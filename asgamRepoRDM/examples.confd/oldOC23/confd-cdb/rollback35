@@ -1,0 +1,22 @@
+# Created by: admin
+# Date: 2023-02-27 21:08:44
+# Via: netconf
+# Type: delta
+# Label: 
+# Comment: 
+# No: 10127
+
+oc-if:interfaces {
+    interface Ethernet4 {
+        ipv4 {
+            addresses {
+                address 10.0.1.2 {
+                    config {
+                        ip            10.0.1.2;
+                        prefix-length 24;
+                    }
+                }
+            }
+         }
+     }
+ }

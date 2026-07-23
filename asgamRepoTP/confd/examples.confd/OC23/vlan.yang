@@ -1,0 +1,92 @@
+module vlan {
+
+  yang-version "1";
+
+  // namespace
+  namespace "http://sssup.it/yang/vlan";
+
+  prefix "sv";
+
+  // meta
+  organization "Scuola Superiore Sant'Anna";
+
+  contact
+    "Andrea Sgambelluri
+     andrea.sgambelluri@santannapisa.it";
+
+  description
+    "This module defines basic configuration variables for VLANs";
+
+  // grouping statements
+
+  grouping vlan-top {
+    description "Top-level grouping forswitched  VLANs";
+    container switched-vlans {
+      description "Container for VLANs information";
+      list vlan {
+        key "vlan-id";
+        description "Configured VLANs keyed by id";
+        leaf vlan-id {
+          type uint8;
+          description "references the configured vlan-id";
+        }
+        leaf vlan-name {
+          type string;
+          description "Interface VLAN name.";
+        }
+        leaf vlan-status {
+          type enumeration {
+            enum ACTIVE {
+              description "VLAN is active";
+            }
+            enum SUSPENDED {
+              description "VLAN is inactive / suspended";
+            }
+          }
+          default ACTIVE;
+          description "Admin state of the VLAN";
+        }
+        //container config {
+        //  description "Configuration parameters for VLANs";
+        //  uses vlan-config;
+        //}
+        uses vlan-members;
+      }
+    }
+  }
+
+  grouping vlan-members {
+    description
+      "List of tagged interfaces belonging to the VLAN.";
+    container tagged-members {
+      description
+        "Enclosing container for list of member interfaces";
+
+      list member {
+        key "port-id";
+        description "List of tagged interfaces associated with the VLAN.";
+        leaf port-id {
+          type string;
+          description "Port id name";
+        }
+
+      }
+    }
+    container untagged-members {
+      list member {
+        key "port-id";
+        description "List of tagged interfaces associated with the VLAN.";
+        leaf port-id {
+          type string;
+          description "Port id name";
+        }
+      }
+    }
+  }
+
+  
+  uses vlan-top;
+
+}
+
+

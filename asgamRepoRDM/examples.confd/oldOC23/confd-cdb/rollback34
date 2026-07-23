@@ -1,0 +1,22 @@
+# Created by: admin
+# Date: 2023-02-27 21:09:02
+# Via: netconf
+# Type: delta
+# Label: 
+# Comment: 
+# No: 10128
+
+oc-if:interfaces {
+    interface Ethernet12 {
+        ipv4 {
+            addresses {
+                address 192.168.107.1 {
+                    config {
+                        ip            192.168.107.1;
+                        prefix-length 24;
+                    }
+                }
+            }
+         }
+     }
+ }

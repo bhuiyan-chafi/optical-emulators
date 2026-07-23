@@ -1,0 +1,138 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Chapter&nbsp;22.&nbsp;The RESTCONF API</title><link rel="stylesheet" type="text/css" href="docbook.css"><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"><link rel="home" href="index.html" title="ConfD User Guide"><link rel="up" href="index.html" title="ConfD User Guide"><link rel="prev" href="ch21.html" title="Chapter&nbsp;21.&nbsp;The REST API"><link rel="next" href="ch23.html" title="Chapter&nbsp;23.&nbsp;The Management Agent API"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Chapter&nbsp;22.&nbsp;The RESTCONF API</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ch21.html">Prev</a>&nbsp;</td><th width="60%" align="center">&nbsp;</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ch23.html">Next</a></td></tr></table><hr></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="ug.restconf"></a>Chapter&nbsp;22.&nbsp;The RESTCONF API</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="sect1"><a href="ch22.html#d5e12576">22.1. Introduction</a></span></dt><dt><span class="sect1"><a href="ch22.html#d5e12582">22.2. Getting started</a></span></dt><dt><span class="sect1"><a href="ch22.html#d5e12617">22.3. Schema resource</a></span></dt><dt><span class="sect1"><a href="ch22.html#d5e12623">22.4. Extensions</a></span></dt><dt><span class="sect1"><a href="ch22.html#d5e12654">22.5. Deviations</a></span></dt></dl></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d5e12576"></a>22.1.&nbsp;Introduction</h2></div></div></div><p>
+      RESTCONF is an HTTP based protocol, very similar to the ConfD REST
+      API. The <span class="phrase">ConfD</span> implementation of RESTCONF is based
+      on <a class="link" href="https://www.ietf.org/rfc/rfc8040.txt" target="_top">
+           RFC 8040</a> - RESTCONF Protocol.
+    </p><p>
+      This chapter describes any extensions and/or deviations between
+      our implementation and RFC 8040.
+    </p></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d5e12582"></a>22.2.&nbsp;Getting started</h2></div></div></div><p>
+      In order to enable RESTCONF in <span class="phrase">ConfD</span>,
+      RESTCONF must be enabled in the <code class="filename">confd.conf</code>
+      configuration file. The web server configuration for RESTCONF
+      is shared with the WebUI's config.
+      However, the WebUI does not have to be enabled for RESTCONF to work.
+    </p><p>
+      Here's a minimal example of what is needed in the
+      <code class="filename">confd.conf</code> file:
+    </p><p>
+      </p><div class="example"><a name="d5e12590"></a><p class="title"><b>Example&nbsp;22.1.&nbsp;ConfD configuration for REST</b></p><div class="example-contents"><pre class="screen">
+&lt;restconf&gt;
+  &lt;enabled&gt;true&lt;/enabled&gt;
+&lt;/restconf&gt;
+
+&lt;webui&gt;
+  &lt;enabled&gt;false&lt;/enabled&gt;
+  &lt;transport&gt;
+    &lt;tcp&gt;
+      &lt;enabled&gt;true&lt;/enabled&gt;
+      &lt;ip&gt;0.0.0.0&lt;/ip&gt;
+      &lt;port&gt;8008&lt;/port&gt;
+    &lt;/tcp&gt;
+  &lt;/transport&gt;
+&lt;/webui&gt;</pre></div></div><p><br class="example-break">
+    </p><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="d5e12593"></a>22.2.1.&nbsp;Root resource discovery</h3></div></div></div><p>
+        RESTCONF makes it possible to specify where the RESTCONF API is located,
+        as described in RFC 8040.
+      </p><p>
+        As per default, the RESTCONF API root is <span class="emphasis"><em>/restconf</em></span>.
+        To change this, configure the RESTCONF API root in the
+        <code class="filename">confd.conf</code> file as:
+      </p><p>
+      </p><div class="example"><a name="d5e12600"></a><p class="title"><b>Example&nbsp;22.2.&nbsp;ConfD configuration for RESTCONF</b></p><div class="example-contents"><pre class="screen">
+&lt;restconf&gt;
+  &lt;enabled&gt;true&lt;/enabled&gt;
+  &lt;rootResource&gt;my_own_restconf_root&lt;/rootResource&gt;
+&lt;/restconf&gt;</pre></div></div><p><br class="example-break">
+    </p><p>
+      The RESTCONF API root will now be
+      <span class="emphasis"><em>/my_own_restconf_root</em></span>.
+    </p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>
+        In this document, all examples will assume the RESTCONF API root to be
+        <span class="emphasis"><em>/restconf</em></span>.
+      </p></div></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="d5e12608"></a>22.2.2.&nbsp;Capabilities</h3></div></div></div><p>
+        RESTCONF capabilities are described in Section 9.1 of RFC 8040.
+      </p><p>
+        To view currently enabled capabilities, use the
+        ietf-restconf-monitoring YANG model. This is available via
+        <span class="emphasis"><em>/restconf/data/restconf-state</em></span>, example result:
+      </p><p>
+        </p><div class="example"><a name="d5e12614"></a><p class="title"><b>Example&nbsp;22.3.&nbsp;ConfD RESTCONF capabilities</b></p><div class="example-contents"><pre class="screen">
+&lt;restconf-state xmlns="urn:ietf:params:xml:ns:yang:ietf-restconf-monitoring"
+  xmlns:rcmon="urn:ietf:params:xml:ns:yang:ietf-restconf-monitoring"&gt;
+&lt;capabities&gt;
+  &lt;capility&gt;
+    urn:ietf:params:restconf:capability:defaults:1.0?basic-mode=explicit
+  &lt;/capability&gt;
+  &lt;capility&gt;urn:ietf:params:restconf:capability:depth:1.0&lt;/capability&gt;
+  &lt;capility&gt;urn:ietf:params:restconf:capability:fields:1.0&lt;/capability&gt;
+  &lt;capility&gt;urn:ietf:params:restconf:capability:with-defaults:1.0&lt;/capability&gt;
+  &lt;capility&gt;http://tail-f.com/ns/restconf/collection/1.0&lt;/capability&gt;
+  &lt;capility&gt;http://tail-f.com/ns/restconf/query-api/1.0&lt;/capability&gt;
+&lt;/capalities&gt;
+&lt;/restconf-state&gt;</pre></div></div><p><br class="example-break">
+      </p></div></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d5e12617"></a>22.3.&nbsp;Schema resource</h2></div></div></div><p>
+      RFC 8040 Section 3.7 describes retrieval of YANG modules used by the
+      server via the RPC operation <code class="code">get-schema</code>. The YANG source is
+      made available by <span class="phrase">ConfD</span> in two ways: compiled into
+      the fxs file or put in the loadPath. See <a class="xref" href="ch15.html#ug.netconf_agent.monitoring" title="15.6.&nbsp;Monitoring of the NETCONF Server">Section&nbsp;15.6, &#8220;Monitoring of the NETCONF Server&#8221;</a>.
+    </p></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d5e12623"></a>22.4.&nbsp;Extensions</h2></div></div></div><p>
+      To avoid any potential future conflict with the RESTCONF standard,
+      any extensions made to the <span class="phrase">ConfD</span> implementation
+      of RESTCONF is located under
+      the URL path: <span class="emphasis"><em>/restconf/tailf</em></span>, or is controlled
+      by means of a vendor specific media type.
+    </p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>
+        There is no index of extensions under
+        <span class="emphasis"><em>/restconf/tailf</em></span>. To list extensions, access
+        <span class="emphasis"><em>/restconf/data/modules-state</em></span> and follow published
+        links for schemas.
+      </p></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="d5e12632"></a>22.4.1.&nbsp;Collections</h3></div></div></div><p>
+        The RESTCONF specification states that a result containing
+        multiple instances (e.g a number of list entries) is not
+        allowed if XML encoding is used. The reason for this is that
+        an XML document can only have one root node.
+      </p><p>
+        To remedy this, a HTTP GET request can make use of
+        the "Accept:"
+        media type: <span class="emphasis"><em>application/vnd.yang.collection+xml</em></span> as
+        shown in the following example.
+      </p><p>
+        </p><div class="example"><a name="d5e12638"></a><p class="title"><b>Example&nbsp;22.4.&nbsp;Use of collections</b></p><div class="example-contents"><pre class="screen">
+curl  -H "Accept: application/vnd.yang.collection+xml"  http://....</pre></div></div><p><br class="example-break">
+      </p><p>
+        The result will then be wrapped with a "collection" element
+        as shown below:
+      </p><p>
+        </p><div class="example"><a name="d5e12643"></a><p class="title"><b>Example&nbsp;22.5.&nbsp;Use of collections</b></p><div class="example-contents"><pre class="screen">
+&lt;collection xmlns:y="urn:ietf:params:xml:ns:yang:ietf-restconf"&gt;
+  ....
+&lt;/collection&gt;</pre></div></div><p><br class="example-break">
+      </p></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="d5e12646"></a>22.4.2.&nbsp;The RESTCONF Query API</h3></div></div></div><p>
+        Refer to <a class="xref" href="ch21.html#ug.rest.query.api" title="21.9.&nbsp;The Query API">Section&nbsp;21.9, &#8220;The Query API&#8221;</a> for a
+        complete description of this functionality.
+      </p><p>
+        The only difference in the ConfD implementation is the
+        use of the RESTCONF URI root resource, and the RESTCONF media types.
+        An example of how a <span class="command"><strong>curl</strong></span> request can look like
+        is shown below:
+      </p><pre class="screen"><strong class="userinput"><code>
+curl -i 'http://admin:admin@localhost:8008/restconf/tailf/query' \
+     -X POST -T test.xml \
+     -H "Content-Type: application/yang-data+xml"
+      </code></strong></pre></div></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d5e12654"></a>22.5.&nbsp;Deviations</h2></div></div></div><p>
+      The ConfD RESTCONF server support all the mandatory parts of the
+      specification and some optional parts. This chapter describes what is
+      currently not supported and/or any other deviations from the
+      specification.
+    </p><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="d5e12657"></a>22.5.1.&nbsp;Notifications</h3></div></div></div><p>
+        Currently, RESTCONF notifications are not supported.
+      </p></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="d5e12660"></a>22.5.2.&nbsp;Query Parameters</h3></div></div></div><p>
+        The following optional query parameters are currently not supported:
+        <span class="emphasis"><em>filter</em></span>,
+        <span class="emphasis"><em>start-time</em></span>,
+        <span class="emphasis"><em>stop-time</em></span>,
+        <span class="emphasis"><em>replay</em></span>.
+      </p></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ch21.html">Prev</a>&nbsp;</td><td width="20%" align="center">&nbsp;</td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ch23.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Chapter&nbsp;21.&nbsp;The REST API&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;23.&nbsp;The Management Agent API</td></tr></table></div></body></html>

@@ -1,0 +1,17 @@
+# Created by: admin
+# Date: 2023-02-27 21:12:16
+# Via: netconf
+# Type: delta
+# Label: 
+# Comment: 
+# No: 10142
+
+terminal-device {
+    logical-channels {
+        channel 4 {
+            config {
+                admin-state ENABLED;
+            }
+         }
+     }
+ }

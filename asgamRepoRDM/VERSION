@@ -1,0 +1,6 @@
+ConfD Basic version 6.4 for linux on x86_64.
+Revision: 92834 (SVN)
+Date: Wed Mar 22 12:01:45 CET 2017
+Erlang/OTP version: 18.3.4.5
+DOCUMENTATION_PACKAGE=confd-basic-6.4.doc.tar.gz
+EXAMPLE_PACKAGE=confd-basic-6.4.examples.tar.gz

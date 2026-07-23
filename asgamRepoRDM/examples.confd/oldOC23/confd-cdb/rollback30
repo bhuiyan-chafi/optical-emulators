@@ -1,0 +1,16 @@
+# Created by: admin
+# Date: 2023-02-27 21:09:52
+# Via: netconf
+# Type: delta
+# Label: 
+# Comment: 
+# No: 10132
+
+oc-prt:bgp-instance {
+    bgp {
+        neighbors {
+            delete:
+            neighbor 10.0.1.1;
+        }
+     }
+ }

@@ -1,0 +1,37 @@
+<config xmlns:xc="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <bgp-instance xmlns="http://openconfig.net/yang/protocols">
+   <bgp>
+     <!--global>
+	<config>
+	  <as>65345</as>	
+	  <router-id>10.0.0.1</router-id>
+	  <address-family>
+             <ipv4-unicast>
+               <connected>true</connected>
+               <static>true</static>
+             </ipv4-unicast>
+          </address-family>
+	</config>
+     </global-->
+     <neighbors>
+       <neighbor>
+            <neighbor-address>192.168.1.1</neighbor-address>
+            <config>
+              <neighbor-address>192.168.1.1</neighbor-address>
+              <neighbor-port>88</neighbor-port>
+              <peer-as>65432</peer-as>
+              <enabled>true</enabled>
+            </config>
+            <!--apply-policy>
+               <config>
+                  <import-policy>testIN</import-policy>
+                  <export-policy>testOUT</export-policy>
+               </config>
+            </apply-policy-->
+       </neighbor>
+     </neighbors>
+
+   </bgp>
+  </bgp-instance>
+</config>
+

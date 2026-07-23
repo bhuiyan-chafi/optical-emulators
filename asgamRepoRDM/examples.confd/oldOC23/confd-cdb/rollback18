@@ -1,0 +1,22 @@
+# Created by: admin
+# Date: 2023-02-27 21:12:30
+# Via: netconf
+# Type: delta
+# Label: 
+# Comment: 
+# No: 10144
+
+oc-prt:bgp-instance {
+    bgp {
+        neighbors {
+            neighbor 10.0.1.1 {
+                config {
+                    neighbor-address 10.0.1.1;
+                    enabled          true;
+                    peer-as          64545;
+                    local-as         64545;
+                }
+            }
+        }
+     }
+ }

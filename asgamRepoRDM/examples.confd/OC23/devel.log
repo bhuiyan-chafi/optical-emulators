@@ -1,0 +1,57 @@
+<INFO> 28-Jan-2026::15:24:14.627 71154eb22ce5 confd[177]: confd embedded apps in early_phase0: []
+<INFO> 28-Jan-2026::15:24:14.895 71154eb22ce5 confd[177]: confd mmap_schema handle_info got msg: timeout
+<INFO> 28-Jan-2026::15:24:14.936 71154eb22ce5 confd[177]: confd embedded apps in phase0: []
+<INFO> 28-Jan-2026::15:24:15.253 71154eb22ce5 confd[177]: devel-cdb init files found in ./confd-cdb: aaa_init.xml, init_openconfig-platform.xml
+<INFO> 28-Jan-2026::15:24:15.465 71154eb22ce5 confd[177]: devel-cdb Compacted CDB journal file: 33 ms (414 nodes in memory, disk size 6.94 KiB -> 6.83 KiB)
+<INFO> 28-Jan-2026::15:24:15.475 71154eb22ce5 confd[177]: confd embedded apps in phase1: []
+<ERR> 28-Jan-2026::15:24:15.558 71154eb22ce5 confd[177]: devel-aaa Module "tailf-webui" in access rule "any-group/tailf-webui-user" does not exist - ignoring rule
+<ERR> 28-Jan-2026::15:24:15.558 71154eb22ce5 confd[177]: devel-aaa Module "vlan" in access rule "packet/vlan" does not exist - ignoring rule
+<ERR> 28-Jan-2026::15:24:15.559 71154eb22ce5 confd[177]: devel-aaa path "/terminal-device" in access Rule "packet/terminal-device" is not valid for URN "star"
+<ERR> 28-Jan-2026::15:24:15.559 71154eb22ce5 confd[177]: devel-aaa path "/terminal-device" in access Rule "optical/terminal-device" is not valid for URN "star"
+<ERR> 28-Jan-2026::15:24:15.560 71154eb22ce5 confd[177]: devel-aaa Module "vlan" in access rule "optical/vlan" does not exist - ignoring rule
+<INFO> 28-Jan-2026::15:24:15.581 71154eb22ce5 confd[177]: confd embedded apps in phase1_delayed: []
+<INFO> 28-Jan-2026::15:24:15.589 71154eb22ce5 confd[177]: confd embedded apps in phase2: []
+<ERR> 28-Jan-2026::15:25:02.126 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::15:25:02.127 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::15:25:02.193 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::15:25:02.193 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::16:02:00.593 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::16:02:00.594 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::16:02:00.627 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::16:02:00.628 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::16:12:37.586 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::16:12:37.586 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::16:12:37.618 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::16:12:37.618 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::16:22:21.272 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::16:22:21.272 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::16:22:21.301 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::16:22:21.302 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::17:06:03.088 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::17:06:03.089 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::17:06:03.122 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::17:06:03.122 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::17:26:07.601 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::17:26:07.601 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::17:26:07.633 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::17:26:07.633 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::18:25:25.612 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::18:25:25.612 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::18:25:25.644 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::18:25:25.645 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::18:51:13.425 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::18:51:13.425 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::18:51:13.451 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::18:51:13.451 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::19:04:10.144 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::19:04:10.144 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::19:04:10.172 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::19:04:10.172 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::20:48:13.009 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::20:48:13.009 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::20:48:13.047 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::20:48:13.048 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::21:33:42.093 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::21:33:42.093 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::21:33:42.123 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external
+<ERR> 28-Jan-2026::21:33:42.123 71154eb22ce5 confd[177]: devel-c no registration found for callpoint transponder/get_log_times of type=external

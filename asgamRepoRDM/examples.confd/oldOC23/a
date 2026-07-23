@@ -1,0 +1,721 @@
+module: openconfig-protocols
+  +--rw bgp-instance
+  |  +--rw bgp
+  |     +--rw global
+  |     |  +--rw config
+  |     |  |  +--rw as?               oc-inet:as-number
+  |     |  |  +--rw router-id?        oc-yang:dotted-quad
+  |     |  |  +--rw address-family
+  |     |  |     +--rw ipv4-unicast
+  |     |  |        +--rw connected?   boolean
+  |     |  |        +--rw static?      boolean
+  |     |  +--ro state
+  |     |  |  +--ro as?               oc-inet:as-number
+  |     |  |  +--ro router-id?        oc-yang:dotted-quad
+  |     |  |  +--ro address-family
+  |     |  |  |  +--ro ipv4-unicast
+  |     |  |  |     +--ro connected?   boolean
+  |     |  |  |     +--ro static?      boolean
+  |     |  |  +--ro total-paths?      uint32
+  |     |  |  +--ro total-prefixes?   uint32
+  |     |  +--rw default-route-distance
+  |     |  |  +--rw config
+  |     |  |  |  +--rw external-route-distance?   uint8
+  |     |  |  |  +--rw internal-route-distance?   uint8
+  |     |  |  +--ro state
+  |     |  |     +--ro external-route-distance?   uint8
+  |     |  |     +--ro internal-route-distance?   uint8
+  |     |  +--rw confederation
+  |     |  |  +--rw config
+  |     |  |  |  +--rw identifier?   oc-inet:as-number
+  |     |  |  |  +--rw member-as*    oc-inet:as-number
+  |     |  |  +--ro state
+  |     |  |     +--ro identifier?   oc-inet:as-number
+  |     |  |     +--ro member-as*    oc-inet:as-number
+  |     |  +--rw graceful-restart
+  |     |  |  +--rw config
+  |     |  |  |  +--rw enabled?             boolean
+  |     |  |  |  +--rw restart-time?        uint16
+  |     |  |  |  +--rw stale-routes-time?   uint16
+  |     |  |  |  +--rw helper-only?         boolean
+  |     |  |  +--ro state
+  |     |  |     +--ro enabled?             boolean
+  |     |  |     +--ro restart-time?        uint16
+  |     |  |     +--ro stale-routes-time?   uint16
+  |     |  |     +--ro helper-only?         boolean
+  |     |  +--rw route-selection-options
+  |     |  |  +--rw config
+  |     |  |  |  +--rw always-compare-med?           boolean
+  |     |  |  |  +--rw ignore-as-path-length?        boolean
+  |     |  |  |  +--rw external-compare-router-id?   boolean
+  |     |  |  |  +--rw advertise-inactive-routes?    boolean
+  |     |  |  |  +--rw enable-aigp?                  boolean
+  |     |  |  |  +--rw ignore-next-hop-igp-metric?   boolean
+  |     |  |  +--ro state
+  |     |  |     +--ro always-compare-med?           boolean
+  |     |  |     +--ro ignore-as-path-length?        boolean
+  |     |  |     +--ro external-compare-router-id?   boolean
+  |     |  |     +--ro advertise-inactive-routes?    boolean
+  |     |  |     +--ro enable-aigp?                  boolean
+  |     |  |     +--ro ignore-next-hop-igp-metric?   boolean
+  |     |  +--rw afi-safis
+  |     |  |  +--rw afi-safi* [afi-safi-name]
+  |     |  |     +--rw afi-safi-name       -> ../config/afi-safi-name
+  |     |  |     +--rw config
+  |     |  |     |  +--rw afi-safi-name?   identityref
+  |     |  |     |  +--rw enabled?         boolean
+  |     |  |     +--ro state
+  |     |  |     |  +--ro afi-safi-name?    identityref
+  |     |  |     |  +--ro enabled?          boolean
+  |     |  |     |  +--ro total-paths?      uint32
+  |     |  |     |  +--ro total-prefixes?   uint32
+  |     |  |     +--rw graceful-restart
+  |     |  |        +--rw config
+  |     |  |        |  +--rw enabled?   boolean
+  |     |  |        +--ro state
+  |     |  |           +--ro enabled?   boolean
+  |     |  +--rw dynamic-neighbor-prefixes
+  |     |     +--rw dynamic-neighbor-prefix* [prefix]
+  |     |        +--rw prefix    -> ../config/prefix
+  |     |        +--rw config
+  |     |        |  +--rw prefix?   oc-inet:ip-prefix
+  |     |        +--ro state
+  |     |           +--ro prefix?   oc-inet:ip-prefix
+  |     +--rw neighbors
+  |        +--rw neighbor* [neighbor-address]
+  |           +--rw neighbor-address      -> ../config/neighbor-address
+  |           +--rw config
+  |           |  +--rw neighbor-address?     oc-inet:ip-address
+  |           |  +--rw neighbor-port?        oc-inet:port-number
+  |           |  +--rw enabled?              boolean
+  |           |  +--rw peer-as?              oc-inet:as-number
+  |           |  +--rw local-as?             oc-inet:as-number
+  |           |  +--rw peer-type?            oc-bgp-types:peer-type
+  |           |  +--rw auth-password?        oc-types:routing-password
+  |           |  +--rw remove-private-as?    oc-bgp-types:remove-private-as-option
+  |           |  +--rw route-flap-damping?   boolean
+  |           |  +--rw send-community?       oc-bgp-types:community-type
+  |           |  +--rw description?          string
+  |           +--ro state
+  |           |  +--ro neighbor-address?             oc-inet:ip-address
+  |           |  +--ro neighbor-port?                oc-inet:port-number
+  |           |  +--ro enabled?                      boolean
+  |           |  +--ro peer-as?                      oc-inet:as-number
+  |           |  +--ro local-as?                     oc-inet:as-number
+  |           |  +--ro peer-type?                    oc-bgp-types:peer-type
+  |           |  +--ro auth-password?                oc-types:routing-password
+  |           |  +--ro remove-private-as?            oc-bgp-types:remove-private-as-option
+  |           |  +--ro route-flap-damping?           boolean
+  |           |  +--ro send-community?               oc-bgp-types:community-type
+  |           |  +--ro description?                  string
+  |           |  +--ro session-state?                enumeration
+  |           |  +--ro last-established?             oc-types:timeticks64
+  |           |  +--ro established-transitions?      oc-yang:counter64
+  |           |  +--ro supported-capabilities*       identityref
+  |           |  +--ro messages
+  |           |  |  +--ro sent
+  |           |  |  |  +--ro UPDATE?                            uint64
+  |           |  |  |  +--ro NOTIFICATION?                      uint64
+  |           |  |  |  +--ro last-notification-time?            oc-types:timeticks64
+  |           |  |  |  +--ro last-notification-error-code?      identityref
+  |           |  |  |  +--ro last-notification-error-subcode?   identityref
+  |           |  |  +--ro received
+  |           |  |     +--ro UPDATE?                            uint64
+  |           |  |     +--ro NOTIFICATION?                      uint64
+  |           |  |     +--ro last-notification-time?            oc-types:timeticks64
+  |           |  |     +--ro last-notification-error-code?      identityref
+  |           |  |     +--ro last-notification-error-subcode?   identityref
+  |           |  +--ro queues
+  |           |  |  +--ro input?    uint32
+  |           |  |  +--ro output?   uint32
+  |           |  +--ro dynamically-configured?       boolean
+  |           |  +--ro last-prefix-limit-exceeded?   oc-types:timeticks64
+  |           +--rw timers
+  |           |  +--rw config
+  |           |  |  +--rw connect-retry?                    uint16
+  |           |  |  +--rw hold-time?                        uint16
+  |           |  |  +--rw keepalive-interval?               uint16
+  |           |  |  +--rw minimum-advertisement-interval?   uint16
+  |           |  |  +--rw restart-time?                     uint16
+  |           |  +--ro state
+  |           |     +--ro connect-retry?                    uint16
+  |           |     +--ro hold-time?                        uint16
+  |           |     +--ro keepalive-interval?               uint16
+  |           |     +--ro minimum-advertisement-interval?   uint16
+  |           |     +--ro restart-time?                     uint16
+  |           |     +--ro negotiated-hold-time?             uint16
+  |           +--rw transport
+  |           |  +--rw config
+  |           |  |  +--rw tcp-mss?         uint16
+  |           |  |  +--rw mtu-discovery?   boolean
+  |           |  |  +--rw passive-mode?    boolean
+  |           |  |  +--rw local-address?   union
+  |           |  +--ro state
+  |           |     +--ro tcp-mss?          uint16
+  |           |     +--ro mtu-discovery?    boolean
+  |           |     +--ro passive-mode?     boolean
+  |           |     +--ro local-address?    union
+  |           |     +--ro local-port?       oc-inet:port-number
+  |           |     +--ro remote-address?   oc-inet:ip-address
+  |           |     +--ro remote-port?      oc-inet:port-number
+  |           +--rw error-handling
+  |           |  +--rw config
+  |           |  |  +--rw treat-as-withdraw?   boolean
+  |           |  +--ro state
+  |           |     +--ro treat-as-withdraw?           boolean
+  |           |     +--ro erroneous-update-messages?   uint32
+  |           +--rw graceful-restart
+  |           |  +--rw config
+  |           |  |  +--rw enabled?             boolean
+  |           |  |  +--rw restart-time?        uint16
+  |           |  |  +--rw stale-routes-time?   uint16
+  |           |  |  +--rw helper-only?         boolean
+  |           |  +--ro state
+  |           |     +--ro enabled?             boolean
+  |           |     +--ro restart-time?        uint16
+  |           |     +--ro stale-routes-time?   uint16
+  |           |     +--ro helper-only?         boolean
+  |           |     +--ro peer-restart-time?   uint16
+  |           |     +--ro peer-restarting?     boolean
+  |           |     +--ro local-restarting?    boolean
+  |           |     +--ro mode?                enumeration
+  |           +--rw logging-options
+  |           |  +--rw config
+  |           |  |  +--rw log-neighbor-state-changes?   boolean
+  |           |  +--ro state
+  |           |     +--ro log-neighbor-state-changes?   boolean
+  |           +--rw ebgp-multihop
+  |           |  +--rw config
+  |           |  |  +--rw enabled?        boolean
+  |           |  |  +--rw multihop-ttl?   uint8
+  |           |  +--ro state
+  |           |     +--ro enabled?        boolean
+  |           |     +--ro multihop-ttl?   uint8
+  |           +--rw route-reflector
+  |           |  +--rw config
+  |           |  |  +--rw route-reflector-cluster-id?   oc-bgp-types:rr-cluster-id-type
+  |           |  |  +--rw route-reflector-client?       boolean
+  |           |  +--ro state
+  |           |     +--ro route-reflector-cluster-id?   oc-bgp-types:rr-cluster-id-type
+  |           |     +--ro route-reflector-client?       boolean
+  |           +--rw as-path-options
+  |           |  +--rw config
+  |           |  |  +--rw allow-own-as?             uint8
+  |           |  |  +--rw replace-peer-as?          boolean
+  |           |  |  +--rw disable-peer-as-filter?   boolean
+  |           |  +--ro state
+  |           |     +--ro allow-own-as?             uint8
+  |           |     +--ro replace-peer-as?          boolean
+  |           |     +--ro disable-peer-as-filter?   boolean
+  |           +--rw use-multiple-paths
+  |           |  +--rw config
+  |           |  |  +--rw enabled?   boolean
+  |           |  +--ro state
+  |           |  |  +--ro enabled?   boolean
+  |           |  +--rw ebgp
+  |           |     +--rw config
+  |           |     |  +--rw allow-multiple-as?   boolean
+  |           |     +--ro state
+  |           |        +--ro allow-multiple-as?   boolean
+  |           +--rw apply-policy
+  |           |  +--rw config
+  |           |  |  +--rw import-policy*           -> /oc-rpol:routing-policy/policy-definitions/policy-definition/name
+  |           |  |  +--rw default-import-policy?   default-policy-type
+  |           |  |  +--rw export-policy*           -> /oc-rpol:routing-policy/policy-definitions/policy-definition/name
+  |           |  |  +--rw default-export-policy?   default-policy-type
+  |           |  +--ro state
+  |           |     +--ro import-policy*           -> /oc-rpol:routing-policy/policy-definitions/policy-definition/name
+  |           |     +--ro default-import-policy?   default-policy-type
+  |           |     +--ro export-policy*           -> /oc-rpol:routing-policy/policy-definitions/policy-definition/name
+  |           |     +--ro default-export-policy?   default-policy-type
+  |           +--rw afi-safis
+  |           |  +--rw afi-safi* [afi-safi-name]
+  |           |     +--rw afi-safi-name           -> ../config/afi-safi-name
+  |           |     +--rw config
+  |           |     |  +--rw afi-safi-name?   identityref
+  |           |     |  +--rw enabled?         boolean
+  |           |     +--ro state
+  |           |     |  +--ro afi-safi-name?   identityref
+  |           |     |  +--ro enabled?         boolean
+  |           |     |  +--ro active?          boolean
+  |           |     |  +--ro prefixes
+  |           |     |     +--ro received?              uint32
+  |           |     |     +--ro received-pre-policy?   uint32
+  |           |     |     +--ro sent?                  uint32
+  |           |     |     +--ro installed?             uint32
+  |           |     +--rw graceful-restart
+  |           |     |  +--rw config
+  |           |     |  |  +--rw enabled?   boolean
+  |           |     |  +--ro state
+  |           |     |     +--ro enabled?      boolean
+  |           |     |     +--ro received?     boolean
+  |           |     |     +--ro advertised?   boolean
+  |           |     +--rw add-paths
+  |           |     |  +--rw config
+  |           |     |  |  +--rw receive?                  boolean
+  |           |     |  |  +--rw send?                     boolean
+  |           |     |  |  +--rw send-max?                 uint8
+  |           |     |  |  +--rw eligible-prefix-policy?   -> /oc-rpol:routing-policy/policy-definitions/policy-definition/name
+  |           |     |  +--ro state
+  |           |     |     +--ro receive?                  boolean
+  |           |     |     +--ro send?                     boolean
+  |           |     |     +--ro send-max?                 uint8
+  |           |     |     +--ro eligible-prefix-policy?   -> /oc-rpol:routing-policy/policy-definitions/policy-definition/name
+  |           |     +--rw apply-policy
+  |           |     |  +--rw config
+  |           |     |  |  +--rw import-policy*           -> /oc-rpol:routing-policy/policy-definitions/policy-definition/name
+  |           |     |  |  +--rw default-import-policy?   default-policy-type
+  |           |     |  |  +--rw export-policy*           -> /oc-rpol:routing-policy/policy-definitions/policy-definition/name
+  |           |     |  |  +--rw default-export-policy?   default-policy-type
+  |           |     |  +--ro state
+  |           |     |     +--ro import-policy*           -> /oc-rpol:routing-policy/policy-definitions/policy-definition/name
+  |           |     |     +--ro default-import-policy?   default-policy-type
+  |           |     |     +--ro export-policy*           -> /oc-rpol:routing-policy/policy-definitions/policy-definition/name
+  |           |     |     +--ro default-export-policy?   default-policy-type
+  |           |     +--rw ipv4-unicast
+  |           |     |  +--rw prefix-limit
+  |           |     |  |  +--rw config
+  |           |     |  |  |  +--rw max-prefixes?            uint32
+  |           |     |  |  |  +--rw prevent-teardown?        boolean
+  |           |     |  |  |  +--rw warning-threshold-pct?   oc-types:percentage
+  |           |     |  |  +--ro state
+  |           |     |  |     +--ro max-prefixes?            uint32
+  |           |     |  |     +--ro prevent-teardown?        boolean
+  |           |     |  |     +--ro warning-threshold-pct?   oc-types:percentage
+  |           |     |  |     +--ro prefix-limit-exceeded?   boolean
+  |           |     |  +--rw prefix-limit-received
+  |           |     |  |  +--rw config
+  |           |     |  |  |  +--rw max-prefixes?            uint32
+  |           |     |  |  |  +--rw prevent-teardown?        boolean
+  |           |     |  |  |  +--rw warning-threshold-pct?   oc-types:percentage
+  |           |     |  |  +--ro state
+  |           |     |  |     +--ro max-prefixes?            uint32
+  |           |     |  |     +--ro prevent-teardown?        boolean
+  |           |     |  |     +--ro warning-threshold-pct?   oc-types:percentage
+  |           |     |  |     +--ro prefix-limit-exceeded?   boolean
+  |           |     |  +--rw config
+  |           |     |  |  +--rw send-default-route?           boolean
+  |           |     |  |  +--rw extended-next-hop-encoding?   boolean
+  |           |     |  +--ro state
+  |           |     |     +--ro send-default-route?           boolean
+  |           |     |     +--ro extended-next-hop-encoding?   boolean
+  |           |     +--rw ipv6-unicast
+  |           |     |  +--rw prefix-limit
+  |           |     |  |  +--rw config
+  |           |     |  |  |  +--rw max-prefixes?            uint32
+  |           |     |  |  |  +--rw prevent-teardown?        boolean
+  |           |     |  |  |  +--rw warning-threshold-pct?   oc-types:percentage
+  |           |     |  |  +--ro state
+  |           |     |  |     +--ro max-prefixes?            uint32
+  |           |     |  |     +--ro prevent-teardown?        boolean
+  |           |     |  |     +--ro warning-threshold-pct?   oc-types:percentage
+  |           |     |  |     +--ro prefix-limit-exceeded?   boolean
+  |           |     |  +--rw prefix-limit-received
+  |           |     |  |  +--rw config
+  |           |     |  |  |  +--rw max-prefixes?            uint32
+  |           |     |  |  |  +--rw prevent-teardown?        boolean
+  |           |     |  |  |  +--rw warning-threshold-pct?   oc-types:percentage
+  |           |     |  |  +--ro state
+  |           |     |  |     +--ro max-prefixes?            uint32
+  |           |     |  |     +--ro prevent-teardown?        boolean
+  |           |     |  |     +--ro warning-threshold-pct?   oc-types:percentage
+  |           |     |  |     +--ro prefix-limit-exceeded?   boolean
+  |           |     |  +--rw config
+  |           |     |  |  +--rw send-default-route?   boolean
+  |           |     |  +--ro state
+  |           |     |     +--ro send-default-route?   boolean
+  |           |     +--rw ipv4-labeled-unicast
+  |           |     |  +--rw prefix-limit
+  |           |     |  |  +--rw config
+  |           |     |  |  |  +--rw max-prefixes?            uint32
+  |           |     |  |  |  +--rw prevent-teardown?        boolean
+  |           |     |  |  |  +--rw warning-threshold-pct?   oc-types:percentage
+  |           |     |  |  +--ro state
+  |           |     |  |     +--ro max-prefixes?            uint32
+  |           |     |  |     +--ro prevent-teardown?        boolean
+  |           |     |  |     +--ro warning-threshold-pct?   oc-types:percentage
+  |           |     |  |     +--ro prefix-limit-exceeded?   boolean
+  |           |     |  +--rw prefix-limit-received
+  |           |     |     +--rw config
+  |           |     |     |  +--rw max-prefixes?            uint32
+  |           |     |     |  +--rw prevent-teardown?        boolean
+  |           |     |     |  +--rw warning-threshold-pct?   oc-types:percentage
+  |           |     |     +--ro state
+  |           |     |        +--ro max-prefixes?            uint32
+  |           |     |        +--ro prevent-teardown?        boolean
+  |           |     |        +--ro warning-threshold-pct?   oc-types:percentage
+  |           |     |        +--ro prefix-limit-exceeded?   boolean
+  |           |     +--rw ipv6-labeled-unicast
+  |           |     |  +--rw prefix-limit
+  |           |     |  |  +--rw config
+  |           |     |  |  |  +--rw max-prefixes?            uint32
+  |           |     |  |  |  +--rw prevent-teardown?        boolean
+  |           |     |  |  |  +--rw warning-threshold-pct?   oc-types:percentage
+  |           |     |  |  +--ro state
+  |           |     |  |     +--ro max-prefixes?            uint32
+  |           |     |  |     +--ro prevent-teardown?        boolean
+  |           |     |  |     +--ro warning-threshold-pct?   oc-types:percentage
+  |           |     |  |     +--ro prefix-limit-exceeded?   boolean
+  |           |     |  +--rw prefix-limit-received
+  |           |     |     +--rw config
+  |           |     |     |  +--rw max-prefixes?            uint32
+  |           |     |     |  +--rw prevent-teardown?        boolean
+  |           |     |     |  +--rw warning-threshold-pct?   oc-types:percentage
+  |           |     |     +--ro state
+  |           |     |        +--ro max-prefixes?            uint32
+  |           |     |        +--ro prevent-teardown?        boolean
+  |           |     |        +--ro warning-threshold-pct?   oc-types:percentage
+  |           |     |        +--ro prefix-limit-exceeded?   boolean
+  |           |     +--rw l3vpn-ipv4-unicast
+  |           |     |  +--rw prefix-limit
+  |           |     |  |  +--rw config
+  |           |     |  |  |  +--rw max-prefixes?            uint32
+  |           |     |  |  |  +--rw prevent-teardown?        boolean
+  |           |     |  |  |  +--rw warning-threshold-pct?   oc-types:percentage
+  |           |     |  |  +--ro state
+  |           |     |  |     +--ro max-prefixes?            uint32
+  |           |     |  |     +--ro prevent-teardown?        boolean
+  |           |     |  |     +--ro warning-threshold-pct?   oc-types:percentage
+  |           |     |  |     +--ro prefix-limit-exceeded?   boolean
+  |           |     |  +--rw prefix-limit-received
+  |           |     |     +--rw config
+  |           |     |     |  +--rw max-prefixes?            uint32
+  |           |     |     |  +--rw prevent-teardown?        boolean
+  |           |     |     |  +--rw warning-threshold-pct?   oc-types:percentage
+  |           |     |     +--ro state
+  |           |     |        +--ro max-prefixes?            uint32
+  |           |     |        +--ro prevent-teardown?        boolean
+  |           |     |        +--ro warning-threshold-pct?   oc-types:percentage
+  |           |     |        +--ro prefix-limit-exceeded?   boolean
+  |           |     +--rw l3vpn-ipv6-unicast
+  |           |     |  +--rw prefix-limit
+  |           |     |  |  +--rw config
+  |           |     |  |  |  +--rw max-prefixes?            uint32
+  |           |     |  |  |  +--rw prevent-teardown?        boolean
+  |           |     |  |  |  +--rw warning-threshold-pct?   oc-types:percentage
+  |           |     |  |  +--ro state
+  |           |     |  |     +--ro max-prefixes?            uint32
+  |           |     |  |     +--ro prevent-teardown?        boolean
+  |           |     |  |     +--ro warning-threshold-pct?   oc-types:percentage
+  |           |     |  |     +--ro prefix-limit-exceeded?   boolean
+  |           |     |  +--rw prefix-limit-received
+  |           |     |     +--rw config
+  |           |     |     |  +--rw max-prefixes?            uint32
+  |           |     |     |  +--rw prevent-teardown?        boolean
+  |           |     |     |  +--rw warning-threshold-pct?   oc-types:percentage
+  |           |     |     +--ro state
+  |           |     |        +--ro max-prefixes?            uint32
+  |           |     |        +--ro prevent-teardown?        boolean
+  |           |     |        +--ro warning-threshold-pct?   oc-types:percentage
+  |           |     |        +--ro prefix-limit-exceeded?   boolean
+  |           |     +--rw l3vpn-ipv4-multicast
+  |           |     |  +--rw prefix-limit
+  |           |     |  |  +--rw config
+  |           |     |  |  |  +--rw max-prefixes?            uint32
+  |           |     |  |  |  +--rw prevent-teardown?        boolean
+  |           |     |  |  |  +--rw warning-threshold-pct?   oc-types:percentage
+  |           |     |  |  +--ro state
+  |           |     |  |     +--ro max-prefixes?            uint32
+  |           |     |  |     +--ro prevent-teardown?        boolean
+  |           |     |  |     +--ro warning-threshold-pct?   oc-types:percentage
+  |           |     |  |     +--ro prefix-limit-exceeded?   boolean
+  |           |     |  +--rw prefix-limit-received
+  |           |     |     +--rw config
+  |           |     |     |  +--rw max-prefixes?            uint32
+  |           |     |     |  +--rw prevent-teardown?        boolean
+  |           |     |     |  +--rw warning-threshold-pct?   oc-types:percentage
+  |           |     |     +--ro state
+  |           |     |        +--ro max-prefixes?            uint32
+  |           |     |        +--ro prevent-teardown?        boolean
+  |           |     |        +--ro warning-threshold-pct?   oc-types:percentage
+  |           |     |        +--ro prefix-limit-exceeded?   boolean
+  |           |     +--rw l3vpn-ipv6-multicast
+  |           |     |  +--rw prefix-limit
+  |           |     |  |  +--rw config
+  |           |     |  |  |  +--rw max-prefixes?            uint32
+  |           |     |  |  |  +--rw prevent-teardown?        boolean
+  |           |     |  |  |  +--rw warning-threshold-pct?   oc-types:percentage
+  |           |     |  |  +--ro state
+  |           |     |  |     +--ro max-prefixes?            uint32
+  |           |     |  |     +--ro prevent-teardown?        boolean
+  |           |     |  |     +--ro warning-threshold-pct?   oc-types:percentage
+  |           |     |  |     +--ro prefix-limit-exceeded?   boolean
+  |           |     |  +--rw prefix-limit-received
+  |           |     |     +--rw config
+  |           |     |     |  +--rw max-prefixes?            uint32
+  |           |     |     |  +--rw prevent-teardown?        boolean
+  |           |     |     |  +--rw warning-threshold-pct?   oc-types:percentage
+  |           |     |     +--ro state
+  |           |     |        +--ro max-prefixes?            uint32
+  |           |     |        +--ro prevent-teardown?        boolean
+  |           |     |        +--ro warning-threshold-pct?   oc-types:percentage
+  |           |     |        +--ro prefix-limit-exceeded?   boolean
+  |           |     +--rw l2vpn-vpls
+  |           |     |  +--rw prefix-limit
+  |           |     |  |  +--rw config
+  |           |     |  |  |  +--rw max-prefixes?            uint32
+  |           |     |  |  |  +--rw prevent-teardown?        boolean
+  |           |     |  |  |  +--rw warning-threshold-pct?   oc-types:percentage
+  |           |     |  |  +--ro state
+  |           |     |  |     +--ro max-prefixes?            uint32
+  |           |     |  |     +--ro prevent-teardown?        boolean
+  |           |     |  |     +--ro warning-threshold-pct?   oc-types:percentage
+  |           |     |  |     +--ro prefix-limit-exceeded?   boolean
+  |           |     |  +--rw prefix-limit-received
+  |           |     |     +--rw config
+  |           |     |     |  +--rw max-prefixes?            uint32
+  |           |     |     |  +--rw prevent-teardown?        boolean
+  |           |     |     |  +--rw warning-threshold-pct?   oc-types:percentage
+  |           |     |     +--ro state
+  |           |     |        +--ro max-prefixes?            uint32
+  |           |     |        +--ro prevent-teardown?        boolean
+  |           |     |        +--ro warning-threshold-pct?   oc-types:percentage
+  |           |     |        +--ro prefix-limit-exceeded?   boolean
+  |           |     +--rw l2vpn-evpn
+  |           |     |  +--rw prefix-limit
+  |           |     |  |  +--rw config
+  |           |     |  |  |  +--rw max-prefixes?            uint32
+  |           |     |  |  |  +--rw prevent-teardown?        boolean
+  |           |     |  |  |  +--rw warning-threshold-pct?   oc-types:percentage
+  |           |     |  |  +--ro state
+  |           |     |  |     +--ro max-prefixes?            uint32
+  |           |     |  |     +--ro prevent-teardown?        boolean
+  |           |     |  |     +--ro warning-threshold-pct?   oc-types:percentage
+  |           |     |  |     +--ro prefix-limit-exceeded?   boolean
+  |           |     |  +--rw prefix-limit-received
+  |           |     |     +--rw config
+  |           |     |     |  +--rw max-prefixes?            uint32
+  |           |     |     |  +--rw prevent-teardown?        boolean
+  |           |     |     |  +--rw warning-threshold-pct?   oc-types:percentage
+  |           |     |     +--ro state
+  |           |     |        +--ro max-prefixes?            uint32
+  |           |     |        +--ro prevent-teardown?        boolean
+  |           |     |        +--ro warning-threshold-pct?   oc-types:percentage
+  |           |     |        +--ro prefix-limit-exceeded?   boolean
+  |           |     +--rw srte-policy-ipv4
+  |           |     |  +--rw prefix-limit
+  |           |     |  |  +--rw config
+  |           |     |  |  |  +--rw max-prefixes?            uint32
+  |           |     |  |  |  +--rw prevent-teardown?        boolean
+  |           |     |  |  |  +--rw warning-threshold-pct?   oc-types:percentage
+  |           |     |  |  +--ro state
+  |           |     |  |     +--ro max-prefixes?            uint32
+  |           |     |  |     +--ro prevent-teardown?        boolean
+  |           |     |  |     +--ro warning-threshold-pct?   oc-types:percentage
+  |           |     |  |     +--ro prefix-limit-exceeded?   boolean
+  |           |     |  +--rw prefix-limit-received
+  |           |     |     +--rw config
+  |           |     |     |  +--rw max-prefixes?            uint32
+  |           |     |     |  +--rw prevent-teardown?        boolean
+  |           |     |     |  +--rw warning-threshold-pct?   oc-types:percentage
+  |           |     |     +--ro state
+  |           |     |        +--ro max-prefixes?            uint32
+  |           |     |        +--ro prevent-teardown?        boolean
+  |           |     |        +--ro warning-threshold-pct?   oc-types:percentage
+  |           |     |        +--ro prefix-limit-exceeded?   boolean
+  |           |     +--rw srte-policy-ipv6
+  |           |     |  +--rw prefix-limit
+  |           |     |  |  +--rw config
+  |           |     |  |  |  +--rw max-prefixes?            uint32
+  |           |     |  |  |  +--rw prevent-teardown?        boolean
+  |           |     |  |  |  +--rw warning-threshold-pct?   oc-types:percentage
+  |           |     |  |  +--ro state
+  |           |     |  |     +--ro max-prefixes?            uint32
+  |           |     |  |     +--ro prevent-teardown?        boolean
+  |           |     |  |     +--ro warning-threshold-pct?   oc-types:percentage
+  |           |     |  |     +--ro prefix-limit-exceeded?   boolean
+  |           |     |  +--rw prefix-limit-received
+  |           |     |     +--rw config
+  |           |     |     |  +--rw max-prefixes?            uint32
+  |           |     |     |  +--rw prevent-teardown?        boolean
+  |           |     |     |  +--rw warning-threshold-pct?   oc-types:percentage
+  |           |     |     +--ro state
+  |           |     |        +--ro max-prefixes?            uint32
+  |           |     |        +--ro prevent-teardown?        boolean
+  |           |     |        +--ro warning-threshold-pct?   oc-types:percentage
+  |           |     |        +--ro prefix-limit-exceeded?   boolean
+  |           |     +--rw use-multiple-paths
+  |           |        +--rw config
+  |           |        |  +--rw enabled?   boolean
+  |           |        +--ro state
+  |           |        |  +--ro enabled?   boolean
+  |           |        +--rw ebgp
+  |           |           +--rw config
+  |           |           |  +--rw allow-multiple-as?   boolean
+  |           |           +--ro state
+  |           |              +--ro allow-multiple-as?   boolean
+  |           +--rw enable-bfd
+  |              +--rw config
+  |              |  +--rw enabled?   boolean
+  |              +--ro state
+  |                 +--ro enabled?   boolean
+  +--rw ospf-instance
+     +--rw ospfv2
+        +--rw global
+        |  +--rw config
+        |  |  +--rw router-id?                    yang:dotted-quad
+        |  |  +--rw summary-route-cost-mode?      enumeration
+        |  |  +--rw igp-shortcuts?                boolean
+        |  |  +--rw log-adjacency-changes?        boolean
+        |  |  +--rw hide-transit-only-networks?   boolean
+        |  +--ro state
+        |  |  +--ro router-id?                    yang:dotted-quad
+        |  |  +--ro summary-route-cost-mode?      enumeration
+        |  |  +--ro igp-shortcuts?                boolean
+        |  |  +--ro log-adjacency-changes?        boolean
+        |  |  +--ro hide-transit-only-networks?   boolean
+        |  +--rw timers
+        |  |  +--rw spf
+        |  |  |  +--rw config
+        |  |  |  |  +--rw initial-delay?   uint32
+        |  |  |  |  +--rw maximum-delay?   uint32
+        |  |  |  +--ro state
+        |  |  |     +--ro initial-delay?   uint32
+        |  |  |     +--ro maximum-delay?   uint32
+        |  |  |     +--ro timer-type?      enumeration
+        |  |  +--rw max-metric
+        |  |  |  +--rw config
+        |  |  |  |  +--rw set?       boolean
+        |  |  |  |  +--rw timeout?   uint64
+        |  |  |  |  +--rw include*   identityref
+        |  |  |  |  +--rw trigger*   identityref
+        |  |  |  +--ro state
+        |  |  |     +--ro set?       boolean
+        |  |  |     +--ro timeout?   uint64
+        |  |  |     +--ro include*   identityref
+        |  |  |     +--ro trigger*   identityref
+        |  |  +--rw lsa-generation
+        |  |     +--rw config
+        |  |     |  +--rw initial-delay?   uint32
+        |  |     |  +--rw maximum-delay?   uint32
+        |  |     +--ro state
+        |  |        +--ro initial-delay?   uint32
+        |  |        +--ro maximum-delay?   uint32
+        |  |        +--ro timer-type?      enumeration
+        |  +--rw graceful-restart
+        |  |  +--rw config
+        |  |  |  +--rw enabled?       boolean
+        |  |  |  +--rw helper-only?   boolean
+        |  |  +--ro state
+        |  |     +--ro enabled?       boolean
+        |  |     +--ro helper-only?   boolean
+        |  +--rw inter-area-propagation-policies
+        |     +--rw inter-area-propagation-policy* [src-area dst-area]
+        |        +--rw src-area    -> ../config/src-area
+        |        +--rw dst-area    -> ../config/dst-area
+        |        +--rw config
+        |        |  +--rw src-area?                -> ../../../../../areas/area/identifier
+        |        |  +--rw dst-area?                -> ../../../../../areas/area/identifier
+        |        |  +--rw import-policy*           -> /oc-rpol:routing-policy/policy-definitions/policy-definition/name
+        |        |  +--rw default-import-policy?   default-policy-type
+        |        +--ro state
+        |           +--ro src-area?                -> ../../../../../areas/area/identifier
+        |           +--ro dst-area?                -> ../../../../../areas/area/identifier
+        |           +--ro import-policy*           -> /oc-rpol:routing-policy/policy-definitions/policy-definition/name
+        |           +--ro default-import-policy?   default-policy-type
+        +--rw areas
+           +--rw area* [identifier]
+              +--rw identifier       -> ../config/identifier
+              +--rw config
+              |  +--rw identifier?   oc-ospf-types:ospf-area-identifier
+              +--ro state
+              |  +--ro identifier?   oc-ospf-types:ospf-area-identifier
+              +--rw mpls
+              |  +--rw config
+              |  |  +--rw traffic-engineering-enabled?   boolean
+              |  +--ro state
+              |     +--ro traffic-engineering-enabled?   boolean
+              +--rw interfaces
+              |  +--rw interface* [id]
+              |     +--rw id               -> ../config/id
+              |     +--rw config
+              |     |  +--rw id?                             string
+              |     |  +--rw network-type?                   identityref
+              |     |  +--rw priority?                       uint8
+              |     |  +--rw multi-area-adjacency-primary?   boolean
+              |     |  +--rw authentication-type?            string
+              |     |  +--rw metric?                         oc-ospf-types:ospf-metric
+              |     |  +--rw passive?                        boolean
+              |     |  +--rw hide-network?                   boolean
+              |     +--ro state
+              |     |  +--ro id?                             string
+              |     |  +--ro network-type?                   identityref
+              |     |  +--ro priority?                       uint8
+              |     |  +--ro multi-area-adjacency-primary?   boolean
+              |     |  +--ro authentication-type?            string
+              |     |  +--ro metric?                         oc-ospf-types:ospf-metric
+              |     |  +--ro passive?                        boolean
+              |     |  +--ro hide-network?                   boolean
+              |     +--rw interface-ref
+              |     |  +--rw config
+              |     |  |  +--rw interface?      -> /oc-if:interfaces/interface/name
+              |     |  |  +--rw subinterface?   -> /oc-if:interfaces/interface[oc-if:name=current()/../interface]/subinterfaces/subinterface/index
+              |     |  +--ro state
+              |     |     +--ro interface?      -> /oc-if:interfaces/interface/name
+              |     |     +--ro subinterface?   -> /oc-if:interfaces/interface[oc-if:name=current()/../interface]/subinterfaces/subinterface/index
+              |     +--rw timers
+              |     |  +--rw config
+              |     |  |  +--rw dead-interval?             uint32
+              |     |  |  +--rw hello-interval?            uint32
+              |     |  |  +--rw retransmission-interval?   uint32
+              |     |  +--ro state
+              |     |     +--ro dead-interval?             uint32
+              |     |     +--ro hello-interval?            uint32
+              |     |     +--ro retransmission-interval?   uint32
+              |     +--rw mpls
+              |     |  +--rw config
+              |     |  |  +--rw traffic-engineering-metric?   uint32
+              |     |  +--ro state
+              |     |  |  +--ro traffic-engineering-metric?   uint32
+              |     |  +--rw igp-ldp-sync
+              |     |     +--rw config
+              |     |     |  +--rw enabled?                 boolean
+              |     |     |  +--rw post-session-up-delay?   uint32
+              |     |     +--ro state
+              |     |        +--ro enabled?                 boolean
+              |     |        +--ro post-session-up-delay?   uint32
+              |     |        +--ro synchronized?            boolean
+              |     +--rw lsa-filter
+              |     |  +--rw config
+              |     |  |  +--rw all?   boolean
+              |     |  +--ro state
+              |     |     +--ro all?   boolean
+              |     +--rw neighbors
+              |     |  +--rw neighbor* [router-id]
+              |     |     +--rw router-id    -> ../config/router-id
+              |     |     +--rw config
+              |     |     |  +--rw router-id?   yang:dotted-quad
+              |     |     |  +--rw metric?      oc-ospf-types:ospf-metric
+              |     |     +--ro state
+              |     |        +--ro router-id?                     yang:dotted-quad
+              |     |        +--ro metric?                        oc-ospf-types:ospf-metric
+              |     |        +--ro priority?                      uint8
+              |     |        +--ro dead-time?                     oc-types:timeticks64
+              |     |        +--ro designated-router?             yang:dotted-quad
+              |     |        +--ro backup-designated-router?      yang:dotted-quad
+              |     |        +--ro optional-capabilities?         yang:hex-string
+              |     |        +--ro last-established-time?         oc-types:timeticks64
+              |     |        +--ro adjacency-state?               identityref
+              |     |        +--ro state-changes?                 uint32
+              |     |        +--ro retransmission-queue-length?   uint32
+              |     +--rw enable-bfd
+              |        +--rw config
+              |        |  +--rw enabled?   boolean
+              |        +--ro state
+              |           +--ro enabled?   boolean
+              +--rw virtual-links
+                 +--rw virtual-link* [remote-router-id]
+                    +--rw remote-router-id    -> ../config/remote-router-id
+                    +--rw config
+                    |  +--rw remote-router-id?   inet:ipv4-address-no-zone
+                    +--ro state
+                       +--ro remote-router-id?              inet:ipv4-address-no-zone
+                       +--ro priority?                      uint8
+                       +--ro dead-time?                     oc-types:timeticks64
+                       +--ro designated-router?             yang:dotted-quad
+                       +--ro backup-designated-router?      yang:dotted-quad
+                       +--ro optional-capabilities?         yang:hex-string
+                       +--ro last-established-time?         oc-types:timeticks64
+                       +--ro adjacency-state?               identityref
+                       +--ro state-changes?                 uint32
+                       +--ro retransmission-queue-length?   uint32

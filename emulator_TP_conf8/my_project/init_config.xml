@@ -1,0 +1,342 @@
+<config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <components xmlns="http://openconfig.net/yang/platform">
+    <!-- Device Info -->
+    <component>
+      <name>device</name>
+      <config>
+        <name>device</name>
+      </config>
+      <state>
+        <name>StandardDevice</name>
+        <type xmlns:oc-platform-types="http://openconfig.net/yang/platform-types">oc-platform-types:OPERATING_SYSTEM</type>
+        <description>Optical Transponder Emulator</description>
+        <hardware-version>1.0</hardware-version>
+        <firmware-version>1.0</firmware-version>
+        <software-version>1.0</software-version>
+      </state>
+    </component>
+
+    <!-- Client Side Port (100G) -->
+    <component>
+      <name>port-client-1</name>
+      <config>
+        <name>port-client-1</name>
+      </config>
+      <state>
+        <name>port-client-1</name>
+        <type xmlns:oc-platform-types="http://openconfig.net/yang/platform-types">oc-platform-types:PORT</type>
+        <description>Client Port 100G</description>
+      </state>
+      <properties>
+        <property>
+          <name>ODTN-PORT-TYPE</name>
+          <config>
+            <name>ODTN-PORT-TYPE</name>
+            <value>CLIENT</value>
+          </config>
+          <state>
+            <name>ODTN-PORT-TYPE</name>
+            <value>CLIENT</value>
+          </state>
+        </property>
+      </properties>
+    </component>
+
+    <!-- Client Side Transceiver -->
+    <component>
+      <name>transceiver-client-1</name>
+      <config>
+        <name>transceiver-client-1</name>
+      </config>
+      <state>
+        <name>transceiver-client-1</name>
+        <type xmlns:oc-platform-types="http://openconfig.net/yang/platform-types">oc-platform-types:TRANSCEIVER</type>
+        <parent>port-client-1</parent>
+      </state>
+      <transceiver xmlns="http://openconfig.net/yang/platform/transceiver">
+        <config>
+          <enabled>true</enabled>
+          <form-factor-preconf xmlns:oc-opt-types="http://openconfig.net/yang/transport-types">oc-opt-types:QSFP28</form-factor-preconf>
+          <ethernet-pmd-preconf xmlns:oc-opt-types="http://openconfig.net/yang/transport-types">oc-opt-types:ETH_100GBASE_LR4</ethernet-pmd-preconf>
+        </config>
+        <state>
+          <enabled>true</enabled>
+          <form-factor-preconf xmlns:oc-opt-types="http://openconfig.net/yang/transport-types">oc-opt-types:QSFP28</form-factor-preconf>
+          <ethernet-pmd-preconf xmlns:oc-opt-types="http://openconfig.net/yang/transport-types">oc-opt-types:ETH_100GBASE_LR4</ethernet-pmd-preconf>
+          <present>PRESENT</present>
+        </state>
+      </transceiver>
+    </component>
+
+    <!-- Line Side Port (400ZR) -->
+    <component>
+      <name>port-line-1</name>
+      <config>
+        <name>port-line-1</name>
+      </config>
+      <state>
+        <name>port-line-1</name>
+        <type xmlns:oc-platform-types="http://openconfig.net/yang/platform-types">oc-platform-types:PORT</type>
+        <description>Line Port 400ZR</description>
+      </state>
+      <properties>
+        <property>
+          <name>ODTN-PORT-TYPE</name>
+          <config>
+            <name>ODTN-PORT-TYPE</name>
+            <value>LINE</value>
+          </config>
+          <state>
+            <name>ODTN-PORT-TYPE</name>
+            <value>LINE</value>
+          </state>
+        </property>
+      </properties>
+    </component>
+
+    <!-- Line Side Transceiver -->
+    <component>
+      <name>transceiver-line-1</name>
+      <config>
+        <name>transceiver-line-1</name>
+      </config>
+      <state>
+        <name>transceiver-line-1</name>
+        <type xmlns:oc-platform-types="http://openconfig.net/yang/platform-types">oc-platform-types:TRANSCEIVER</type>
+        <parent>port-line-1</parent>
+      </state>
+      <transceiver xmlns="http://openconfig.net/yang/platform/transceiver">
+        <config>
+          <enabled>true</enabled>
+          <form-factor-preconf xmlns:oc-opt-types="http://openconfig.net/yang/transport-types">oc-opt-types:QSFP56_DD_TYPE1</form-factor-preconf>
+          <ethernet-pmd-preconf xmlns:oc-opt-types="http://openconfig.net/yang/transport-types">oc-opt-types:ETH_400GBASE_ZR</ethernet-pmd-preconf>
+          <fec-mode xmlns:oc-platform-types="http://openconfig.net/yang/platform-types">oc-platform-types:FEC_AUTO</fec-mode>
+          <module-functional-type xmlns:oc-opt-types="http://openconfig.net/yang/transport-types">oc-opt-types:TYPE_DIGITAL_COHERENT_OPTIC</module-functional-type>
+        </config>
+        <state>
+          <enabled>true</enabled>
+          <form-factor-preconf xmlns:oc-opt-types="http://openconfig.net/yang/transport-types">oc-opt-types:QSFP56_DD_TYPE1</form-factor-preconf>
+          <ethernet-pmd-preconf xmlns:oc-opt-types="http://openconfig.net/yang/transport-types">oc-opt-types:ETH_400GBASE_ZR</ethernet-pmd-preconf>
+          <fec-mode xmlns:oc-platform-types="http://openconfig.net/yang/platform-types">oc-platform-types:FEC_AUTO</fec-mode>
+          <module-functional-type xmlns:oc-opt-types="http://openconfig.net/yang/transport-types">oc-opt-types:TYPE_DIGITAL_COHERENT_OPTIC</module-functional-type>
+          <vendor>Cisco</vendor>
+          <vendor-part>400zr-QSFP-DD</vendor-part>
+          <serial-no>EMUL400ZR001</serial-no>
+        </state>
+        <!-- Mapping to the optical channel -->
+        <physical-channels>
+          <channel>
+            <index>1</index>
+            <config>
+              <index>1</index>
+              <associated-optical-channel>optical-channel-1</associated-optical-channel>
+            </config>
+            <state>
+              <index>1</index>
+              <associated-optical-channel>optical-channel-1</associated-optical-channel>
+            </state>
+          </channel>
+        </physical-channels>
+      </transceiver>
+    </component>
+
+    <!-- Optical Channel (The Wavelength) -->
+    <component>
+      <name>optical-channel-1</name>
+      <config>
+        <name>optical-channel-1</name>
+      </config>
+      <state>
+        <name>optical-channel-1</name>
+        <type xmlns:oc-opt-types="http://openconfig.net/yang/transport-types">oc-opt-types:OPTICAL_CHANNEL</type>
+        <parent>port-line-1</parent>
+      </state>
+      <!-- Way 1 to define the operational frequency range, this is a way but not the way -->
+      <properties>
+        <property>
+          <name>MIN-FREQUENCY</name>
+          <config>
+            <name>MIN-FREQUENCY</name>
+            <value>191300000</value>
+          </config>
+          <state>
+            <name>MIN-FREQUENCY</name>
+            <value>191300000</value>
+          </state>
+        </property>
+        <property>
+          <name>MAX-FREQUENCY</name>
+          <config>
+            <name>MAX-FREQUENCY</name>
+            <value>196100000</value>
+          </config>
+          <state>
+            <name>MAX-FREQUENCY</name>
+            <value>196100000</value>
+          </state>
+        </property>
+      </properties>
+      <optical-channel xmlns="http://openconfig.net/yang/terminal-device">
+        <config>
+          <frequency>193100000</frequency> <!-- 193.1 THz -->
+          <target-output-power>-3.0</target-output-power>
+          <operational-mode>1</operational-mode>
+          <line-port>port-line-1</line-port>
+        </config>
+        <state>
+          <frequency>193100000</frequency>
+          <target-output-power>0.0</target-output-power>
+          <operational-mode>0</operational-mode>
+          <line-port>transceiver-line-1</line-port>
+          <output-power>
+             <instant>-5.0</instant>
+             <avg>-5.0</avg>
+             <min>-6.0</min>
+             <max>-4.0</max>
+          </output-power>
+          <chromatic-dispersion>
+            <instant>10</instant>
+          </chromatic-dispersion>
+        </state>
+      </optical-channel>
+    </component>
+  </components>
+
+  <!-- Terminal Device Logic -->
+  <terminal-device xmlns="http://openconfig.net/yang/terminal-device">
+    <logical-channels>
+      
+      <!-- Client Side Logical Channel (100GE) -->
+      <channel>
+        <index>100</index>
+        <config>
+          <index>100</index>
+          <description>Client Service 100GE</description>
+          <admin-state>ENABLED</admin-state>
+          <logical-channel-type xmlns:oc-opt-types="http://openconfig.net/yang/transport-types">oc-opt-types:PROT_ETHERNET</logical-channel-type>
+          <loopback-mode>NONE</loopback-mode>
+        </config>
+        <state>
+          <index>100</index>
+          <description>Client Service 100GE</description>
+          <admin-state>ENABLED</admin-state>
+          <logical-channel-type xmlns:oc-opt-types="http://openconfig.net/yang/transport-types">oc-opt-types:PROT_ETHERNET</logical-channel-type>
+          <loopback-mode>NONE</loopback-mode>
+          <link-state>UP</link-state>
+        </state>
+        <ingress>
+          <config>
+            <transceiver>transceiver-client-1</transceiver>
+          </config>
+          <state>
+            <transceiver>transceiver-client-1</transceiver>
+          </state>
+        </ingress>
+      </channel>
+
+      <!-- Line Side Logical Channel (OTN) -->
+      <channel>
+        <index>200</index>
+        <config>
+          <index>200</index>
+          <description>Line Service OTN</description>
+          <admin-state>ENABLED</admin-state>
+          <logical-channel-type xmlns:oc-opt-types="http://openconfig.net/yang/transport-types">oc-opt-types:PROT_OTN</logical-channel-type>
+          <loopback-mode>NONE</loopback-mode>
+        </config>
+        <state>
+          <index>200</index>
+          <description>Line Service OTN</description>
+          <admin-state>ENABLED</admin-state>
+          <logical-channel-type xmlns:oc-opt-types="http://openconfig.net/yang/transport-types">oc-opt-types:PROT_OTN</logical-channel-type>
+          <loopback-mode>NONE</loopback-mode>
+          <link-state>UP</link-state>
+        </state>
+        <ingress>
+          <config>
+            <transceiver>transceiver-line-1</transceiver>
+          </config>
+          <state>
+            <transceiver>transceiver-line-1</transceiver>
+          </state>
+        </ingress>
+        
+        <!-- Assignment to the Optical Channel (wavelength) -->
+        <logical-channel-assignments>
+          <assignment>
+            <index>1</index>
+            <config>
+              <index>1</index>
+              <description>Map to Wavelength</description>
+              <assignment-type>OPTICAL_CHANNEL</assignment-type>
+              <optical-channel>optical-channel-1</optical-channel>
+              <allocation>400.0</allocation>
+            </config>
+            <state>
+              <index>1</index>
+              <description>Map to Wavelength</description>
+              <assignment-type>OPTICAL_CHANNEL</assignment-type>
+              <optical-channel>optical-channel-1</optical-channel>
+              <allocation>400.0</allocation>
+            </state>
+          </assignment>
+          <!-- Assignment to Client Signal (Cross-connect) -->
+          <assignment>
+             <index>2</index>
+             <config>
+                <index>2</index>
+                <description>Map from Client</description>
+                <assignment-type>LOGICAL_CHANNEL</assignment-type>
+                <logical-channel>100</logical-channel>
+                <allocation>100.0</allocation>
+             </config>
+             <state>
+                <index>2</index>
+                <description>Map from Client</description>
+                <assignment-type>LOGICAL_CHANNEL</assignment-type>
+                <logical-channel>100</logical-channel>
+                <allocation>100.0</allocation>
+             </state>
+          </assignment>
+        </logical-channel-assignments>
+      </channel>
+
+    </logical-channels>
+  </terminal-device>
+
+  <!-- Operational Mode Manifest (Properties Extension) -->
+  <operational-mode-descriptors xmlns="http://openconfig.net/yang/openconfig-terminal-device-properties">
+      <operational-modes>
+        <mode-id>1</mode-id>
+        <state>
+          <mode-id>1</mode-id>
+        </state>
+      </operational-modes>
+  </operational-mode-descriptors>
+
+  <!-- Linecard Descriptor (Frequency Constraints) -->
+  <linecard-descriptors xmlns="http://openconfig.net/yang/openconfig-terminal-device-properties">
+    <linecard-descriptor>
+      <component-descriptor-id>LineCard-400G-A</component-descriptor-id>
+      <compatible-transceivers>
+        <compatible-transceiver>
+          <transceiver-descriptor-id>400zr-QSFP-DD</transceiver-descriptor-id>
+          <constrained-compatible-modes>
+            <constrained-compatible-mode>
+              <mode-id>1</mode-id>
+              <optical-channel-config-value-constraints>
+                <state>
+                  <min-central-frequency>191300000</min-central-frequency>
+                  <max-central-frequency>196100000</max-central-frequency>
+                  <min-output-power>-10.0</min-output-power>
+                  <max-output-power>0.0</max-output-power>
+                </state>
+              </optical-channel-config-value-constraints>
+            </constrained-compatible-mode>
+          </constrained-compatible-modes>
+        </compatible-transceiver>
+      </compatible-transceivers>
+    </linecard-descriptor>
+  </linecard-descriptors>
+
+</config>

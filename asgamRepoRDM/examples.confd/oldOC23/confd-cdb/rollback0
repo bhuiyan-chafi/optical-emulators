@@ -1,0 +1,17 @@
+# Created by: admin
+# Date: 2023-03-09 13:55:18
+# Via: maapi
+# Type: delta
+# Label: 
+# Comment: 
+# No: 10162
+
+terminal-device {
+    logical-channels {
+        channel 4 {
+            state {
+                admin-state ENABLED;
+            }
+         }
+     }
+ }

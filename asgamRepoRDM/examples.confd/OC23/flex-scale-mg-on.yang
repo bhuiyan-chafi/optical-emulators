@@ -1,0 +1,420 @@
+module flex-scale-mg-on {
+
+  yang-version "1";
+
+  // namespace
+  namespace "http://flex-scale-project.eu/yang/flex-scale-mg-on";
+
+  prefix "fsmgon";
+
+  // Import OpenConfig wavelength-router
+  import openconfig-wavelength-router { prefix ocwr; }
+  // Other OpneConfig imports
+  import openconfig-extensions { prefix oc-ext; }
+  import openconfig-platform { prefix oc-platform; }
+  import openconfig-transport-types { prefix oc-opt-types; }
+
+  // meta
+  organization "Horizon Europe FLEX-SCALE Project";
+
+  contact
+    "Horizon Europe FLEX-SCALE Project
+      www.flex-scale-project.eu";
+
+  description
+    "This model describes configuration and operational state data
+    for a Multi-granular Optical Switching Node or MG-ON as developed
+	in the EU Horizon Europe FLEX-SCALE Project.
+
+    
+	It is based on the OpenConfig Wavelength Router model with additions
+	to accommodate hierarchical switching of spectral bands of different
+	sizes up to full fiber switching.";
+	
+
+  oc-ext:openconfig-version "1.1.0";
+
+  revision "2023-06-15" {
+    description "First draft";
+    reference "0.1";
+  }
+
+  // OpenConfig specific extensions for module metadata.
+  oc-ext:regexp-posix;
+  oc-ext:catalog-organization "TBD";
+  oc-ext:origin "TBD";
+
+  // identity statements
+
+  // grouping statements
+
+  grouping fiber-port-state {
+    description
+      "Operational state data for a (high-order) optical fiber source/dest port";
+  }
+
+  grouping optical-band-port-state {
+    description
+      "Operational state data for a (high-order) optical band source/dest port";
+  }
+
+  grouping fiber-port-config {
+    description
+      "Configuration data for a (high-order) optical fiber source/dest port";
+
+    leaf port-name {
+      type leafref {
+        path "/oc-platform:components/oc-platform:component/" +
+          "oc-platform:name";
+      }
+      description
+        "Reference to the corresponding node port";
+    }
+  }
+
+  grouping optical-band-port-config {
+    description
+      "Configuration data for a (high-order) optical band source/dest port";
+
+    leaf port-name {
+      type leafref {
+        path "/oc-platform:components/oc-platform:component/" +
+          "oc-platform:name";
+      }
+      description
+        "Reference to the corresponding node port";
+    }
+  }
+
+  grouping fiber-source-port-top {
+    description
+      "Top-level grouping for source of the (high-order) optical (duplex) fiber";
+
+    container source {
+      description
+        "Top-level container for (high-order) optical (duplex) fiber";
+
+      container config {
+        description
+          "Configuration data for the (high-order) optical (duplex) fiber source";
+
+        uses fiber-port-config;
+      }
+      container state {
+
+        config false;
+
+        description
+          "Operational state data for the (high-order) optical (duplex) fiber source";
+
+        uses fiber-port-config;
+        uses fiber-port-state;
+      }
+    }
+  }
+
+  grouping optical-band-source-port-top {
+    description
+      "Top-level grouping for source of the (high-order) optical band";
+
+    container source {
+      description
+        "Top-level container for (high-order) optical band source";
+
+      container config {
+        description
+          "Configuration data for the (high-order) optical band source";
+
+        uses ocwr:media-channel-port-config;
+      }
+      container state {
+
+        config false;
+
+        description
+          "Operational state data for the (high-order) optical band source";
+
+        uses ocwr:media-channel-port-config;
+        uses ocwr:media-channel-port-state;
+      }
+    }
+  }
+
+  grouping fiber-dest-port-top {
+    description
+      "Top-level grouping for destination of the (high-order) optical (duplex) fiber";
+
+    container dest {
+      description
+        "Top-level container for (high-order) optical (duplex) fiber destination";
+
+      container config {
+        description
+          "Configuration data for the (high-order) optical (duplex) fiber destination";
+
+        uses fiber-port-config;
+      }
+
+      container state {
+
+        config false;
+
+        description
+          "Operational state data for the (high-order) optical (duplex) fiber destination";
+
+        uses fiber-port-config;
+        uses fiber-port-state;
+      }
+    }
+  }
+
+  grouping optical-band-dest-port-top {
+    description
+      "Top-level grouping for destination of the (high-order) optical band";
+
+    container dest {
+      description
+        "Top-level container for (high-order) optical band destination";
+
+      container config {
+        description
+          "Configuration data for the (high-order) optical band destination";
+
+        uses ocwr:media-channel-port-config;
+      }
+
+      container state {
+
+        config false;
+
+        description
+          "Operational state data for the (high-order) optical band destination";
+
+        uses ocwr:media-channel-port-config;
+        uses ocwr:media-channel-port-state;
+      }
+    }
+  }
+
+  grouping fiber-config {
+    description
+      "Configuration data for (duplex) optical fiber definitions";
+
+    leaf index {
+      type uint32;
+      description
+        "Identifier for the defined (duplex) optical fiber";
+    }
+
+    leaf name {
+      type string;
+      description
+        "The user supplied name of the (duplex) optical fiber";
+    }
+
+    leaf admin-status {
+      type oc-opt-types:admin-state-type;
+      description
+        "Sets the admin status of the (duplex) optical fiber";
+    }
+  }  
+
+  grouping optical-band-config {
+    description
+      "Configuration data for optical band definitions";
+
+    leaf index {
+      type uint32;
+      description
+        "Identifier for the defined optical band";
+    }
+
+    leaf name {
+      type string;
+      description
+        "The user supplied name of the optical band";
+    }
+
+    leaf lower-frequency {
+      type oc-opt-types:frequency-type;
+      description
+        "The lower frequency for the spectrum defined by this optical band";
+    }
+
+    leaf upper-frequency {
+      type oc-opt-types:frequency-type;
+      description
+        "The upper frequency for the spectrum defined by this optical band";
+    }
+
+    leaf admin-status {
+      type oc-opt-types:admin-state-type;
+      description
+        "Sets the admin status of the optical band";
+    }
+
+	leaf fiber-parent {
+	  type leafref {
+		path "../../../../fibers/fiber/config/index";
+	  }
+	  description
+		"If the media channel is contained within a super channel this
+		would specify the index of the super channel parent";
+	}
+  }
+
+  grouping fiber-state {
+    description
+      "Operational state data for (duplex) optical fibers ";
+
+    leaf oper-status {
+      type enumeration {
+        enum UP {
+          description
+            "Optical (duplex) fiber is operationally up";
+        }
+        enum DOWN {
+          description
+            "Optical (duplex) fiber is operationally down";
+        }
+      }
+      description
+        "Operational state of the (duplex) optical fiber";
+    }
+  }
+
+  grouping optical-band-state {
+    description
+      "Operational state data for optical bands ";
+
+    leaf oper-status {
+      type enumeration {
+        enum UP {
+          description
+            "Optical band is operationally up";
+        }
+        enum DOWN {
+          description
+            "Optical band is operationally down";
+        }
+      }
+      description
+        "Operational state of the optical band";
+    }
+  }
+  
+  grouping fiber-top {
+    description
+      "Top-level grouping for list of defined (duplex) optical fibers";
+
+    container fibers {
+      description
+        "Enclosing container for (duplex) fiber list";
+
+      list fiber {
+        key "index";
+        description
+          "List of (duplex) optical fibers";
+
+        leaf index {
+          type leafref {
+            path "../config/index";
+          }
+          description
+            "Reference to index number of the (duplex) optical fibers";
+        }
+
+        container config {
+          description
+            "Configuration data ";
+
+          uses fiber-config;
+        }
+
+        container state {
+
+          config false;
+
+          description
+            "Operational state data ";
+
+          uses fiber-config;
+          uses fiber-state;
+        }
+
+        uses fiber-source-port-top;
+        uses fiber-dest-port-top;
+      }
+    }
+  }
+
+  grouping optical-band-top {
+    description
+      "Top-level grouping for list of defined bands";
+
+    container optical-bands {
+      description
+        "Enclosing container for band list";
+
+      list optical-band {
+        key "index";
+        description
+          "List of optical bands";
+
+        leaf index {
+          type leafref {
+            path "../config/index";
+          }
+          description
+            "Reference to index number of the optical band";
+        }
+
+        container config {
+          description
+            "Configuration data ";
+
+          uses optical-band-config;
+        }
+
+        container state {
+
+          config false;
+
+          description
+            "Operational state data ";
+
+          uses optical-band-config;
+          uses optical-band-state;
+        }
+
+        uses optical-band-source-port-top;
+        uses optical-band-dest-port-top;
+      }
+    }
+  }
+
+  // data definition statements
+
+  uses ocwr:wavelength-router-top;
+
+  // augment statements
+  augment "/ocwr:wavelength-router" {
+    uses fiber-top;
+	uses optical-band-top;
+  }
+  augment "/ocwr:wavelength-router/ocwr:media-channels/ocwr:channel/ocwr:config" {
+    leaf optical-band-parent {
+      type leafref {
+	path "../../../../optical-bands/optical-band/config/index";
+      }
+      description
+	"If the media channel is contained within an optical band this
+	would specify the index of the optical band parent";
+    }
+  }
+
+  // rpc statements
+
+  // notification statements
+
+}

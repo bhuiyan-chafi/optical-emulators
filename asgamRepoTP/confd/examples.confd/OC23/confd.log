@@ -1,0 +1,61 @@
+<INFO> 29-Jan-2026::14:49:53.874 bee342309c8e confd[304]: - Writing daemon log to /confd/examples.confd/OC23/confd.log
+<INFO> 29-Jan-2026::14:49:53.880 bee342309c8e confd[304]: - Writing NETCONF log to /confd/examples.confd/OC23/netconf.log
+<INFO> 29-Jan-2026::14:49:53.880 bee342309c8e confd[304]: - Writing audit log to /confd/examples.confd/OC23/audit.log
+<INFO> 29-Jan-2026::14:49:53.880 bee342309c8e confd[304]: - Daemon logging started
+<INFO> 29-Jan-2026::14:49:53.880 bee342309c8e confd[304]: - Writing developer log to /confd/examples.confd/OC23/devel.log
+<DEBUG> 29-Jan-2026::14:49:53.912 bee342309c8e confd[304]: - Loading file /confd/etc/confd/ietf-netconf-monitoring.fxs
+<DEBUG> 29-Jan-2026::14:49:53.914 bee342309c8e confd[304]: - Loading file /confd/etc/confd/tailf-common-monitoring.fxs
+<DEBUG> 29-Jan-2026::14:49:53.915 bee342309c8e confd[304]: - Loading file /confd/etc/confd/ietf-netconf-acm.fxs
+<DEBUG> 29-Jan-2026::14:49:53.916 bee342309c8e confd[304]: - Loading file /confd/etc/confd/iana-crypt-hash.fxs
+<DEBUG> 29-Jan-2026::14:49:53.916 bee342309c8e confd[304]: - Loading file ./openconfig-telemetry-types.fxs
+<DEBUG> 29-Jan-2026::14:49:53.917 bee342309c8e confd[304]: - Loading file ./openconfig-mpls-types.fxs
+<DEBUG> 29-Jan-2026::14:49:53.918 bee342309c8e confd[304]: - Loading file ./openconfig-rib-bgp-types.fxs
+<DEBUG> 29-Jan-2026::14:49:53.919 bee342309c8e confd[304]: - Loading file ./openconfig-network-instance-types.fxs
+<DEBUG> 29-Jan-2026::14:49:53.919 bee342309c8e confd[304]: - Loading file ./openconfig-alarm-types.fxs
+<DEBUG> 29-Jan-2026::14:49:53.920 bee342309c8e confd[304]: - Loading file ./openconfig-ospf-types.fxs
+<DEBUG> 29-Jan-2026::14:49:53.921 bee342309c8e confd[304]: - Loading file ./openconfig-lldp-types.fxs
+<DEBUG> 29-Jan-2026::14:49:53.922 bee342309c8e confd[304]: - Loading file ./ietf-interfaces.fxs
+<DEBUG> 29-Jan-2026::14:49:53.924 bee342309c8e confd[304]: - Loading file ./openconfig-yang-types.fxs
+<DEBUG> 29-Jan-2026::14:49:53.925 bee342309c8e confd[304]: - Loading file ./openconfig-types.fxs
+<DEBUG> 29-Jan-2026::14:49:53.925 bee342309c8e confd[304]: - Loading file ./openconfig-policy-types.fxs
+<DEBUG> 29-Jan-2026::14:49:53.927 bee342309c8e confd[304]: - Loading file ./openconfig-inet-types.fxs
+<DEBUG> 29-Jan-2026::14:49:53.927 bee342309c8e confd[304]: - Loading file ./openconfig-segment-routing-types.fxs
+<DEBUG> 29-Jan-2026::14:49:53.928 bee342309c8e confd[304]: - Loading file ./openconfig-evpn-types.fxs
+<DEBUG> 29-Jan-2026::14:49:53.929 bee342309c8e confd[304]: - Loading file ./openconfig-platform-types.fxs
+<DEBUG> 29-Jan-2026::14:49:53.930 bee342309c8e confd[304]: - Loading file ./openconfig-bgp-types.fxs
+<DEBUG> 29-Jan-2026::14:49:53.931 bee342309c8e confd[304]: - Loading file ./openconfig-interfaces.fxs
+<DEBUG> 29-Jan-2026::14:49:53.933 bee342309c8e confd[304]: - Loading file ./openconfig-lldp.fxs
+<DEBUG> 29-Jan-2026::14:49:53.935 bee342309c8e confd[304]: - Loading file ./openconfig-transport-types.fxs
+<DEBUG> 29-Jan-2026::14:49:53.937 bee342309c8e confd[304]: - Loading file ./openconfig-platform.fxs
+<DEBUG> 29-Jan-2026::14:49:53.938 bee342309c8e confd[304]: - Loading file ./openconfig-if-ethernet.fxs
+<DEBUG> 29-Jan-2026::14:49:53.940 bee342309c8e confd[304]: - Loading file ./openconfig-routing-policy.fxs
+<DEBUG> 29-Jan-2026::14:49:53.943 bee342309c8e confd[304]: - Loading file ./openconfig-bfd.fxs
+<DEBUG> 29-Jan-2026::14:49:53.945 bee342309c8e confd[304]: - Loading file ./openconfig-ospfv2.fxs
+<DEBUG> 29-Jan-2026::14:49:53.946 bee342309c8e confd[304]: - Loading file ./openconfig-bgp.fxs
+<DEBUG> 29-Jan-2026::14:49:53.953 bee342309c8e confd[304]: - Loading file ./openconfig-platform-port.fxs
+<DEBUG> 29-Jan-2026::14:49:53.954 bee342309c8e confd[304]: - Loading file ./openconfig-platform-transceiver.fxs
+<DEBUG> 29-Jan-2026::14:49:53.956 bee342309c8e confd[304]: - Loading file /confd/etc/confd/ietf-yang-library.fxs
+<DEBUG> 29-Jan-2026::14:49:53.958 bee342309c8e confd[304]: - Loading file /confd/etc/confd/ietf-netconf-notifications.fxs
+<DEBUG> 29-Jan-2026::14:49:53.959 bee342309c8e confd[304]: - Loading file /confd/lib/confd/lib/netconf/netconf/priv/netconf_netmod.fxs
+<DEBUG> 29-Jan-2026::14:49:53.959 bee342309c8e confd[304]: - Loading file /confd/etc/confd/tailf-netconf-monitoring.fxs
+<DEBUG> 29-Jan-2026::14:49:53.961 bee342309c8e confd[304]: - Loading file /confd/etc/confd/tailf-confd-monitoring.fxs
+<DEBUG> 29-Jan-2026::14:49:53.964 bee342309c8e confd[304]: - Loading file /confd/etc/confd/tailf-acm.fxs
+<DEBUG> 29-Jan-2026::14:49:53.965 bee342309c8e confd[304]: - Loading file /confd/etc/confd/tailf-rollback.fxs
+<DEBUG> 29-Jan-2026::14:49:53.966 bee342309c8e confd[304]: - Loading file /confd/etc/confd/tailf-kicker.fxs
+<DEBUG> 29-Jan-2026::14:49:53.967 bee342309c8e confd[304]: - Loading file /confd/etc/confd/tailf-aaa.fxs
+<DEBUG> 29-Jan-2026::14:49:53.968 bee342309c8e confd[304]: - Loading file ./vlan.fxs
+<DEBUG> 29-Jan-2026::14:49:53.969 bee342309c8e confd[304]: - Loading file ./openconfig-terminal-device.fxs
+<DEBUG> 29-Jan-2026::14:49:53.974 bee342309c8e confd[304]: - Loading file ./openconfig-telemetry.fxs
+<DEBUG> 29-Jan-2026::14:49:53.976 bee342309c8e confd[304]: - Loading file ./openconfig-rib-bgp.fxs
+<DEBUG> 29-Jan-2026::14:49:53.977 bee342309c8e confd[304]: - Loading file ./openconfig-protocols.fxs
+<DEBUG> 29-Jan-2026::14:49:53.985 bee342309c8e confd[304]: - Loading file ./openconfig-if-ip.fxs
+<DEBUG> 29-Jan-2026::14:49:54.016 bee342309c8e confd[304]: - Loading file /confd/etc/confd/confd.ccl
+<INFO> 29-Jan-2026::14:49:54.178 bee342309c8e confd[304]: - Starting to listen for Internal IPC on 127.0.0.1:4565
+<INFO> 29-Jan-2026::14:49:54.656 bee342309c8e confd[304]: - CDB load: processing file: ./confd-cdb/aaa_init.xml
+<INFO> 29-Jan-2026::14:49:54.702 bee342309c8e confd[304]: - CDB load: processing file: ./confd-cdb/bgp.xml
+<INFO> 29-Jan-2026::14:49:54.705 bee342309c8e confd[304]: - CDB load: processing file: ./confd-cdb/demoECOC21.xml
+<INFO> 29-Jan-2026::14:49:54.822 bee342309c8e confd[304]: - CDB load: processing file: ./confd-cdb/interfaces.xml
+<INFO> 29-Jan-2026::14:49:55.148 bee342309c8e confd[304]: - Starting to listen for NETCONF SSH on 0.0.0.0:2022
+<INFO> 29-Jan-2026::14:49:55.181 bee342309c8e confd[304]: - Starting to listen for NETCONF TCP on 0.0.0.0:2023
+<INFO> 29-Jan-2026::14:49:56.056 bee342309c8e confd[304]: - Starting to listen for CLI SSH on 0.0.0.0:2024
+<INFO> 29-Jan-2026::14:49:56.161 bee342309c8e confd[304]: - ConfD started vsn: 6.4

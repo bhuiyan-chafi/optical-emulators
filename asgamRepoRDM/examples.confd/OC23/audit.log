@@ -1,0 +1,51 @@
+<INFO> 28-Jan-2026::15:24:16.558 71154eb22ce5 confd[177]: audit user: admin/28 assigned to groups: admin
+<INFO> 28-Jan-2026::15:25:01.890 71154eb22ce5 confd[177]: audit user: admin/0 logged in over ssh from 131.114.54.72 with authmeth:password
+<INFO> 28-Jan-2026::15:25:01.892 71154eb22ce5 confd[177]: audit user: admin/29 assigned to groups: admin
+<INFO> 28-Jan-2026::16:01:34.386 71154eb22ce5 confd[177]: audit user: admin/0 logged in over ssh from 131.114.54.72 with authmeth:password
+<INFO> 28-Jan-2026::16:01:34.388 71154eb22ce5 confd[177]: audit user: admin/30 assigned to groups: admin
+<INFO> 28-Jan-2026::16:01:35.274 71154eb22ce5 confd[177]: audit user: admin/0 Logged out ssh <local> user
+<INFO> 28-Jan-2026::16:01:51.922 71154eb22ce5 confd[177]: audit user: admin/0 Logged out ssh <local> user
+<INFO> 28-Jan-2026::16:02:00.390 71154eb22ce5 confd[177]: audit user: admin/0 logged in over ssh from 131.114.54.72 with authmeth:password
+<INFO> 28-Jan-2026::16:02:00.392 71154eb22ce5 confd[177]: audit user: admin/31 assigned to groups: admin
+<INFO> 28-Jan-2026::16:12:08.378 71154eb22ce5 confd[177]: audit user: admin/0 logged in over ssh from 131.114.54.72 with authmeth:password
+<INFO> 28-Jan-2026::16:12:08.379 71154eb22ce5 confd[177]: audit user: admin/32 assigned to groups: admin
+<INFO> 28-Jan-2026::16:12:10.711 71154eb22ce5 confd[177]: audit user: admin/0 Logged out ssh <local> user
+<INFO> 28-Jan-2026::16:12:29.823 71154eb22ce5 confd[177]: audit user: admin/0 Logged out ssh <local> user
+<INFO> 28-Jan-2026::16:12:37.362 71154eb22ce5 confd[177]: audit user: admin/0 logged in over ssh from 131.114.54.72 with authmeth:password
+<INFO> 28-Jan-2026::16:12:37.364 71154eb22ce5 confd[177]: audit user: admin/33 assigned to groups: admin
+<INFO> 28-Jan-2026::16:19:32.822 71154eb22ce5 confd[177]: audit user: admin/0 Logged out ssh <local> user
+<INFO> 28-Jan-2026::16:22:21.070 71154eb22ce5 confd[177]: audit user: admin/0 logged in over ssh from 131.114.54.72 with authmeth:password
+<INFO> 28-Jan-2026::16:22:21.072 71154eb22ce5 confd[177]: audit user: admin/34 assigned to groups: admin
+<INFO> 28-Jan-2026::17:00:04.899 71154eb22ce5 confd[177]: audit user: admin/0 Logged out ssh <local> user
+<INFO> 28-Jan-2026::17:06:02.878 71154eb22ce5 confd[177]: audit user: admin/0 logged in over ssh from 131.114.54.72 with authmeth:password
+<INFO> 28-Jan-2026::17:06:02.880 71154eb22ce5 confd[177]: audit user: admin/35 assigned to groups: admin
+<INFO> 28-Jan-2026::17:21:20.996 71154eb22ce5 confd[177]: audit user: admin/0 Logged out ssh <local> user
+<INFO> 28-Jan-2026::17:26:07.386 71154eb22ce5 confd[177]: audit user: admin/0 logged in over ssh from 131.114.54.72 with authmeth:password
+<INFO> 28-Jan-2026::17:26:07.388 71154eb22ce5 confd[177]: audit user: admin/36 assigned to groups: admin
+<INFO> 28-Jan-2026::18:14:13.822 71154eb22ce5 confd[177]: audit user: admin/0 Logged out ssh <local> user
+<INFO> 28-Jan-2026::18:25:25.406 71154eb22ce5 confd[177]: audit user: admin/0 logged in over ssh from 131.114.54.72 with authmeth:password
+<INFO> 28-Jan-2026::18:25:25.408 71154eb22ce5 confd[177]: audit user: admin/37 assigned to groups: admin
+<INFO> 28-Jan-2026::18:46:31.371 71154eb22ce5 confd[177]: audit user: admin/0 Logged out ssh <local> user
+<INFO> 28-Jan-2026::18:51:13.234 71154eb22ce5 confd[177]: audit user: admin/0 logged in over ssh from 131.114.54.72 with authmeth:password
+<INFO> 28-Jan-2026::18:51:13.236 71154eb22ce5 confd[177]: audit user: admin/38 assigned to groups: admin
+<INFO> 28-Jan-2026::19:02:12.178 71154eb22ce5 confd[177]: audit user: admin/0 logged in over ssh from 131.114.54.72 with authmeth:password
+<INFO> 28-Jan-2026::19:02:12.180 71154eb22ce5 confd[177]: audit user: admin/39 assigned to groups: admin
+<INFO> 28-Jan-2026::19:02:15.194 71154eb22ce5 confd[177]: audit user: admin/0 Logged out ssh <local> user
+<INFO> 28-Jan-2026::19:03:57.437 71154eb22ce5 confd[177]: audit user: admin/0 Logged out ssh <local> user
+<INFO> 28-Jan-2026::19:04:09.934 71154eb22ce5 confd[177]: audit user: admin/0 logged in over ssh from 131.114.54.72 with authmeth:password
+<INFO> 28-Jan-2026::19:04:09.935 71154eb22ce5 confd[177]: audit user: admin/40 assigned to groups: admin
+<INFO> 28-Jan-2026::20:38:49.306 71154eb22ce5 confd[177]: audit user: admin/0 logged in over ssh from 131.114.54.72 with authmeth:password
+<INFO> 28-Jan-2026::20:38:49.308 71154eb22ce5 confd[177]: audit user: admin/41 assigned to groups: admin
+<INFO> 28-Jan-2026::20:38:50.341 71154eb22ce5 confd[177]: audit user: admin/0 Logged out ssh <local> user
+<INFO> 28-Jan-2026::20:47:59.407 71154eb22ce5 confd[177]: audit user: admin/0 Logged out ssh <local> user
+<INFO> 28-Jan-2026::20:48:12.802 71154eb22ce5 confd[177]: audit user: admin/0 logged in over ssh from 131.114.54.72 with authmeth:password
+<INFO> 28-Jan-2026::20:48:12.804 71154eb22ce5 confd[177]: audit user: admin/42 assigned to groups: admin
+<INFO> 28-Jan-2026::21:22:49.114 71154eb22ce5 confd[177]: audit user: admin/0 logged in over ssh from 131.114.54.72 with authmeth:password
+<INFO> 28-Jan-2026::21:22:49.116 71154eb22ce5 confd[177]: audit user: admin/43 assigned to groups: admin
+<INFO> 28-Jan-2026::21:22:50.672 71154eb22ce5 confd[177]: audit user: admin/0 Logged out ssh <local> user
+<INFO> 28-Jan-2026::21:32:58.008 71154eb22ce5 confd[177]: audit user: admin/0 Logged out ssh <local> user
+<INFO> 28-Jan-2026::21:33:41.878 71154eb22ce5 confd[177]: audit user: admin/0 logged in over ssh from 131.114.54.72 with authmeth:password
+<INFO> 28-Jan-2026::21:33:41.880 71154eb22ce5 confd[177]: audit user: admin/44 assigned to groups: admin
+<INFO> 28-Jan-2026::23:36:57.630 71154eb22ce5 confd[177]: audit user: admin/0 logged in over ssh from 131.114.54.72 with authmeth:password
+<INFO> 28-Jan-2026::23:36:57.632 71154eb22ce5 confd[177]: audit user: admin/45 assigned to groups: admin
+<INFO> 28-Jan-2026::23:37:00.519 71154eb22ce5 confd[177]: audit user: admin/0 Logged out ssh <local> user

@@ -1,0 +1,3626 @@
+<config xmlns:xc="urn:ietf:params:xml:ns:netconf:base:1.0">
+	<terminal-device xmlns="http://openconfig.net/yang/terminal-device">
+		<logical-channels>
+			<channel>
+				<!--Description: Packet Port-->
+				<index>1</index>
+				<config>
+					<index>1</index>
+					<description>Logical channel 1</description>
+					<admin-state>DISABLED</admin-state>
+					<rate-class xmlns:type="http://openconfig.net/yang/transport-types">type:TRIB_RATE_10G</rate-class>
+					<trib-protocol xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_10GE_LAN</trib-protocol>
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_ETHERNET</logical-channel-type>		
+					<loopback-mode>NONE</loopback-mode>
+					<test-signal>0</test-signal>  					
+				</config>
+				<state>
+					<index>1</index>
+					<description>Logical channel 1</description>
+					<admin-state>DISABLED</admin-state>
+					<rate-class xmlns:type="http://openconfig.net/yang/transport-types">type:TRIB_RATE_10G</rate-class>
+					<trib-protocol xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_10GE_LAN</trib-protocol>			
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_ETHERNET</logical-channel-type>		
+					<loopback-mode>NONE</loopback-mode>
+					<test-signal>0</test-signal>
+					<link-state>UP</link-state>
+				</state>
+				<ingress>
+					<config>
+						<transceiver>transceiver-1</transceiver>
+					</config>
+					<state>
+						<transceiver>transceiver-1</transceiver>
+					</state>
+				</ingress>
+				<logical-channel-assignments>
+					<assignment>
+						<index>1</index>
+						<config>
+							<index>1</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>19</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>1</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>19</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<!--index>2</index>
+						<config>
+							<index>2</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>20</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>2</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>20</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<index>3</index>
+						<config>
+							<index>3</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>21</logical-channel>
+							<allocation>19</allocation>
+						</config>
+						<state>
+							<index>3</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>21</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<index>4</index>
+						<config>
+							<index>4</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>22</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>4</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>22</logical-channel>
+							<allocation>10</allocation>
+						</state-->
+					</assignment>
+				</logical-channel-assignments>
+			</channel>
+			<channel>
+				<!--Description: Packet Port-->
+				<index>2</index>
+				<config>
+					<index>2</index>
+					<description>Logical channel 2</description>
+					<admin-state>DISABLED</admin-state>
+					<rate-class xmlns:type="http://openconfig.net/yang/transport-types">type:TRIB_RATE_10G</rate-class>
+					<trib-protocol xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_10GE_LAN</trib-protocol>
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_ETHERNET</logical-channel-type>		
+					<loopback-mode>NONE</loopback-mode>
+					<test-signal>0</test-signal>  					
+				</config>
+				<state>
+					<index>2</index>
+					<description>Logical channel 2</description>
+					<admin-state>DISABLED</admin-state>
+					<rate-class xmlns:type="http://openconfig.net/yang/transport-types">type:TRIB_RATE_10G</rate-class>
+					<trib-protocol xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_10GE_LAN</trib-protocol>			
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_ETHERNET</logical-channel-type>		
+					<loopback-mode>NONE</loopback-mode>
+					<test-signal>0</test-signal>
+					<link-state>UP</link-state>
+				</state>
+				<ingress>
+					<config>
+						<transceiver>transceiver-2</transceiver>
+					</config>
+					<state>
+						<transceiver>transceiver-2</transceiver>
+					</state>
+				</ingress>
+				<logical-channel-assignments>
+					<assignment>
+						<index>1</index>
+						<config>
+							<index>1</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>19</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>1</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>19</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<!--index>2</index>
+						<config>
+							<index>2</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>20</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>2</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>20</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<index>3</index>
+						<config>
+							<index>3</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>21</logical-channel>
+							<allocation>19</allocation>
+						</config>
+						<state>
+							<index>3</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>21</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<index>4</index>
+						<config>
+							<index>4</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>22</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>4</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>22</logical-channel>
+							<allocation>10</allocation>
+						</state-->
+					</assignment>
+				</logical-channel-assignments>
+			</channel>
+			<channel>
+				<!--Description: Packet Port-->
+				<index>3</index>
+				<config>
+					<index>3</index>
+					<description>Logical channel 3</description>
+					<admin-state>DISABLED</admin-state>
+					<rate-class xmlns:type="http://openconfig.net/yang/transport-types">type:TRIB_RATE_10G</rate-class>
+					<trib-protocol xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_10GE_LAN</trib-protocol>
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_ETHERNET</logical-channel-type>		
+					<loopback-mode>NONE</loopback-mode>
+					<test-signal>0</test-signal>  					
+				</config>
+				<state>
+					<index>3</index>
+					<description>Logical channel 3</description>
+					<admin-state>DISABLED</admin-state>
+					<rate-class xmlns:type="http://openconfig.net/yang/transport-types">type:TRIB_RATE_10G</rate-class>
+					<trib-protocol xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_10GE_LAN</trib-protocol>			
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_ETHERNET</logical-channel-type>		
+					<loopback-mode>NONE</loopback-mode>
+					<test-signal>0</test-signal>
+					<link-state>UP</link-state>
+				</state>
+				<ingress>
+					<config>
+						<transceiver>transceiver-3</transceiver>
+					</config>
+					<state>
+						<transceiver>transceiver-3</transceiver>
+					</state>
+				</ingress>
+				<logical-channel-assignments>
+					<assignment>
+						<index>1</index>
+						<config>
+							<index>1</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>19</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>1</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>19</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<!--index>2</index>
+						<config>
+							<index>2</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>20</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>2</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>20</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<index>3</index>
+						<config>
+							<index>3</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>21</logical-channel>
+							<allocation>19</allocation>
+						</config>
+						<state>
+							<index>3</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>21</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<index>4</index>
+						<config>
+							<index>4</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>22</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>4</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>22</logical-channel>
+							<allocation>10</allocation>
+						</state-->					</assignment>
+				</logical-channel-assignments>
+			</channel>
+			<channel>
+				<!--Description: Packet Port-->
+				<index>4</index>
+				<config>
+					<index>4</index>
+					<description>Logical channel 4</description>
+					<admin-state>DISABLED</admin-state>
+					<rate-class xmlns:type="http://openconfig.net/yang/transport-types">type:TRIB_RATE_10G</rate-class>
+					<trib-protocol xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_10GE_LAN</trib-protocol>
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_ETHERNET</logical-channel-type>		
+					<loopback-mode>NONE</loopback-mode>
+					<test-signal>0</test-signal>  					
+				</config>
+				<state>
+					<index>4</index>
+					<description>Logical channel 4</description>
+					<admin-state>DISABLED</admin-state>
+					<rate-class xmlns:type="http://openconfig.net/yang/transport-types">type:TRIB_RATE_10G</rate-class>
+					<trib-protocol xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_10GE_LAN</trib-protocol>			
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_ETHERNET</logical-channel-type>		
+					<loopback-mode>NONE</loopback-mode>
+					<test-signal>0</test-signal>
+					<link-state>UP</link-state>
+				</state>
+				<ingress>
+					<config>
+						<transceiver>transceiver-4</transceiver>
+					</config>
+					<state>
+						<transceiver>transceiver-4</transceiver>
+					</state>
+				</ingress>
+				<logical-channel-assignments>
+					<assignment>
+						<index>1</index>
+						<config>
+							<index>1</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>19</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>1</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>19</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<!--index>2</index>
+						<config>
+							<index>2</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>20</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>2</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>20</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<index>3</index>
+						<config>
+							<index>3</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>21</logical-channel>
+							<allocation>19</allocation>
+						</config>
+						<state>
+							<index>3</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>21</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<index>4</index>
+						<config>
+							<index>4</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>22</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>4</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>22</logical-channel>
+							<allocation>10</allocation>
+						</state-->							
+					</assignment>
+				</logical-channel-assignments>
+			</channel>
+			<channel>
+				<!--Description: Packet Port-->
+				<index>5</index>
+				<config>
+					<index>5</index>
+					<description>Logical channel 5</description>
+					<admin-state>DISABLED</admin-state>
+					<rate-class xmlns:type="http://openconfig.net/yang/transport-types">type:TRIB_RATE_10G</rate-class>
+					<trib-protocol xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_10GE_LAN</trib-protocol>
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_ETHERNET</logical-channel-type>		
+					<loopback-mode>NONE</loopback-mode>
+					<test-signal>0</test-signal>  					
+				</config>
+				<state>
+					<index>5</index>
+					<description>Logical channel 5</description>
+					<admin-state>DISABLED</admin-state>
+					<rate-class xmlns:type="http://openconfig.net/yang/transport-types">type:TRIB_RATE_10G</rate-class>
+					<trib-protocol xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_10GE_LAN</trib-protocol>			
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_ETHERNET</logical-channel-type>		
+					<loopback-mode>NONE</loopback-mode>
+					<test-signal>0</test-signal>
+					<link-state>UP</link-state>
+				</state>
+				<ingress>
+					<config>
+						<transceiver>transceiver-5</transceiver>
+					</config>
+					<state>
+						<transceiver>transceiver-5</transceiver>
+					</state>
+				</ingress>
+				<logical-channel-assignments>
+					<assignment>
+						<index>1</index>
+						<config>
+							<index>1</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>19</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>1</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>19</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<!--index>2</index>
+						<config>
+							<index>2</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>20</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>2</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>20</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<index>3</index>
+						<config>
+							<index>3</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>21</logical-channel>
+							<allocation>19</allocation>
+						</config>
+						<state>
+							<index>3</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>21</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<index>4</index>
+						<config>
+							<index>4</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>22</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>4</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>22</logical-channel>
+							<allocation>10</allocation>
+						</state-->
+					</assignment>
+				</logical-channel-assignments>
+			</channel>
+			<channel>
+				<!--Description: Packet Port-->
+				<index>6</index>
+				<config>
+					<index>6</index>
+					<description>Logical channel 6</description>
+					<admin-state>DISABLED</admin-state>
+					<rate-class xmlns:type="http://openconfig.net/yang/transport-types">type:TRIB_RATE_10G</rate-class>
+					<trib-protocol xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_10GE_LAN</trib-protocol>
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_ETHERNET</logical-channel-type>		
+					<loopback-mode>NONE</loopback-mode>
+					<test-signal>0</test-signal>  					
+				</config>
+				<state>
+					<index>6</index>
+					<description>Logical channel 6</description>
+					<admin-state>DISABLED</admin-state>
+					<rate-class xmlns:type="http://openconfig.net/yang/transport-types">type:TRIB_RATE_10G</rate-class>
+					<trib-protocol xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_10GE_LAN</trib-protocol>			
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_ETHERNET</logical-channel-type>		
+					<loopback-mode>NONE</loopback-mode>
+					<test-signal>0</test-signal>
+					<link-state>UP</link-state>
+				</state>
+				<ingress>
+					<config>
+						<transceiver>transceiver-6</transceiver>
+					</config>
+					<state>
+						<transceiver>transceiver-6</transceiver>
+					</state>
+				</ingress>
+				<logical-channel-assignments>
+					<assignment>
+						<index>1</index>
+						<config>
+							<index>1</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>19</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>1</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>19</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<!--index>2</index>
+						<config>
+							<index>2</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>20</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>2</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>20</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<index>3</index>
+						<config>
+							<index>3</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>21</logical-channel>
+							<allocation>19</allocation>
+						</config>
+						<state>
+							<index>3</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>21</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<index>4</index>
+						<config>
+							<index>4</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>22</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>4</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>22</logical-channel>
+							<allocation>10</allocation>
+						</state-->
+					</assignment>
+				</logical-channel-assignments>
+			</channel>
+			<channel>
+				<!--Description: Packet Port-->
+				<index>7</index>
+				<config>
+					<index>7</index>
+					<description>Logical channel 7</description>
+					<admin-state>DISABLED</admin-state>
+					<rate-class xmlns:type="http://openconfig.net/yang/transport-types">type:TRIB_RATE_10G</rate-class>
+					<trib-protocol xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_10GE_LAN</trib-protocol>
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_ETHERNET</logical-channel-type>		
+					<loopback-mode>NONE</loopback-mode>
+					<test-signal>0</test-signal>  					
+				</config>
+				<state>
+					<index>7</index>
+					<description>Logical channel 7</description>
+					<admin-state>DISABLED</admin-state>
+					<rate-class xmlns:type="http://openconfig.net/yang/transport-types">type:TRIB_RATE_10G</rate-class>
+					<trib-protocol xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_10GE_LAN</trib-protocol>			
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_ETHERNET</logical-channel-type>		
+					<loopback-mode>NONE</loopback-mode>
+					<test-signal>0</test-signal>
+					<link-state>UP</link-state>
+				</state>
+				<ingress>
+					<config>
+						<transceiver>transceiver-7</transceiver>
+					</config>
+					<state>
+						<transceiver>transceiver-7</transceiver>
+					</state>
+				</ingress>
+				<logical-channel-assignments>
+					<assignment>
+						<index>1</index>
+						<config>
+							<index>1</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>19</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>1</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>19</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<!--index>2</index>
+						<config>
+							<index>2</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>20</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>2</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>20</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<index>3</index>
+						<config>
+							<index>3</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>21</logical-channel>
+							<allocation>19</allocation>
+						</config>
+						<state>
+							<index>3</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>21</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<index>4</index>
+						<config>
+							<index>4</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>22</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>4</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>22</logical-channel>
+							<allocation>10</allocation>
+						</state-->
+					</assignment>
+				</logical-channel-assignments>
+			</channel>
+			<channel>
+				<!--Description: Packet Port-->
+				<index>8</index>
+				<config>
+					<index>8</index>
+					<description>Logical channel 8</description>
+					<admin-state>DISABLED</admin-state>
+					<rate-class xmlns:type="http://openconfig.net/yang/transport-types">type:TRIB_RATE_10G</rate-class>
+					<trib-protocol xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_10GE_LAN</trib-protocol>
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_ETHERNET</logical-channel-type>		
+					<loopback-mode>NONE</loopback-mode>
+					<test-signal>0</test-signal>  					
+				</config>
+				<state>
+					<index>8</index>
+					<description>Logical channel 8</description>
+					<admin-state>DISABLED</admin-state>
+					<rate-class xmlns:type="http://openconfig.net/yang/transport-types">type:TRIB_RATE_10G</rate-class>
+					<trib-protocol xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_10GE_LAN</trib-protocol>			
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_ETHERNET</logical-channel-type>		
+					<loopback-mode>NONE</loopback-mode>
+					<test-signal>0</test-signal>
+					<link-state>UP</link-state>
+				</state>
+				<ingress>
+					<config>
+						<transceiver>transceiver-8</transceiver>
+					</config>
+					<state>
+						<transceiver>transceiver-8</transceiver>
+					</state>
+				</ingress>
+				<logical-channel-assignments>
+					<assignment>
+						<index>1</index>
+						<config>
+							<index>1</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>19</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>1</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>19</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<!--index>2</index>
+						<config>
+							<index>2</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>20</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>2</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>20</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<index>3</index>
+						<config>
+							<index>3</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>21</logical-channel>
+							<allocation>19</allocation>
+						</config>
+						<state>
+							<index>3</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>21</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<index>4</index>
+						<config>
+							<index>4</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>22</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>4</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>22</logical-channel>
+							<allocation>10</allocation>
+						</state-->
+					</assignment>
+				</logical-channel-assignments>
+			</channel>
+			<channel>
+				<!--Description: Packet Port-->
+				<index>9</index>
+				<config>
+					<index>9</index>
+					<description>Logical channel 9</description>
+					<admin-state>DISABLED</admin-state>
+					<rate-class xmlns:type="http://openconfig.net/yang/transport-types">type:TRIB_RATE_10G</rate-class>
+					<trib-protocol xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_10GE_LAN</trib-protocol>
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_ETHERNET</logical-channel-type>		
+					<loopback-mode>NONE</loopback-mode>
+					<test-signal>0</test-signal>  					
+				</config>
+				<state>
+					<index>9</index>
+					<description>Logical channel 9</description>
+					<admin-state>DISABLED</admin-state>
+					<rate-class xmlns:type="http://openconfig.net/yang/transport-types">type:TRIB_RATE_10G</rate-class>
+					<trib-protocol xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_10GE_LAN</trib-protocol>			
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_ETHERNET</logical-channel-type>		
+					<loopback-mode>NONE</loopback-mode>
+					<test-signal>0</test-signal>
+					<link-state>UP</link-state>
+				</state>
+				<ingress>
+					<config>
+						<transceiver>transceiver-9</transceiver>
+					</config>
+					<state>
+						<transceiver>transceiver-9</transceiver>
+					</state>
+				</ingress>
+				<logical-channel-assignments>
+					<assignment>
+						<index>1</index>
+						<config>
+							<index>1</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>19</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>1</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>19</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<!--index>2</index>
+						<config>
+							<index>2</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>20</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>2</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>20</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<index>3</index>
+						<config>
+							<index>3</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>21</logical-channel>
+							<allocation>19</allocation>
+						</config>
+						<state>
+							<index>3</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>21</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<index>4</index>
+						<config>
+							<index>4</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>22</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>4</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>22</logical-channel>
+							<allocation>10</allocation>
+						</state-->
+					</assignment>
+				</logical-channel-assignments>
+			</channel>
+			<channel>
+				<!--Description: Packet Port-->
+				<index>10</index>
+				<config>
+					<index>10</index>
+					<description>Logical channel 10</description>
+					<admin-state>DISABLED</admin-state>
+					<rate-class xmlns:type="http://openconfig.net/yang/transport-types">type:TRIB_RATE_10G</rate-class>
+					<trib-protocol xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_10GE_LAN</trib-protocol>
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_ETHERNET</logical-channel-type>		
+					<loopback-mode>NONE</loopback-mode>
+					<test-signal>0</test-signal>  					
+				</config>
+				<state>
+					<index>10</index>
+					<description>Logical channel 10</description>
+					<admin-state>DISABLED</admin-state>
+					<rate-class xmlns:type="http://openconfig.net/yang/transport-types">type:TRIB_RATE_10G</rate-class>
+					<trib-protocol xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_10GE_LAN</trib-protocol>			
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_ETHERNET</logical-channel-type>		
+					<loopback-mode>NONE</loopback-mode>
+					<test-signal>0</test-signal>
+					<link-state>UP</link-state>
+				</state>
+				<ingress>
+					<config>
+						<transceiver>transceiver-10</transceiver>
+					</config>
+					<state>
+						<transceiver>transceiver-10</transceiver>
+					</state>
+				</ingress>
+				<logical-channel-assignments>
+					<assignment>
+						<index>1</index>
+						<config>
+							<index>1</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>19</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>1</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>19</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<!--index>2</index>
+						<config>
+							<index>2</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>20</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>2</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>20</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<index>3</index>
+						<config>
+							<index>3</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>21</logical-channel>
+							<allocation>19</allocation>
+						</config>
+						<state>
+							<index>3</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>21</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<index>4</index>
+						<config>
+							<index>4</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>22</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>4</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>22</logical-channel>
+							<allocation>10</allocation>
+						</state-->
+					</assignment>
+				</logical-channel-assignments>
+			</channel>
+			<channel>
+				<!--Description: Packet Port-->
+				<index>11</index>
+				<config>
+					<index>11</index>
+					<description>Logical channel 11</description>
+					<admin-state>DISABLED</admin-state>
+					<rate-class xmlns:type="http://openconfig.net/yang/transport-types">type:TRIB_RATE_10G</rate-class>
+					<trib-protocol xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_10GE_LAN</trib-protocol>
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_ETHERNET</logical-channel-type>		
+					<loopback-mode>NONE</loopback-mode>
+					<test-signal>0</test-signal>  					
+				</config>
+				<state>
+					<index>11</index>
+					<description>Logical channel 11</description>
+					<admin-state>DISABLED</admin-state>
+					<rate-class xmlns:type="http://openconfig.net/yang/transport-types">type:TRIB_RATE_10G</rate-class>
+					<trib-protocol xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_10GE_LAN</trib-protocol>			
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_ETHERNET</logical-channel-type>		
+					<loopback-mode>NONE</loopback-mode>
+					<test-signal>0</test-signal>
+					<link-state>UP</link-state>
+				</state>
+				<ingress>
+					<config>
+						<transceiver>transceiver-11</transceiver>
+					</config>
+					<state>
+						<transceiver>transceiver-11</transceiver>
+					</state>
+				</ingress>
+				<logical-channel-assignments>
+					<assignment>
+						<index>1</index>
+						<config>
+							<index>1</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>19</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>1</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>19</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<!--index>2</index>
+						<config>
+							<index>2</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>20</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>2</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>20</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<index>3</index>
+						<config>
+							<index>3</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>21</logical-channel>
+							<allocation>19</allocation>
+						</config>
+						<state>
+							<index>3</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>21</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<index>4</index>
+						<config>
+							<index>4</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>22</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>4</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>22</logical-channel>
+							<allocation>10</allocation>
+						</state-->
+					</assignment>
+				</logical-channel-assignments>
+			</channel>
+			<channel>
+				<!--Description: Packet Port-->
+				<index>12</index>
+				<config>
+					<index>12</index>
+					<description>Logical channel 12</description>
+					<admin-state>DISABLED</admin-state>
+					<rate-class xmlns:type="http://openconfig.net/yang/transport-types">type:TRIB_RATE_10G</rate-class>
+					<trib-protocol xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_10GE_LAN</trib-protocol>
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_ETHERNET</logical-channel-type>		
+					<loopback-mode>NONE</loopback-mode>
+					<test-signal>0</test-signal>  					
+				</config>
+				<state>
+					<index>12</index>
+					<description>Logical channel 12</description>
+					<admin-state>DISABLED</admin-state>
+					<rate-class xmlns:type="http://openconfig.net/yang/transport-types">type:TRIB_RATE_10G</rate-class>
+					<trib-protocol xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_10GE_LAN</trib-protocol>			
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_ETHERNET</logical-channel-type>		
+					<loopback-mode>NONE</loopback-mode>
+					<test-signal>0</test-signal>
+					<link-state>UP</link-state>
+				</state>
+				<ingress>
+					<config>
+						<transceiver>transceiver-12</transceiver>
+					</config>
+					<state>
+						<transceiver>transceiver-12</transceiver>
+					</state>
+				</ingress>
+				<logical-channel-assignments>
+					<assignment>
+						<index>1</index>
+						<config>
+							<index>1</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>19</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>1</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>19</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<!--index>2</index>
+						<config>
+							<index>2</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>20</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>2</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>20</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<index>3</index>
+						<config>
+							<index>3</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>21</logical-channel>
+							<allocation>19</allocation>
+						</config>
+						<state>
+							<index>3</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>21</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<index>4</index>
+						<config>
+							<index>4</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>22</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>4</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>22</logical-channel>
+							<allocation>10</allocation>
+						</state-->
+					</assignment>
+				</logical-channel-assignments>
+			</channel>
+			<channel>
+				<!--Description: Packet Port-->
+				<index>13</index>
+				<config>
+					<index>13</index>
+					<description>Logical channel 13</description>
+					<admin-state>DISABLED</admin-state>
+					<rate-class xmlns:type="http://openconfig.net/yang/transport-types">type:TRIB_RATE_10G</rate-class>
+					<trib-protocol xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_10GE_LAN</trib-protocol>
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_ETHERNET</logical-channel-type>		
+					<loopback-mode>NONE</loopback-mode>
+					<test-signal>0</test-signal>  					
+				</config>
+				<state>
+					<index>13</index>
+					<description>Logical channel 13</description>
+					<admin-state>DISABLED</admin-state>
+					<rate-class xmlns:type="http://openconfig.net/yang/transport-types">type:TRIB_RATE_10G</rate-class>
+					<trib-protocol xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_10GE_LAN</trib-protocol>			
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_ETHERNET</logical-channel-type>		
+					<loopback-mode>NONE</loopback-mode>
+					<test-signal>0</test-signal>
+					<link-state>UP</link-state>
+				</state>
+				<ingress>
+					<config>
+						<transceiver>transceiver-13</transceiver>
+					</config>
+					<state>
+						<transceiver>transceiver-13</transceiver>
+					</state>
+				</ingress>
+				<logical-channel-assignments>
+					<assignment>
+						<index>1</index>
+						<config>
+							<index>1</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>19</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>1</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>19</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<!--index>2</index>
+						<config>
+							<index>2</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>20</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>2</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>20</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<index>3</index>
+						<config>
+							<index>3</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>21</logical-channel>
+							<allocation>19</allocation>
+						</config>
+						<state>
+							<index>3</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>21</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<index>4</index>
+						<config>
+							<index>4</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>22</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>4</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>22</logical-channel>
+							<allocation>10</allocation>
+						</state-->					</assignment>
+				</logical-channel-assignments>
+			</channel>
+			<channel>
+				<!--Description: Packet Port-->
+				<index>14</index>
+				<config>
+					<index>14</index>
+					<description>Logical channel 14</description>
+					<admin-state>DISABLED</admin-state>
+					<rate-class xmlns:type="http://openconfig.net/yang/transport-types">type:TRIB_RATE_10G</rate-class>
+					<trib-protocol xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_10GE_LAN</trib-protocol>
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_ETHERNET</logical-channel-type>		
+					<loopback-mode>NONE</loopback-mode>
+					<test-signal>0</test-signal>  					
+				</config>
+				<state>
+					<index>14</index>
+					<description>Logical channel 14</description>
+					<admin-state>DISABLED</admin-state>
+					<rate-class xmlns:type="http://openconfig.net/yang/transport-types">type:TRIB_RATE_10G</rate-class>
+					<trib-protocol xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_10GE_LAN</trib-protocol>			
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_ETHERNET</logical-channel-type>		
+					<loopback-mode>NONE</loopback-mode>
+					<test-signal>0</test-signal>
+					<link-state>UP</link-state>
+				</state>
+				<ingress>
+					<config>
+						<transceiver>transceiver-14</transceiver>
+					</config>
+					<state>
+						<transceiver>transceiver-14</transceiver>
+					</state>
+				</ingress>
+				<logical-channel-assignments>
+					<assignment>
+						<index>1</index>
+						<config>
+							<index>1</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>19</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>1</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>19</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<!--index>2</index>
+						<config>
+							<index>2</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>20</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>2</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>20</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<index>3</index>
+						<config>
+							<index>3</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>21</logical-channel>
+							<allocation>19</allocation>
+						</config>
+						<state>
+							<index>3</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>21</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<index>4</index>
+						<config>
+							<index>4</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>22</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>4</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>22</logical-channel>
+							<allocation>10</allocation>
+						</state-->							
+					</assignment>
+				</logical-channel-assignments>
+			</channel>
+			<channel>
+				<!--Description: Packet Port-->
+				<index>15</index>
+				<config>
+					<index>15</index>
+					<description>Logical channel 15</description>
+					<admin-state>DISABLED</admin-state>
+					<rate-class xmlns:type="http://openconfig.net/yang/transport-types">type:TRIB_RATE_10G</rate-class>
+					<trib-protocol xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_10GE_LAN</trib-protocol>
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_ETHERNET</logical-channel-type>		
+					<loopback-mode>NONE</loopback-mode>
+					<test-signal>0</test-signal>  					
+				</config>
+				<state>
+					<index>15</index>
+					<description>Logical channel 15</description>
+					<admin-state>DISABLED</admin-state>
+					<rate-class xmlns:type="http://openconfig.net/yang/transport-types">type:TRIB_RATE_10G</rate-class>
+					<trib-protocol xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_10GE_LAN</trib-protocol>			
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_ETHERNET</logical-channel-type>		
+					<loopback-mode>NONE</loopback-mode>
+					<test-signal>0</test-signal>
+					<link-state>UP</link-state>
+				</state>
+				<ingress>
+					<config>
+						<transceiver>transceiver-15</transceiver>
+					</config>
+					<state>
+						<transceiver>transceiver-15</transceiver>
+					</state>
+				</ingress>
+				<logical-channel-assignments>
+					<assignment>
+						<index>1</index>
+						<config>
+							<index>1</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>19</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>1</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>19</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<!--index>2</index>
+						<config>
+							<index>2</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>20</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>2</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>20</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<index>3</index>
+						<config>
+							<index>3</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>21</logical-channel>
+							<allocation>19</allocation>
+						</config>
+						<state>
+							<index>3</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>21</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<index>4</index>
+						<config>
+							<index>4</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>22</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>4</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>22</logical-channel>
+							<allocation>10</allocation>
+						</state-->
+					</assignment>
+				</logical-channel-assignments>
+			</channel>
+			<channel>
+				<!--Description: Packet Port-->
+				<index>16</index>
+				<config>
+					<index>16</index>
+					<description>Logical channel 16</description>
+					<admin-state>DISABLED</admin-state>
+					<rate-class xmlns:type="http://openconfig.net/yang/transport-types">type:TRIB_RATE_10G</rate-class>
+					<trib-protocol xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_10GE_LAN</trib-protocol>
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_ETHERNET</logical-channel-type>		
+					<loopback-mode>NONE</loopback-mode>
+					<test-signal>0</test-signal>  					
+				</config>
+				<state>
+					<index>16</index>
+					<description>Logical channel 16</description>
+					<admin-state>DISABLED</admin-state>
+					<rate-class xmlns:type="http://openconfig.net/yang/transport-types">type:TRIB_RATE_10G</rate-class>
+					<trib-protocol xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_10GE_LAN</trib-protocol>			
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_ETHERNET</logical-channel-type>		
+					<loopback-mode>NONE</loopback-mode>
+					<test-signal>0</test-signal>
+					<link-state>UP</link-state>
+				</state>
+				<ingress>
+					<config>
+						<transceiver>transceiver-16</transceiver>
+					</config>
+					<state>
+						<transceiver>transceiver-16</transceiver>
+					</state>
+				</ingress>
+				<logical-channel-assignments>
+					<assignment>
+						<index>1</index>
+						<config>
+							<index>1</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>19</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>1</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>19</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<!--index>2</index>
+						<config>
+							<index>2</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>20</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>2</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>20</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<index>3</index>
+						<config>
+							<index>3</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>21</logical-channel>
+							<allocation>19</allocation>
+						</config>
+						<state>
+							<index>3</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>21</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<index>4</index>
+						<config>
+							<index>4</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>22</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>4</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>22</logical-channel>
+							<allocation>10</allocation>
+						</state-->
+					</assignment>
+				</logical-channel-assignments>
+			</channel>
+			<channel>
+				<!--Description: Packet Port-->
+				<index>17</index>
+				<config>
+					<index>17</index>
+					<description>Logical channel 17</description>
+					<admin-state>DISABLED</admin-state>
+					<rate-class xmlns:type="http://openconfig.net/yang/transport-types">type:TRIB_RATE_10G</rate-class>
+					<trib-protocol xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_10GE_LAN</trib-protocol>
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_ETHERNET</logical-channel-type>		
+					<loopback-mode>NONE</loopback-mode>
+					<test-signal>0</test-signal>  					
+				</config>
+				<state>
+					<index>17</index>
+					<description>Logical channel 17</description>
+					<admin-state>DISABLED</admin-state>
+					<rate-class xmlns:type="http://openconfig.net/yang/transport-types">type:TRIB_RATE_10G</rate-class>
+					<trib-protocol xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_10GE_LAN</trib-protocol>			
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_ETHERNET</logical-channel-type>		
+					<loopback-mode>NONE</loopback-mode>
+					<test-signal>0</test-signal>
+					<link-state>UP</link-state>
+				</state>
+				<ingress>
+					<config>
+						<transceiver>transceiver-17</transceiver>
+					</config>
+					<state>
+						<transceiver>transceiver-17</transceiver>
+					</state>
+				</ingress>
+				<logical-channel-assignments>
+					<assignment>
+						<index>1</index>
+						<config>
+							<index>1</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>19</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>1</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>19</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<!--index>2</index>
+						<config>
+							<index>2</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>20</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>2</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>20</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<index>3</index>
+						<config>
+							<index>3</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>21</logical-channel>
+							<allocation>19</allocation>
+						</config>
+						<state>
+							<index>3</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>21</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<index>4</index>
+						<config>
+							<index>4</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>22</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>4</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>22</logical-channel>
+							<allocation>10</allocation>
+						</state-->
+					</assignment>
+				</logical-channel-assignments>
+			</channel>
+			<channel>
+				<!--Description: Packet Port-->
+				<index>18</index>
+				<config>
+					<index>18</index>
+					<description>Logical channel 18</description>
+					<admin-state>DISABLED</admin-state>
+					<rate-class xmlns:type="http://openconfig.net/yang/transport-types">type:TRIB_RATE_10G</rate-class>
+					<trib-protocol xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_10GE_LAN</trib-protocol>
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_ETHERNET</logical-channel-type>		
+					<loopback-mode>NONE</loopback-mode>
+					<test-signal>0</test-signal>  					
+				</config>
+				<state>
+					<index>18</index>
+					<description>Logical channel 18</description>
+					<admin-state>DISABLED</admin-state>
+					<rate-class xmlns:type="http://openconfig.net/yang/transport-types">type:TRIB_RATE_10G</rate-class>
+					<trib-protocol xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_10GE_LAN</trib-protocol>			
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_ETHERNET</logical-channel-type>		
+					<loopback-mode>NONE</loopback-mode>
+					<test-signal>0</test-signal>
+					<link-state>UP</link-state>
+				</state>
+				<ingress>
+					<config>
+						<transceiver>transceiver-18</transceiver>
+					</config>
+					<state>
+						<transceiver>transceiver-18</transceiver>
+					</state>
+				</ingress>
+				<logical-channel-assignments>
+					<assignment>
+						<index>1</index>
+						<config>
+							<index>1</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>19</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>1</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>19</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<!--index>2</index>
+						<config>
+							<index>2</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>20</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>2</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>20</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<index>3</index>
+						<config>
+							<index>3</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>21</logical-channel>
+							<allocation>19</allocation>
+						</config>
+						<state>
+							<index>3</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>21</logical-channel>
+							<allocation>10</allocation>
+						</state>
+						<index>4</index>
+						<config>
+							<index>4</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>22</logical-channel>
+							<allocation>10</allocation>
+						</config>
+						<state>
+							<index>4</index>
+							<description>Uplink assigned</description>
+							<assignment-type>LOGICAL_CHANNEL</assignment-type>
+							<logical-channel>22</logical-channel>
+							<allocation>10</allocation>
+						</state-->
+					</assignment>
+				</logical-channel-assignments>
+			</channel>
+			<channel>
+				<!--Description: Line (OTN) Port-->
+				<index>19</index>
+				<config>
+					<index>19</index>
+					<description>Logical channel 19</description>
+					<admin-state>DISABLED</admin-state>
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_OTN</logical-channel-type>
+					<loopback-mode>NONE</loopback-mode>
+				</config>
+				<state>
+					<index>19</index>
+					<description>Logical channel 19</description>
+					<admin-state>DISABLED</admin-state>
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_OTN</logical-channel-type>
+					<loopback-mode>NONE</loopback-mode>
+					<link-state>UP</link-state>
+				</state>
+				   <ingress>
+						<config>
+							<transceiver>channel-19</transceiver>
+							<!-- 
+							<physical-channel></physical-channel>
+							-->
+						</config>
+						<state>
+							<transceiver>channel-19</transceiver>
+							<!-- 
+							<physical-channel></physical-channel>
+							-->
+						</state>
+					</ingress>
+
+				<otn>
+					<config>
+						<tti-msg-expected>test1</tti-msg-expected>
+						<tti-msg-transmit>test1</tti-msg-transmit>
+					</config>
+					<state>
+						<tti-msg-expected>test1</tti-msg-expected>
+						<tti-msg-transmit>test1</tti-msg-transmit>
+						<tti-msg-auto>0</tti-msg-auto>
+						<tti-msg-recv>0</tti-msg-recv>
+						<rdi-msg>0</rdi-msg>
+						<errored-seconds>0</errored-seconds>
+						<severely-errored-seconds>0</severely-errored-seconds>
+						<unavailable-seconds>0</unavailable-seconds>
+						<code-violations>0</code-violations>
+						<fec-uncorrectable-words>0</fec-uncorrectable-words>
+						<fec-corrected-bytes>0</fec-corrected-bytes>
+						<fec-corrected-bits>0</fec-corrected-bits>
+						<background-block-errors>0</background-block-errors>
+						<pre-fec-ber>
+							<instant>0.0</instant>
+							<avg>0.0</avg>
+							<min>0.0</min>
+							<max>0.0</max>
+						</pre-fec-ber>	
+						<post-fec-ber>
+							<instant>0.0</instant>
+							<avg>0.0</avg>
+							<min>0.0</min>
+							<max>0.0</max>
+						</post-fec-ber>	
+						<q-value>
+							<instant>0.0</instant>
+							<avg>0.0</avg>
+							<min>0.0</min>
+							<max>0.0</max>
+							<interval>0</interval>
+						</q-value>	
+						<esnr>
+							<instant>0.0</instant>
+							<avg>0.0</avg>
+							<min>0.0</min>
+							<max>0.0</max>
+							<interval>0</interval>
+						</esnr>	
+					</state>
+				</otn>
+				<logical-channel-assignments>
+					<assignment>
+						<index>1</index>
+						<config>
+							<index>1</index>
+							<description>Optical channel assigned 100</description>
+							<allocation>100</allocation>
+							<assignment-type>OPTICAL_CHANNEL</assignment-type>
+							<optical-channel>channel-19</optical-channel>
+						</config>
+						<state>
+							<index>1</index>
+							<description>Optical channel assigned 100</description>
+							<allocation>100</allocation>
+							<assignment-type>OPTICAL_CHANNEL</assignment-type>
+							<optical-channel>channel-19</optical-channel>
+						</state>
+					</assignment>
+				</logical-channel-assignments>
+			</channel>
+			<channel>
+				<!--Description: Line (OTN) Port-->
+				<index>20</index>
+				<config>
+					<index>20</index>
+					<description>Logical channel 20</description>
+					<admin-state>DISABLED</admin-state>
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_OTN</logical-channel-type>
+					<loopback-mode>NONE</loopback-mode>
+				</config>
+				<state>
+					<index>20</index>
+					<description>Logical channel 20</description>
+					<admin-state>DISABLED</admin-state>
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_OTN</logical-channel-type>
+					<loopback-mode>NONE</loopback-mode>
+					<link-state>UP</link-state>
+				</state>
+				   <ingress>
+						<config>
+							<transceiver>channel-20</transceiver>
+							<!-- 
+							<physical-channel></physical-channel>
+							-->
+						</config>
+						<state>
+							<transceiver>channel-20</transceiver>
+							<!-- 
+							<physical-channel></physical-channel>
+							-->
+						</state>
+					</ingress>
+
+				<otn>
+					<config>
+						<tti-msg-expected>test1</tti-msg-expected>
+						<tti-msg-transmit>test1</tti-msg-transmit>
+					</config>
+					<state>
+						<tti-msg-expected>test1</tti-msg-expected>
+						<tti-msg-transmit>test1</tti-msg-transmit>
+						<tti-msg-auto>0</tti-msg-auto>
+						<tti-msg-recv>0</tti-msg-recv>
+						<rdi-msg>0</rdi-msg>
+						<errored-seconds>0</errored-seconds>
+						<severely-errored-seconds>0</severely-errored-seconds>
+						<unavailable-seconds>0</unavailable-seconds>
+						<code-violations>0</code-violations>
+						<fec-uncorrectable-words>0</fec-uncorrectable-words>
+						<fec-corrected-bytes>0</fec-corrected-bytes>
+						<fec-corrected-bits>0</fec-corrected-bits>
+						<background-block-errors>0</background-block-errors>
+						<pre-fec-ber>
+							<instant>0.0</instant>
+							<avg>0.0</avg>
+							<min>0.0</min>
+							<max>0.0</max>
+						</pre-fec-ber>	
+						<post-fec-ber>
+							<instant>0.0</instant>
+							<avg>0.0</avg>
+							<min>0.0</min>
+							<max>0.0</max>
+						</post-fec-ber>	
+						<q-value>
+							<instant>0.0</instant>
+							<avg>0.0</avg>
+							<min>0.0</min>
+							<max>0.0</max>
+							<interval>0</interval>
+						</q-value>	
+						<esnr>
+							<instant>0.0</instant>
+							<avg>0.0</avg>
+							<min>0.0</min>
+							<max>0.0</max>
+							<interval>0</interval>
+						</esnr>	
+					</state>
+				</otn>
+				<logical-channel-assignments>
+					<assignment>
+						<index>1</index>
+						<config>
+							<index>1</index>
+							<description>Optical channel assigned 100</description>
+							<allocation>100</allocation>
+							<assignment-type>OPTICAL_CHANNEL</assignment-type>
+							<optical-channel>channel-20</optical-channel>
+						</config>
+						<state>
+							<index>1</index>
+							<description>Optical channel assigned 100</description>
+							<allocation>100</allocation>
+							<assignment-type>OPTICAL_CHANNEL</assignment-type>
+							<optical-channel>channel-20</optical-channel>
+						</state>
+					</assignment>
+				</logical-channel-assignments>
+			</channel>
+			<channel>
+				<!--Description: Line (OTN) Port-->
+				<index>21</index>
+				<config>
+					<index>21</index>
+					<description>Logical channel 21</description>
+					<admin-state>DISABLED</admin-state>
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_OTN</logical-channel-type>
+					<loopback-mode>NONE</loopback-mode>
+				</config>
+				<state>
+					<index>21</index>
+					<description>Logical channel 21</description>
+					<admin-state>DISABLED</admin-state>
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_OTN</logical-channel-type>
+					<loopback-mode>NONE</loopback-mode>
+					<link-state>UP</link-state>
+				</state>
+				   <ingress>
+						<config>
+							<transceiver>channel-21</transceiver>
+							<!-- 
+							<physical-channel></physical-channel>
+							-->
+						</config>
+						<state>
+							<transceiver>channel-21</transceiver>
+							<!-- 
+							<physical-channel></physical-channel>
+							-->
+						</state>
+					</ingress>
+
+				<otn>
+					<config>
+						<tti-msg-expected>test1</tti-msg-expected>
+						<tti-msg-transmit>test1</tti-msg-transmit>
+					</config>
+					<state>
+						<tti-msg-expected>test1</tti-msg-expected>
+						<tti-msg-transmit>test1</tti-msg-transmit>
+						<tti-msg-auto>0</tti-msg-auto>
+						<tti-msg-recv>0</tti-msg-recv>
+						<rdi-msg>0</rdi-msg>
+						<errored-seconds>0</errored-seconds>
+						<severely-errored-seconds>0</severely-errored-seconds>
+						<unavailable-seconds>0</unavailable-seconds>
+						<code-violations>0</code-violations>
+						<fec-uncorrectable-words>0</fec-uncorrectable-words>
+						<fec-corrected-bytes>0</fec-corrected-bytes>
+						<fec-corrected-bits>0</fec-corrected-bits>
+						<background-block-errors>0</background-block-errors>
+						<pre-fec-ber>
+							<instant>0.0</instant>
+							<avg>0.0</avg>
+							<min>0.0</min>
+							<max>0.0</max>
+						</pre-fec-ber>	
+						<post-fec-ber>
+							<instant>0.0</instant>
+							<avg>0.0</avg>
+							<min>0.0</min>
+							<max>0.0</max>
+						</post-fec-ber>	
+						<q-value>
+							<instant>0.0</instant>
+							<avg>0.0</avg>
+							<min>0.0</min>
+							<max>0.0</max>
+							<interval>0</interval>
+						</q-value>	
+						<esnr>
+							<instant>0.0</instant>
+							<avg>0.0</avg>
+							<min>0.0</min>
+							<max>0.0</max>
+							<interval>0</interval>
+						</esnr>	
+					</state>
+				</otn>
+				<logical-channel-assignments>
+					<assignment>
+						<index>1</index>
+						<config>
+							<index>1</index>
+							<description>Optical channel assigned 100</description>
+							<allocation>100</allocation>
+							<assignment-type>OPTICAL_CHANNEL</assignment-type>
+							<optical-channel>channel-21</optical-channel>
+						</config>
+						<state>
+							<index>1</index>
+							<description>Optical channel assigned 100</description>
+							<allocation>100</allocation>
+							<assignment-type>OPTICAL_CHANNEL</assignment-type>
+							<optical-channel>channel-21</optical-channel>
+						</state>
+					</assignment>
+				</logical-channel-assignments>
+			</channel>
+			<channel>
+				<!--Description: Line (OTN) Port-->
+				<index>22</index>
+				<config>
+					<index>22</index>
+					<description>Logical channel 22</description>
+					<admin-state>DISABLED</admin-state>
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_OTN</logical-channel-type>
+					<loopback-mode>NONE</loopback-mode>
+				</config>
+				<state>
+					<index>22</index>
+					<description>Logical channel 22</description>
+					<admin-state>DISABLED</admin-state>
+					<logical-channel-type xmlns:type="http://openconfig.net/yang/transport-types">type:PROT_OTN</logical-channel-type>
+					<loopback-mode>NONE</loopback-mode>
+					<link-state>UP</link-state>
+				</state>
+				   <ingress>
+						<config>
+							<transceiver>channel-22</transceiver>
+							<!-- 
+							<physical-channel></physical-channel>
+							-->
+						</config>
+						<state>
+							<transceiver>channel-22</transceiver>
+							<!-- 
+							<physical-channel></physical-channel>
+							-->
+						</state>
+					</ingress>
+
+				<otn>
+					<config>
+						<tti-msg-expected>test1</tti-msg-expected>
+						<tti-msg-transmit>test1</tti-msg-transmit>
+					</config>
+					<state>
+						<tti-msg-expected>test1</tti-msg-expected>
+						<tti-msg-transmit>test1</tti-msg-transmit>
+						<tti-msg-auto>0</tti-msg-auto>
+						<tti-msg-recv>0</tti-msg-recv>
+						<rdi-msg>0</rdi-msg>
+						<errored-seconds>0</errored-seconds>
+						<severely-errored-seconds>0</severely-errored-seconds>
+						<unavailable-seconds>0</unavailable-seconds>
+						<code-violations>0</code-violations>
+						<fec-uncorrectable-words>0</fec-uncorrectable-words>
+						<fec-corrected-bytes>0</fec-corrected-bytes>
+						<fec-corrected-bits>0</fec-corrected-bits>
+						<background-block-errors>0</background-block-errors>
+						<pre-fec-ber>
+							<instant>0.0</instant>
+							<avg>0.0</avg>
+							<min>0.0</min>
+							<max>0.0</max>
+						</pre-fec-ber>	
+						<post-fec-ber>
+							<instant>0.0</instant>
+							<avg>0.0</avg>
+							<min>0.0</min>
+							<max>0.0</max>
+						</post-fec-ber>	
+						<q-value>
+							<instant>0.0</instant>
+							<avg>0.0</avg>
+							<min>0.0</min>
+							<max>0.0</max>
+							<interval>0</interval>
+						</q-value>	
+						<esnr>
+							<instant>0.0</instant>
+							<avg>0.0</avg>
+							<min>0.0</min>
+							<max>0.0</max>
+							<interval>0</interval>
+						</esnr>	
+					</state>
+				</otn>
+				<logical-channel-assignments>
+					<assignment>
+						<index>1</index>
+						<config>
+							<index>1</index>
+							<description>Optical channel assigned 100</description>
+							<allocation>100</allocation>
+							<assignment-type>OPTICAL_CHANNEL</assignment-type>
+							<optical-channel>channel-22</optical-channel>
+						</config>
+						<state>
+							<index>1</index>
+							<description>Optical channel assigned 100</description>
+							<allocation>100</allocation>
+							<assignment-type>OPTICAL_CHANNEL</assignment-type>
+							<optical-channel>channel-22</optical-channel>
+						</state>
+					</assignment>
+				</logical-channel-assignments>
+			</channel>
+		</logical-channels>
+	</terminal-device>
+	<components xmlns="http://openconfig.net/yang/platform">
+		<component>
+			<name>device</name>
+			<config>
+				<name>device</name>
+			</config>
+			<state>
+				<name>MellanoxSwitch</name>
+				<mfg-name>SSSA-CNIT</mfg-name>
+	         		<hardware-version>1.0.0</hardware-version>
+        	 		<firmware-version>1.0.0</firmware-version>
+         			<software-version>1.0.0</software-version>
+         			<serial-no>610610</serial-no>
+         			<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:OPERATING_SYSTEM</type>
+			</state>
+		</component>
+		<!--ports-->
+	    <!--Packet interfaces-->
+		<component>
+			<name>port-1</name>
+			<config>
+		        <name>port-1</name>
+			</config>
+			<state>
+		        <name>port-1</name>
+				<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:PORT</type>
+			</state>
+			<subcomponents>
+				<subcomponent>
+					<name>transceiver-1</name>
+					<config>
+						<name>transceiver-1</name>
+					</config>
+					<state>
+						<name>transceiver-1</name>
+					</state>
+				</subcomponent>
+			</subcomponents>
+			<properties>
+				<property>
+					<name>onos-index</name>
+					<config>
+						<name>onos-index</name>
+						<value>1</value>
+					</config>
+					<state>
+						<name>onos-index</name>
+						<value>1</value>
+					</state>
+				</property>
+				<property>
+					<name>odtn-port-type</name>
+					<config>
+						<name>odtn-port-type</name>
+						<value>client</value>
+					</config>
+					<state>
+						<name>odtn-port-type</name>
+						<value>client</value>
+					</state>
+				</property>
+			</properties>			
+		</component>
+		<component>
+			<name>port-2</name>
+			<config>
+		        <name>port-2</name>
+			</config>
+			<state>
+		        <name>port-2</name>
+				<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:PORT</type>
+			</state>
+			<subcomponents>
+				<subcomponent>
+					<name>transceiver-2</name>
+					<config>
+						<name>transceiver-2</name>
+					</config>
+					<state>
+						<name>transceiver-2</name>
+					</state>
+				</subcomponent>
+			</subcomponents>
+			<properties>
+				<property>
+					<name>onos-index</name>
+					<config>
+						<name>onos-index</name>
+						<value>2</value>
+					</config>
+					<state>
+						<name>onos-index</name>
+						<value>2</value>
+					</state>
+				</property>
+				<property>
+					<name>odtn-port-type</name>
+					<config>
+						<name>odtn-port-type</name>
+						<value>client</value>
+					</config>
+					<state>
+						<name>odtn-port-type</name>
+						<value>client</value>
+					</state>
+				</property>
+			</properties>			
+		</component>
+		<component>
+			<name>port-3</name>
+			<config>
+		        <name>port-3</name>
+			</config>
+			<state>
+		        <name>port-3</name>
+				<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:PORT</type>
+			</state>
+			<subcomponents>
+				<subcomponent>
+					<name>transceiver-3</name>
+					<config>
+						<name>transceiver-3</name>
+					</config>
+					<state>
+						<name>transceiver-3</name>
+					</state>
+				</subcomponent>
+			</subcomponents>
+			<properties>
+				<property>
+					<name>onos-index</name>
+					<config>
+						<name>onos-index</name>
+						<value>3</value>
+					</config>
+					<state>
+						<name>onos-index</name>
+						<value>3</value>
+					</state>
+				</property>
+				<property>
+					<name>odtn-port-type</name>
+					<config>
+						<name>odtn-port-type</name>
+						<value>client</value>
+					</config>
+					<state>
+						<name>odtn-port-type</name>
+						<value>client</value>
+					</state>
+				</property>
+			</properties>			
+		</component>
+		<component>
+			<name>port-4</name>
+			<config>
+		        <name>port-4</name>
+			</config>
+			<state>
+		        <name>port-4</name>
+				<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:PORT</type>
+			</state>
+			<subcomponents>
+				<subcomponent>
+					<name>transceiver-4</name>
+					<config>
+						<name>transceiver-4</name>
+					</config>
+					<state>
+						<name>transceiver-4</name>
+					</state>
+				</subcomponent>
+			</subcomponents>
+			<properties>
+				<property>
+					<name>onos-index</name>
+					<config>
+						<name>onos-index</name>
+						<value>4</value>
+					</config>
+					<state>
+						<name>onos-index</name>
+						<value>4</value>
+					</state>
+				</property>
+				<property>
+					<name>odtn-port-type</name>
+					<config>
+						<name>odtn-port-type</name>
+						<value>client</value>
+					</config>
+					<state>
+						<name>odtn-port-type</name>
+						<value>client</value>
+					</state>
+				</property>
+			</properties>			
+		</component>
+		<component>
+			<name>port-5</name>
+			<config>
+		        <name>port-5</name>
+			</config>
+			<state>
+		        <name>port-5</name>
+				<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:PORT</type>
+			</state>
+			<subcomponents>
+				<subcomponent>
+					<name>transceiver-5</name>
+					<config>
+						<name>transceiver-5</name>
+					</config>
+					<state>
+						<name>transceiver-5</name>
+					</state>
+				</subcomponent>
+			</subcomponents>
+			<properties>
+				<property>
+					<name>onos-index</name>
+					<config>
+						<name>onos-index</name>
+						<value>5</value>
+					</config>
+					<state>
+						<name>onos-index</name>
+						<value>5</value>
+					</state>
+				</property>
+				<property>
+					<name>odtn-port-type</name>
+					<config>
+						<name>odtn-port-type</name>
+						<value>client</value>
+					</config>
+					<state>
+						<name>odtn-port-type</name>
+						<value>client</value>
+					</state>
+				</property>
+			</properties>			
+		</component>
+		<component>
+			<name>port-6</name>
+			<config>
+		        <name>port-6</name>
+			</config>
+			<state>
+		        <name>port-6</name>
+				<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:PORT</type>
+			</state>
+			<subcomponents>
+				<subcomponent>
+					<name>transceiver-6</name>
+					<config>
+						<name>transceiver-6</name>
+					</config>
+					<state>
+						<name>transceiver-6</name>
+					</state>
+				</subcomponent>
+			</subcomponents>
+			<properties>
+				<property>
+					<name>onos-index</name>
+					<config>
+						<name>onos-index</name>
+						<value>6</value>
+					</config>
+					<state>
+						<name>onos-index</name>
+						<value>6</value>
+					</state>
+				</property>
+				<property>
+					<name>odtn-port-type</name>
+					<config>
+						<name>odtn-port-type</name>
+						<value>client</value>
+					</config>
+					<state>
+						<name>odtn-port-type</name>
+						<value>client</value>
+					</state>
+				</property>
+			</properties>			
+		</component>
+		<component>
+			<name>port-7</name>
+			<config>
+		        <name>port-7</name>
+			</config>
+			<state>
+		        <name>port-7</name>
+				<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:PORT</type>
+			</state>
+			<subcomponents>
+				<subcomponent>
+					<name>transceiver-7</name>
+					<config>
+						<name>transceiver-7</name>
+					</config>
+					<state>
+						<name>transceiver-7</name>
+					</state>
+				</subcomponent>
+			</subcomponents>
+			<properties>
+				<property>
+					<name>onos-index</name>
+					<config>
+						<name>onos-index</name>
+						<value>7</value>
+					</config>
+					<state>
+						<name>onos-index</name>
+						<value>7</value>
+					</state>
+				</property>
+				<property>
+					<name>odtn-port-type</name>
+					<config>
+						<name>odtn-port-type</name>
+						<value>client</value>
+					</config>
+					<state>
+						<name>odtn-port-type</name>
+						<value>client</value>
+					</state>
+				</property>
+			</properties>			
+		</component>
+		<component>
+			<name>port-8</name>
+			<config>
+		        <name>port-8</name>
+			</config>
+			<state>
+		        <name>port-8</name>
+				<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:PORT</type>
+			</state>
+			<subcomponents>
+				<subcomponent>
+					<name>transceiver-8</name>
+					<config>
+						<name>transceiver-8</name>
+					</config>
+					<state>
+						<name>transceiver-8</name>
+					</state>
+				</subcomponent>
+			</subcomponents>
+			<properties>
+				<property>
+					<name>onos-index</name>
+					<config>
+						<name>onos-index</name>
+						<value>8</value>
+					</config>
+					<state>
+						<name>onos-index</name>
+						<value>8</value>
+					</state>
+				</property>
+				<property>
+					<name>odtn-port-type</name>
+					<config>
+						<name>odtn-port-type</name>
+						<value>client</value>
+					</config>
+					<state>
+						<name>odtn-port-type</name>
+						<value>client</value>
+					</state>
+				</property>
+			</properties>			
+		</component>
+		<component>
+			<name>port-9</name>
+			<config>
+		        <name>port-9</name>
+			</config>
+			<state>
+		        <name>port-9</name>
+				<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:PORT</type>
+			</state>
+			<subcomponents>
+				<subcomponent>
+					<name>transceiver-9</name>
+					<config>
+						<name>transceiver-9</name>
+					</config>
+					<state>
+						<name>transceiver-9</name>
+					</state>
+				</subcomponent>
+			</subcomponents>
+			<properties>
+				<property>
+					<name>onos-index</name>
+					<config>
+						<name>onos-index</name>
+						<value>9</value>
+					</config>
+					<state>
+						<name>onos-index</name>
+						<value>9</value>
+					</state>
+				</property>
+				<property>
+					<name>odtn-port-type</name>
+					<config>
+						<name>odtn-port-type</name>
+						<value>client</value>
+					</config>
+					<state>
+						<name>odtn-port-type</name>
+						<value>client</value>
+					</state>
+				</property>
+			</properties>			
+		</component>
+		<component>
+			<name>port-10</name>
+			<config>
+		        <name>port-10</name>
+			</config>
+			<state>
+		        <name>port-10</name>
+				<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:PORT</type>
+			</state>
+			<subcomponents>
+				<subcomponent>
+					<name>transceiver-10</name>
+					<config>
+						<name>transceiver-10</name>
+					</config>
+					<state>
+						<name>transceiver-10</name>
+					</state>
+				</subcomponent>
+			</subcomponents>
+			<properties>
+				<property>
+					<name>onos-index</name>
+					<config>
+						<name>onos-index</name>
+						<value>10</value>
+					</config>
+					<state>
+						<name>onos-index</name>
+						<value>10</value>
+					</state>
+				</property>
+				<property>
+					<name>odtn-port-type</name>
+					<config>
+						<name>odtn-port-type</name>
+						<value>client</value>
+					</config>
+					<state>
+						<name>odtn-port-type</name>
+						<value>client</value>
+					</state>
+				</property>
+			</properties>			
+		</component>
+		<component>
+			<name>port-11</name>
+			<config>
+		        <name>port-11</name>
+			</config>
+			<state>
+		        <name>port-11</name>
+				<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:PORT</type>
+			</state>
+			<subcomponents>
+				<subcomponent>
+					<name>transceiver-11</name>
+					<config>
+						<name>transceiver-11</name>
+					</config>
+					<state>
+						<name>transceiver-11</name>
+					</state>
+				</subcomponent>
+			</subcomponents>
+			<properties>
+				<property>
+					<name>onos-index</name>
+					<config>
+						<name>onos-index</name>
+						<value>11</value>
+					</config>
+					<state>
+						<name>onos-index</name>
+						<value>11</value>
+					</state>
+				</property>
+				<property>
+					<name>odtn-port-type</name>
+					<config>
+						<name>odtn-port-type</name>
+						<value>client</value>
+					</config>
+					<state>
+						<name>odtn-port-type</name>
+						<value>client</value>
+					</state>
+				</property>
+			</properties>			
+		</component>
+		<component>
+			<name>port-12</name>
+			<config>
+		        <name>port-12</name>
+			</config>
+			<state>
+		        <name>port-12</name>
+				<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:PORT</type>
+			</state>
+			<subcomponents>
+				<subcomponent>
+					<name>transceiver-12</name>
+					<config>
+						<name>transceiver-12</name>
+					</config>
+					<state>
+						<name>transceiver-12</name>
+					</state>
+				</subcomponent>
+			</subcomponents>
+			<properties>
+				<property>
+					<name>onos-index</name>
+					<config>
+						<name>onos-index</name>
+						<value>12</value>
+					</config>
+					<state>
+						<name>onos-index</name>
+						<value>12</value>
+					</state>
+				</property>
+				<property>
+					<name>odtn-port-type</name>
+					<config>
+						<name>odtn-port-type</name>
+						<value>client</value>
+					</config>
+					<state>
+						<name>odtn-port-type</name>
+						<value>client</value>
+					</state>
+				</property>
+			</properties>			
+		</component>
+		<component>
+			<name>port-13</name>
+			<config>
+		        <name>port-13</name>
+			</config>
+			<state>
+		        <name>port-13</name>
+				<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:PORT</type>
+			</state>
+			<subcomponents>
+				<subcomponent>
+					<name>transceiver-13</name>
+					<config>
+						<name>transceiver-13</name>
+					</config>
+					<state>
+						<name>transceiver-13</name>
+					</state>
+				</subcomponent>
+			</subcomponents>
+			<properties>
+				<property>
+					<name>onos-index</name>
+					<config>
+						<name>onos-index</name>
+						<value>13</value>
+					</config>
+					<state>
+						<name>onos-index</name>
+						<value>13</value>
+					</state>
+				</property>
+				<property>
+					<name>odtn-port-type</name>
+					<config>
+						<name>odtn-port-type</name>
+						<value>client</value>
+					</config>
+					<state>
+						<name>odtn-port-type</name>
+						<value>client</value>
+					</state>
+				</property>
+			</properties>			
+		</component>
+		<component>
+			<name>port-14</name>
+			<config>
+		        <name>port-14</name>
+			</config>
+			<state>
+		        <name>port-14</name>
+				<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:PORT</type>
+			</state>
+			<subcomponents>
+				<subcomponent>
+					<name>transceiver-14</name>
+					<config>
+						<name>transceiver-14</name>
+					</config>
+					<state>
+						<name>transceiver-14</name>
+					</state>
+				</subcomponent>
+			</subcomponents>
+			<properties>
+				<property>
+					<name>onos-index</name>
+					<config>
+						<name>onos-index</name>
+						<value>14</value>
+					</config>
+					<state>
+						<name>onos-index</name>
+						<value>14</value>
+					</state>
+				</property>
+				<property>
+					<name>odtn-port-type</name>
+					<config>
+						<name>odtn-port-type</name>
+						<value>client</value>
+					</config>
+					<state>
+						<name>odtn-port-type</name>
+						<value>client</value>
+					</state>
+				</property>
+			</properties>			
+		</component>
+		<component>
+			<name>port-15</name>
+			<config>
+		        <name>port-15</name>
+			</config>
+			<state>
+		        <name>port-15</name>
+				<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:PORT</type>
+			</state>
+			<subcomponents>
+				<subcomponent>
+					<name>transceiver-15</name>
+					<config>
+						<name>transceiver-15</name>
+					</config>
+					<state>
+						<name>transceiver-15</name>
+					</state>
+				</subcomponent>
+			</subcomponents>
+			<properties>
+				<property>
+					<name>onos-index</name>
+					<config>
+						<name>onos-index</name>
+						<value>15</value>
+					</config>
+					<state>
+						<name>onos-index</name>
+						<value>15</value>
+					</state>
+				</property>
+				<property>
+					<name>odtn-port-type</name>
+					<config>
+						<name>odtn-port-type</name>
+						<value>client</value>
+					</config>
+					<state>
+						<name>odtn-port-type</name>
+						<value>client</value>
+					</state>
+				</property>
+			</properties>			
+		</component>
+		<component>
+			<name>port-16</name>
+			<config>
+		        <name>port-16</name>
+			</config>
+			<state>
+		        <name>port-16</name>
+				<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:PORT</type>
+			</state>
+			<subcomponents>
+				<subcomponent>
+					<name>transceiver-16</name>
+					<config>
+						<name>transceiver-16</name>
+					</config>
+					<state>
+						<name>transceiver-16</name>
+					</state>
+				</subcomponent>
+			</subcomponents>
+			<properties>
+				<property>
+					<name>onos-index</name>
+					<config>
+						<name>onos-index</name>
+						<value>16</value>
+					</config>
+					<state>
+						<name>onos-index</name>
+						<value>16</value>
+					</state>
+				</property>
+				<property>
+					<name>odtn-port-type</name>
+					<config>
+						<name>odtn-port-type</name>
+						<value>client</value>
+					</config>
+					<state>
+						<name>odtn-port-type</name>
+						<value>client</value>
+					</state>
+				</property>
+			</properties>			
+		</component>
+		<component>
+			<name>port-17</name>
+			<config>
+		        <name>port-17</name>
+			</config>
+			<state>
+		        <name>port-17</name>
+				<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:PORT</type>
+			</state>
+			<subcomponents>
+				<subcomponent>
+					<name>transceiver-17</name>
+					<config>
+						<name>transceiver-17</name>
+					</config>
+					<state>
+						<name>transceiver-17</name>
+					</state>
+				</subcomponent>
+			</subcomponents>
+			<properties>
+				<property>
+					<name>onos-index</name>
+					<config>
+						<name>onos-index</name>
+						<value>17</value>
+					</config>
+					<state>
+						<name>onos-index</name>
+						<value>17</value>
+					</state>
+				</property>
+				<property>
+					<name>odtn-port-type</name>
+					<config>
+						<name>odtn-port-type</name>
+						<value>client</value>
+					</config>
+					<state>
+						<name>odtn-port-type</name>
+						<value>client</value>
+					</state>
+				</property>
+			</properties>			
+		</component>
+		<component>
+			<name>port-18</name>
+			<config>
+		        <name>port-18</name>
+			</config>
+			<state>
+		        <name>port-18</name>
+				<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:PORT</type>
+			</state>
+			<subcomponents>
+				<subcomponent>
+					<name>transceiver-18</name>
+					<config>
+						<name>transceiver-18</name>
+					</config>
+					<state>
+						<name>transceiver-18</name>
+					</state>
+				</subcomponent>
+			</subcomponents>
+			<properties>
+				<property>
+					<name>onos-index</name>
+					<config>
+						<name>onos-index</name>
+						<value>18</value>
+					</config>
+					<state>
+						<name>onos-index</name>
+						<value>18</value>
+					</state>
+				</property>
+				<property>
+					<name>odtn-port-type</name>
+					<config>
+						<name>odtn-port-type</name>
+						<value>client</value>
+					</config>
+					<state>
+						<name>odtn-port-type</name>
+						<value>client</value>
+					</state>
+				</property>
+			</properties>			
+		</component>
+		<!--Line interfaces-->
+		<component>
+			<name>port-19</name>
+			<config>
+				<name>port-19</name>
+			</config>
+			<state>
+				<name>port-19</name>
+      			<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:PORT</type>
+			</state>	
+			<subcomponents>
+				<subcomponent>
+					<name>channel-19</name>
+					<config>
+						<name>channel-19</name>
+					</config>
+					<state>
+						<name>channel-19</name>
+					</state>
+				</subcomponent>
+			</subcomponents>
+			<properties>
+				<property>
+					<name>onos-index</name>
+					<config>
+						<name>onos-index</name>
+						<value>19</value>
+					</config>
+					<state>
+						<name>onos-index</name>
+						<value>19</value>
+					</state>
+				</property>
+				<property>
+					<name>odtn-port-type</name>
+					<config>
+						<name>odtn-port-type</name>
+						<value>line</value>
+					</config>
+					<state>
+						<name>odtn-port-type</name>
+						<value>line</value>
+					</state>
+				</property>
+			</properties>			
+		</component>
+		<component>
+			<name>port-20</name>
+			<config>
+				<name>port-20</name>
+			</config>
+			<state>
+				<name>port-20</name>
+      			<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:PORT</type>
+			</state>	
+			<subcomponents>
+				<subcomponent>
+					<name>channel-20</name>
+					<config>
+						<name>channel-20</name>
+					</config>
+					<state>
+						<name>channel-20</name>
+					</state>
+				</subcomponent>
+			</subcomponents>
+			<properties>
+				<property>
+					<name>onos-index</name>
+					<config>
+						<name>onos-index</name>
+						<value>20</value>
+					</config>
+					<state>
+						<name>onos-index</name>
+						<value>20</value>
+					</state>
+				</property>
+				<property>
+					<name>odtn-port-type</name>
+					<config>
+						<name>odtn-port-type</name>
+						<value>line</value>
+					</config>
+					<state>
+						<name>odtn-port-type</name>
+						<value>line</value>
+					</state>
+				</property>
+			</properties>			
+		</component>
+		<component>
+			<name>port-21</name>
+			<config>
+				<name>port-21</name>
+			</config>
+			<state>
+				<name>port-21</name>
+      			<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:PORT</type>
+			</state>	
+			<subcomponents>
+				<subcomponent>
+					<name>channel-21</name>
+					<config>
+						<name>channel-21</name>
+					</config>
+					<state>
+						<name>channel-21</name>
+					</state>
+				</subcomponent>
+			</subcomponents>
+			<properties>
+				<property>
+					<name>onos-index</name>
+					<config>
+						<name>onos-index</name>
+						<value>21</value>
+					</config>
+					<state>
+						<name>onos-index</name>
+						<value>21</value>
+					</state>
+				</property>
+				<property>
+					<name>odtn-port-type</name>
+					<config>
+						<name>odtn-port-type</name>
+						<value>line</value>
+					</config>
+					<state>
+						<name>odtn-port-type</name>
+						<value>line</value>
+					</state>
+				</property>
+			</properties>			
+		</component>		
+		<component>
+			<name>port-22</name>
+			<config>
+				<name>port-22</name>
+			</config>
+			<state>
+				<name>port-22</name>
+      			<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:PORT</type>
+			</state>	
+			<subcomponents>
+				<subcomponent>
+					<name>channel-22</name>
+					<config>
+						<name>channel-22</name>
+					</config>
+					<state>
+						<name>channel-22</name>
+					</state>
+				</subcomponent>
+			</subcomponents>
+			<properties>
+				<property>
+					<name>onos-index</name>
+					<config>
+						<name>onos-index</name>
+						<value>22</value>
+					</config>
+					<state>
+						<name>onos-index</name>
+						<value>22</value>
+					</state>
+				</property>
+				<property>
+					<name>odtn-port-type</name>
+					<config>
+						<name>odtn-port-type</name>
+						<value>line</value>
+					</config>
+					<state>
+						<name>odtn-port-type</name>
+						<value>line</value>
+					</state>
+				</property>
+			</properties>			
+		</component>
+		<!--tansceivers-->
+		<component>
+			<name>transceiver-1</name>
+			<config>
+				<name>transceiver-1</name>
+			</config>
+			<state>
+				<name>transceiver-1</name>
+      			<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:TRANSCEIVER</type>
+			</state>		
+		</component>
+		<component>
+			<name>transceiver-2</name>
+			<config>
+				<name>transceiver-2</name>
+			</config>
+			<state>
+				<name>transceiver-2</name>
+      			<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:TRANSCEIVER</type>
+			</state>		
+		</component>
+		<component>
+			<name>transceiver-3</name>
+			<config>
+				<name>transceiver-3</name>
+			</config>
+			<state>
+				<name>transceiver-3</name>
+      			<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:TRANSCEIVER</type>
+			</state>		
+		</component>
+		<component>
+			<name>transceiver-4</name>
+			<config>
+				<name>transceiver-4</name>
+			</config>
+			<state>
+				<name>transceiver-4</name>
+      			<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:TRANSCEIVER</type>
+			</state>		
+		</component>
+		<component>
+			<name>transceiver-5</name>
+			<config>
+				<name>transceiver-5</name>
+			</config>
+			<state>
+				<name>transceiver-5</name>
+      			<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:TRANSCEIVER</type>
+			</state>		
+		</component>
+		<component>
+			<name>transceiver-6</name>
+			<config>
+				<name>transceiver-6</name>
+			</config>
+			<state>
+				<name>transceiver-6</name>
+      			<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:TRANSCEIVER</type>
+			</state>		
+		</component>
+		<component>
+			<name>transceiver-7</name>
+			<config>
+				<name>transceiver-7</name>
+			</config>
+			<state>
+				<name>transceiver-7</name>
+      			<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:TRANSCEIVER</type>
+			</state>		
+		</component>
+		<component>
+			<name>transceiver-8</name>
+			<config>
+				<name>transceiver-8</name>
+			</config>
+			<state>
+				<name>transceiver-8</name>
+      			<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:TRANSCEIVER</type>
+			</state>		
+		</component>
+		<component>
+			<name>transceiver-9</name>
+			<config>
+				<name>transceiver-9</name>
+			</config>
+			<state>
+				<name>transceiver-9</name>
+      			<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:TRANSCEIVER</type>
+			</state>		
+		</component>
+		<component>
+			<name>transceiver-10</name>
+			<config>
+				<name>transceiver-10</name>
+			</config>
+			<state>
+				<name>transceiver-10</name>
+      			<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:TRANSCEIVER</type>
+			</state>		
+		</component>
+		<component>
+			<name>transceiver-11</name>
+			<config>
+				<name>transceiver-11</name>
+			</config>
+			<state>
+				<name>transceiver-11</name>
+      			<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:TRANSCEIVER</type>
+			</state>		
+		</component>
+		<component>
+			<name>transceiver-12</name>
+			<config>
+				<name>transceiver-12</name>
+			</config>
+			<state>
+				<name>transceiver-12</name>
+      			<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:TRANSCEIVER</type>
+			</state>		
+		</component>
+		<component>
+			<name>transceiver-13</name>
+			<config>
+				<name>transceiver-13</name>
+			</config>
+			<state>
+				<name>transceiver-13</name>
+      			<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:TRANSCEIVER</type>
+			</state>		
+		</component>
+		<component>
+			<name>transceiver-14</name>
+			<config>
+				<name>transceiver-14</name>
+			</config>
+			<state>
+				<name>transceiver-14</name>
+      			<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:TRANSCEIVER</type>
+			</state>		
+		</component>
+		<component>
+			<name>transceiver-15</name>
+			<config>
+				<name>transceiver-15</name>
+			</config>
+			<state>
+				<name>transceiver-15</name>
+      			<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:TRANSCEIVER</type>
+			</state>		
+		</component>
+		<component>
+			<name>transceiver-16</name>
+			<config>
+				<name>transceiver-16</name>
+			</config>
+			<state>
+				<name>transceiver-16</name>
+      			<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:TRANSCEIVER</type>
+			</state>		
+		</component>
+		<component>
+			<name>transceiver-17</name>
+			<config>
+				<name>transceiver-17</name>
+			</config>
+			<state>
+				<name>transceiver-17</name>
+      			<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:TRANSCEIVER</type>
+			</state>		
+		</component>
+		<component>
+			<name>transceiver-18</name>
+			<config>
+				<name>transceiver-18</name>
+			</config>
+			<state>
+				<name>transceiver-18</name>
+      			<type xmlns:typex="http://openconfig.net/yang/platform-types">typex:TRANSCEIVER</type>
+			</state>		
+		</component>
+		<!--optical-channels-->
+		<component>
+			<name>channel-19</name>
+			<config>
+				<name>channel-19</name>
+			</config>
+			<state>
+				<name>channel-19</name>
+      			<type xmlns:typex="http://openconfig.net/yang/transport-types">typex:OPTICAL_CHANNEL</type>
+			</state>
+			<optical-channel xmlns="http://openconfig.net/yang/terminal-device">
+				<config>
+					<frequency>191600000</frequency>
+					<target-output-power>100</target-output-power>
+					<operational-mode>0</operational-mode>
+					<line-port>port-19</line-port>
+				</config>
+				<state>
+					<frequency>191600000</frequency>
+					<target-output-power>0</target-output-power>
+					<operational-mode>0</operational-mode>
+					<line-port>port-19</line-port>
+					<group-id>1</group-id>
+					<output-power>
+						<instant>0</instant>
+						<avg>0</avg>
+						<min>0</min>
+						<max>0</max>
+						<interval>0</interval>
+					</output-power>		
+					<input-power>
+						<instant>0</instant>
+						<avg>0</avg>
+						<min>0</min>
+						<max>0</max>
+						<interval>0</interval>
+					</input-power>		
+					<laser-bias-current>
+						<instant>0</instant>
+						<avg>0</avg>
+						<min>0</min>
+						<max>0</max>
+						<interval>0</interval>
+					</laser-bias-current>		
+					<chromatic-dispersion>
+						<instant>0</instant>
+						<avg>0</avg>
+						<min>0</min>
+						<max>0</max>
+					</chromatic-dispersion>		
+					<polarization-mode-dispersion>
+						<instant>0</instant>
+						<avg>0</avg>
+						<min>0</min>
+						<max>0</max>
+					</polarization-mode-dispersion>		
+					<second-order-polarization-mode-dispersion>
+						<instant>0</instant>
+						<avg>0</avg>
+						<min>0</min>
+						<max>0</max>
+					</second-order-polarization-mode-dispersion>		
+					<polarization-dependent-loss>
+						<instant>0</instant>
+						<avg>0</avg>
+						<min>0</min>
+						<max>0</max>
+						<interval>0</interval>
+					</polarization-dependent-loss>	
+				</state>
+			</optical-channel>		
+		</component>
+		<component>
+			<name>channel-20</name>
+			<config>
+				<name>channel-20</name>
+			</config>
+			<state>
+				<name>channel-20</name>
+      			<type xmlns:typex="http://openconfig.net/yang/transport-types">typex:OPTICAL_CHANNEL</type>
+			</state>
+			<optical-channel xmlns="http://openconfig.net/yang/terminal-device">
+				<config>
+					<frequency>191600000</frequency>
+					<target-output-power>100</target-output-power>
+					<operational-mode>0</operational-mode>
+					<line-port>port-20</line-port>
+				</config>
+				<state>
+					<frequency>191600000</frequency>
+					<target-output-power>0</target-output-power>
+					<operational-mode>0</operational-mode>
+					<line-port>port-20</line-port>
+					<group-id>1</group-id>
+					<output-power>
+						<instant>0</instant>
+						<avg>0</avg>
+						<min>0</min>
+						<max>0</max>
+						<interval>0</interval>
+					</output-power>		
+					<input-power>
+						<instant>0</instant>
+						<avg>0</avg>
+						<min>0</min>
+						<max>0</max>
+						<interval>0</interval>
+					</input-power>		
+					<laser-bias-current>
+						<instant>0</instant>
+						<avg>0</avg>
+						<min>0</min>
+						<max>0</max>
+						<interval>0</interval>
+					</laser-bias-current>		
+					<chromatic-dispersion>
+						<instant>0</instant>
+						<avg>0</avg>
+						<min>0</min>
+						<max>0</max>
+					</chromatic-dispersion>		
+					<polarization-mode-dispersion>
+						<instant>0</instant>
+						<avg>0</avg>
+						<min>0</min>
+						<max>0</max>
+					</polarization-mode-dispersion>		
+					<second-order-polarization-mode-dispersion>
+						<instant>0</instant>
+						<avg>0</avg>
+						<min>0</min>
+						<max>0</max>
+					</second-order-polarization-mode-dispersion>		
+					<polarization-dependent-loss>
+						<instant>0</instant>
+						<avg>0</avg>
+						<min>0</min>
+						<max>0</max>
+						<interval>0</interval>
+					</polarization-dependent-loss>	
+				</state>
+			</optical-channel>		
+		</component>
+		<component>
+			<name>channel-21</name>
+			<config>
+				<name>channel-21</name>
+			</config>
+			<state>
+				<name>channel-21</name>
+      			<type xmlns:typex="http://openconfig.net/yang/transport-types">typex:OPTICAL_CHANNEL</type>
+			</state>
+			<optical-channel xmlns="http://openconfig.net/yang/terminal-device">
+				<config>
+					<frequency>191600000</frequency>
+					<target-output-power>100</target-output-power>
+					<operational-mode>0</operational-mode>
+					<line-port>port-21</line-port>
+				</config>
+				<state>
+					<frequency>191600000</frequency>
+					<target-output-power>0</target-output-power>
+					<operational-mode>0</operational-mode>
+					<line-port>port-21</line-port>
+					<group-id>1</group-id>
+					<output-power>
+						<instant>0</instant>
+						<avg>0</avg>
+						<min>0</min>
+						<max>0</max>
+						<interval>0</interval>
+					</output-power>		
+					<input-power>
+						<instant>0</instant>
+						<avg>0</avg>
+						<min>0</min>
+						<max>0</max>
+						<interval>0</interval>
+					</input-power>		
+					<laser-bias-current>
+						<instant>0</instant>
+						<avg>0</avg>
+						<min>0</min>
+						<max>0</max>
+						<interval>0</interval>
+					</laser-bias-current>		
+					<chromatic-dispersion>
+						<instant>0</instant>
+						<avg>0</avg>
+						<min>0</min>
+						<max>0</max>
+					</chromatic-dispersion>		
+					<polarization-mode-dispersion>
+						<instant>0</instant>
+						<avg>0</avg>
+						<min>0</min>
+						<max>0</max>
+					</polarization-mode-dispersion>		
+					<second-order-polarization-mode-dispersion>
+						<instant>0</instant>
+						<avg>0</avg>
+						<min>0</min>
+						<max>0</max>
+					</second-order-polarization-mode-dispersion>		
+					<polarization-dependent-loss>
+						<instant>0</instant>
+						<avg>0</avg>
+						<min>0</min>
+						<max>0</max>
+						<interval>0</interval>
+					</polarization-dependent-loss>	
+				</state>
+			</optical-channel>		
+		</component>
+		<component>
+			<name>channel-22</name>
+			<config>
+				<name>channel-22</name>
+			</config>
+			<state>
+				<name>channel-22</name>
+      			<type xmlns:typex="http://openconfig.net/yang/transport-types">typex:OPTICAL_CHANNEL</type>
+			</state>
+			<optical-channel xmlns="http://openconfig.net/yang/terminal-device">
+				<config>
+					<frequency>191600000</frequency>
+					<target-output-power>100</target-output-power>
+					<operational-mode>0</operational-mode>
+					<line-port>port-22</line-port>
+				</config>
+				<state>
+					<frequency>191600000</frequency>
+					<target-output-power>0</target-output-power>
+					<operational-mode>0</operational-mode>
+					<line-port>port-22</line-port>
+					<group-id>1</group-id>
+					<output-power>
+						<instant>0</instant>
+						<avg>0</avg>
+						<min>0</min>
+						<max>0</max>
+						<interval>0</interval>
+					</output-power>		
+					<input-power>
+						<instant>0</instant>
+						<avg>0</avg>
+						<min>0</min>
+						<max>0</max>
+						<interval>0</interval>
+					</input-power>		
+					<laser-bias-current>
+						<instant>0</instant>
+						<avg>0</avg>
+						<min>0</min>
+						<max>0</max>
+						<interval>0</interval>
+					</laser-bias-current>		
+					<chromatic-dispersion>
+						<instant>0</instant>
+						<avg>0</avg>
+						<min>0</min>
+						<max>0</max>
+					</chromatic-dispersion>		
+					<polarization-mode-dispersion>
+						<instant>0</instant>
+						<avg>0</avg>
+						<min>0</min>
+						<max>0</max>
+					</polarization-mode-dispersion>		
+					<second-order-polarization-mode-dispersion>
+						<instant>0</instant>
+						<avg>0</avg>
+						<min>0</min>
+						<max>0</max>
+					</second-order-polarization-mode-dispersion>		
+					<polarization-dependent-loss>
+						<instant>0</instant>
+						<avg>0</avg>
+						<min>0</min>
+						<max>0</max>
+						<interval>0</interval>
+					</polarization-dependent-loss>	
+				</state>
+			</optical-channel>		
+		</component>
+	</components>
+</config>

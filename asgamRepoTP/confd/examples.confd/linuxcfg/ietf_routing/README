@@ -1,0 +1,68 @@
+General
+-------
+
+The `ietf_routing` component provides support for the IETF standard
+ "RFC 8022: A YANG Data Model for Routing Management"
+(http://tools.ietf.org/html/rfc8022).
+
+It enables configuration of both IPv4 and IPv6 static routes.
+
+Requirements
+------------
+
+This should work on any "standard Linux" system, but has been tested
+on Ubuntu 14.04, 16.10
+
+Specific requirements:
+
+ - You must have enabled the `ietf_interfaces` and `ip` `linuxcfg` component.
+
+Installation
+------------
+
+No specific installation required, but no other system should be
+managing the interfaces at the same time.
+
+Example:
+
+```
+interfaces interface enp0s25 type ethernetCsmacd
+enabled
+ipv4 address 11.0.2.15 prefix-length 24
+ipv6 address 7777::1 prefix-length 64
+commit
+
+routing control-plane-protocols control-plane-protocol static protstatic
+static-routes ipv4 route 14.0.2.0/24 next-hop next-hop-address 11.0.2.16
+commit
+
+routing control-plane-protocols control-plane-protocol static protstatic
+static-routes ipv6 route 6667::/64 next-hop next-hop-address 7777::2
+commit
+```
+
+Limitations
+-----------
+
+- only `static-routes` can be configured
+- `action active-route` not support
+- `receive` special next-hop is not supported
+- validation is not fully implemented (see linuxcfg.log)
+  (e.g. `ipv6` nexthop-address must be different from interface address)
+- RT26183 - disabled when statement check that static routes can be configured
+  only under static protocol type (make sure  control-plane-protocol is
+  of type "static")
+- RT26927 - when statement controlling available config is not working
+- deletion of ipv6 route with next-hop list deletes only first next-hop
+  (different behavior of `iproute2` for ipv4 and ipv6)
+- when interface is changed in a way it has impact on routing table in the
+  system, the routes are not re-applied (routing component is not connected
+  with interface component)
+- error messages have to be searched in the linuxcfg.log file
+  (export LINUXCFG_OPTIONS='-i -l' before starting linuxcfg or use "-i -l"
+   start-up arguments)
+- sometimes 'next-hop' is incorrect ('routing-state')
+- 'action active-route' is not implemented
+- route attribute 'active' is not implemented (in 'routing-state')
+- 'router-id' is not implemented (in 'routing-state')
+- 'control-plane-protocols' are not implemented (in 'routing-state')

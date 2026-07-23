@@ -1,0 +1,24 @@
+module openconfig-protocols {
+
+  yang-version "1";
+
+  // namespace
+  namespace "http://openconfig.net/yang/protocols";
+
+  prefix "oc-prt";
+
+  // import some basic inet types
+  import openconfig-bgp { prefix oc-bgp; }
+  import openconfig-ospfv2 { prefix oc-ospfv2; }
+
+
+  container bgp-instance {
+     uses oc-bgp:bgp-top;
+  }
+
+  container ospf-instance {
+     uses oc-ospfv2:ospfv2-top;
+  }
+
+}
+

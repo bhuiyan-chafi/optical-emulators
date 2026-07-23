@@ -1,0 +1,86 @@
+<INFO> 28-Jan-2026::15:24:14.601 71154eb22ce5 confd[177]: - Writing daemon log to /confd/examples.confd/OC23/confd.log
+<INFO> 28-Jan-2026::15:24:14.607 71154eb22ce5 confd[177]: - Writing NETCONF log to /confd/examples.confd/OC23/netconf.log
+<INFO> 28-Jan-2026::15:24:14.607 71154eb22ce5 confd[177]: - Writing audit log to /confd/examples.confd/OC23/audit.log
+<INFO> 28-Jan-2026::15:24:14.607 71154eb22ce5 confd[177]: - Daemon logging started
+<INFO> 28-Jan-2026::15:24:14.607 71154eb22ce5 confd[177]: - Writing developer log to /confd/examples.confd/OC23/devel.log
+<DEBUG> 28-Jan-2026::15:24:14.636 71154eb22ce5 confd[177]: - Loading file /confd/etc/confd/ietf-netconf-monitoring.fxs
+<DEBUG> 28-Jan-2026::15:24:14.638 71154eb22ce5 confd[177]: - Loading file /confd/etc/confd/tailf-common-monitoring.fxs
+<DEBUG> 28-Jan-2026::15:24:14.638 71154eb22ce5 confd[177]: - Loading file /confd/etc/confd/ietf-netconf-acm.fxs
+<DEBUG> 28-Jan-2026::15:24:14.639 71154eb22ce5 confd[177]: - Loading file /confd/etc/confd/iana-crypt-hash.fxs
+<DEBUG> 28-Jan-2026::15:24:14.640 71154eb22ce5 confd[177]: - Loading file ./openconfig-alarm-types.fxs
+<DEBUG> 28-Jan-2026::15:24:14.640 71154eb22ce5 confd[177]: - Loading file ./openconfig-yang-types.fxs
+<DEBUG> 28-Jan-2026::15:24:14.641 71154eb22ce5 confd[177]: - Loading file ./openconfig-types.fxs
+<DEBUG> 28-Jan-2026::15:24:14.642 71154eb22ce5 confd[177]: - Loading file ./ietf-interfaces.fxs
+<DEBUG> 28-Jan-2026::15:24:14.643 71154eb22ce5 confd[177]: - Loading file ./openconfig-platform-types.fxs
+<DEBUG> 28-Jan-2026::15:24:14.644 71154eb22ce5 confd[177]: - Loading file ./openconfig-transport-types.fxs
+<DEBUG> 28-Jan-2026::15:24:14.646 71154eb22ce5 confd[177]: - Loading file ./openconfig-platform.fxs
+<DEBUG> 28-Jan-2026::15:24:14.649 71154eb22ce5 confd[177]: - Loading file ./openconfig-interfaces.fxs
+<DEBUG> 28-Jan-2026::15:24:14.651 71154eb22ce5 confd[177]: - Loading file ./openconfig-wavelength-router.fxs
+<DEBUG> 28-Jan-2026::15:24:14.652 71154eb22ce5 confd[177]: - Loading file ./openconfig-if-ethernet.fxs
+<DEBUG> 28-Jan-2026::15:24:14.654 71154eb22ce5 confd[177]: - Loading file ./openconfig-platform-port.fxs
+<DEBUG> 28-Jan-2026::15:24:14.655 71154eb22ce5 confd[177]: - Loading file /confd/etc/confd/ietf-yang-library.fxs
+<DEBUG> 28-Jan-2026::15:24:14.656 71154eb22ce5 confd[177]: - Loading file /confd/etc/confd/ietf-netconf-notifications.fxs
+<DEBUG> 28-Jan-2026::15:24:14.657 71154eb22ce5 confd[177]: - Loading file /confd/lib/confd/lib/netconf/netconf/priv/netconf_netmod.fxs
+<DEBUG> 28-Jan-2026::15:24:14.658 71154eb22ce5 confd[177]: - Loading file /confd/etc/confd/tailf-netconf-monitoring.fxs
+<DEBUG> 28-Jan-2026::15:24:14.659 71154eb22ce5 confd[177]: - Loading file /confd/etc/confd/tailf-confd-monitoring.fxs
+<DEBUG> 28-Jan-2026::15:24:14.662 71154eb22ce5 confd[177]: - Loading file /confd/etc/confd/tailf-acm.fxs
+<DEBUG> 28-Jan-2026::15:24:14.664 71154eb22ce5 confd[177]: - Loading file /confd/etc/confd/tailf-rollback.fxs
+<DEBUG> 28-Jan-2026::15:24:14.664 71154eb22ce5 confd[177]: - Loading file /confd/etc/confd/tailf-kicker.fxs
+<DEBUG> 28-Jan-2026::15:24:14.665 71154eb22ce5 confd[177]: - Loading file /confd/etc/confd/tailf-aaa.fxs
+<DEBUG> 28-Jan-2026::15:24:14.666 71154eb22ce5 confd[177]: - Loading file ./openconfig-inet-types.fxs
+<DEBUG> 28-Jan-2026::15:24:14.667 71154eb22ce5 confd[177]: - Loading file ./openconfig-telemetry-types.fxs
+<DEBUG> 28-Jan-2026::15:24:14.668 71154eb22ce5 confd[177]: - Loading file ./openconfig-platform-transceiver.fxs
+<DEBUG> 28-Jan-2026::15:24:14.671 71154eb22ce5 confd[177]: - Loading file ./flex-scale-mg-on.fxs
+<DEBUG> 28-Jan-2026::15:24:14.674 71154eb22ce5 confd[177]: - Skipping file ./openconfig-telemetry.fxs: namespace already loaded
+<DEBUG> 28-Jan-2026::15:24:14.689 71154eb22ce5 confd[177]: - Loading file /confd/etc/confd/confd.ccl
+<INFO> 28-Jan-2026::15:24:14.842 71154eb22ce5 confd[177]: - Starting to listen for Internal IPC on 127.0.0.1:4565
+<INFO> 28-Jan-2026::15:24:15.254 71154eb22ce5 confd[177]: - CDB load: processing file: ./confd-cdb/aaa_init.xml
+<INFO> 28-Jan-2026::15:24:15.297 71154eb22ce5 confd[177]: - CDB load: processing file: ./confd-cdb/init_openconfig-platform.xml
+<INFO> 28-Jan-2026::15:24:15.600 71154eb22ce5 confd[177]: - Starting to listen for NETCONF SSH on 0.0.0.0:2022
+<INFO> 28-Jan-2026::15:24:15.631 71154eb22ce5 confd[177]: - Starting to listen for NETCONF TCP on 0.0.0.0:2023
+<INFO> 28-Jan-2026::15:24:16.535 71154eb22ce5 confd[177]: - Starting to listen for CLI SSH on 0.0.0.0:2024
+<INFO> 28-Jan-2026::15:24:16.639 71154eb22ce5 confd[177]: - ConfD started vsn: 6.4
+<CRIT> 28-Jan-2026::15:25:02.126 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::15:25:02.127 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::15:25:02.193 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::15:25:02.193 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::16:02:00.593 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::16:02:00.593 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::16:02:00.627 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::16:02:00.627 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::16:12:37.586 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::16:12:37.586 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::16:12:37.618 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::16:12:37.618 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::16:22:21.271 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::16:22:21.272 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::16:22:21.301 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::16:22:21.301 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::17:06:03.088 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::17:06:03.089 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::17:06:03.121 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::17:06:03.122 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::17:26:07.600 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::17:26:07.601 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::17:26:07.632 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::17:26:07.633 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::18:25:25.612 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::18:25:25.612 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::18:25:25.644 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::18:25:25.644 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::18:51:13.425 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::18:51:13.425 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::18:51:13.451 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::18:51:13.451 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::19:04:10.143 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::19:04:10.144 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::19:04:10.172 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::19:04:10.172 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::20:48:13.008 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::20:48:13.009 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::20:48:13.047 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::20:48:13.048 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::21:33:42.093 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::21:33:42.093 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::21:33:42.123 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
+<CRIT> 28-Jan-2026::21:33:42.123 71154eb22ce5 confd[177]: - no registration found for callpoint transponder/get_log_times of type=external
