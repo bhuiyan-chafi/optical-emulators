@@ -1,12 +1,15 @@
 #!/bin/bash
 set -e
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$SCRIPT_DIR"
+
 # Configuration
 XML_SRC="../xml/terminal_openconfig.xml"
 PROJECT_DIR="my_project"
 XML_DEST="$PROJECT_DIR/init_config.xml"
-CONTAINER_NAME="confd-emulator"
-IMAGE_NAME="confd-latest-img"
+CONTAINER_NAME="terminalemu-conf8"
+IMAGE_NAME="terminalemu-conf8"
 
 echo "=== deployment started ==="
 

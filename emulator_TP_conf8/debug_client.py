@@ -13,7 +13,7 @@ def simple_verify():
     print(f"Connecting to {HOST}:{PORT}...")
     try:
         with manager.connect(host=HOST, port=PORT, username=USER, password=PASS,
-                             hostkey_verify=False, look_for_keys=False) as m:
+                             hostkey_verify=False, look_for_keys=False, allow_agent=False) as m:
             print("Connected!")
             
             # Try getting just the platform components first (usually single root list)

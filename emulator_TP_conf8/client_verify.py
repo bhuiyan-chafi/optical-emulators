@@ -11,7 +11,7 @@ def get_ports_and_modes():
     print(f"Connecting to {HOST}:{PORT}...")
     try:
         with manager.connect(host=HOST, port=PORT, username=USER, password=PASS,
-                             hostkey_verify=False, look_for_keys=False) as m:
+                             hostkey_verify=False, look_for_keys=False, allow_agent=False) as m:
             
             print("Connected! Fetching configuration...")
             
@@ -145,6 +145,39 @@ def get_ports_and_modes():
                         if not found_och:
                              print("  No associated Optical Channel found.")
             
+            # Print Operational Modes Catalog
+            print("\n--- Supported Operational Modes Catalog (Manifest) ---")
+            modes = find_in_roots(root_props, './/oc-term-props:operational-modes', ns) if 'root_props_modes' in locals() else root_props.findall('.//oc-term-props:operational-modes', ns)
+            
+            for m in modes:
+                m_id = m.find('.//oc-term-props:state/oc-term-props:mode-id', ns)
+                if m_id is None:
+                    m_id = m.find('oc-term-props:mode-id', ns)
+                m_id_str = m_id.text if m_id is not None else "?"
+                
+                bit_rate = m.find('.//oc-term-props:state/oc-term-props:bit-rate', ns)
+                br_str = bit_rate.text.split(':')[-1] if bit_rate is not None and bit_rate.text else "?"
+                
+                baud_rate = m.find('.//oc-term-props:state/oc-term-props:baud-rate', ns)
+                if baud_rate is not None and baud_rate.text:
+                    try:
+                        bd_val = float(baud_rate.text) / 1e9
+                        bd_str = f"{bd_val:.2f} GBd"
+                    except:
+                        bd_str = baud_rate.text
+                else:
+                    bd_str = "?"
+                
+                mod_fmt = m.find('.//oc-term-props:state/oc-term-props:modulation-format', ns)
+                mod_str = mod_fmt.text.split(':')[-1].replace("MODULATION_FORMAT_", "") if mod_fmt is not None and mod_fmt.text else "?"
+                
+                fec = m.find('.//oc-term-props:fec/oc-term-props:state/oc-term-props:fec-coding', ns)
+                fec_str = fec.text.split(':')[-1] if fec is not None and fec.text else "?"
+                
+                width = m.find('.//oc-term-props:state/oc-term-props:optical-channel-spectrum-width', ns)
+                w_str = f"{width.text} GHz" if width is not None and width.text else "?"
+                
+                print(f"Mode {m_id_str:>2}: BitRate={br_str:<14} Baud={bd_str:<12} Mod={mod_str:<10} FEC={fec_str:<8} Width={w_str}")
 
     except Exception as e:
         print(f"Error: {e}")
