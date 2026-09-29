@@ -7,24 +7,27 @@ This directory (`emulator_ORDM_conf8`) contains a ConfD 8.0-based emulator confi
 ## 1. Quick Start
 
 ### 1.1 Build the Image
+
 ```bash
 ./build.sh
 ```
 
 ### 1.2 Run the Emulator
+
 ```bash
 ./run.sh
 ```
 
 This starts the container `confd-ordm` mapping the following host ports:
 
-| Service | Container Port | Host Port | Protocol | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| **NETCONF** | 2022 | **2028** | SSH / XML | Programmatic SDN controller & telemetry interface |
-| **CLI** | 2024 | **2029** | SSH | Interactive network engineer command line |
-| **IPC** | 4565 | **4568** | Internal | ConfD Inter-Process Communication socket |
+| Service     | Container Port | Host Port | Protocol  | Description                                       |
+| :---------- | :------------- | :-------- | :-------- | :------------------------------------------------ |
+| **NETCONF** | 2022           | **2028**  | SSH / XML | Programmatic SDN controller & telemetry interface |
+| **CLI**     | 2024           | **2029**  | SSH       | Interactive network engineer command line         |
+| **IPC**     | 4565           | **4568**  | Internal  | ConfD Inter-Process Communication socket          |
 
 ### 1.3 Verify Topology with Python Client
+
 ```bash
 python3 client_ordm.py
 ```
