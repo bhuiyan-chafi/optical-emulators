@@ -39,6 +39,6 @@ docker exec "$CONTAINER_NAME" bash -c "source /opt/confd/confdrc && confd_load -
 docker exec "$CONTAINER_NAME" bash -c "source /opt/confd/confdrc && confd_load -l -m -O /my_project/init_config.xml"
 
 echo "=== Optical Amplifier Emulator Ready! ==="
-echo "NETCONF: ssh -p 2028 admin@localhost (Password: admin)"
-echo "CLI:     ssh -p 2029 admin@localhost (Password: admin)"
+echo "NETCONF: ssh -p 2030 admin@localhost (Password: admin)"
+echo "CLI:     ssh -p 2031 admin@localhost (Password: admin)"
 echo "Verify:  python3 client_amp.py"

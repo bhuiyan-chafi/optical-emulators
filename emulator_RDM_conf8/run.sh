@@ -14,5 +14,5 @@ docker run -d \
     -p 2027:2024 \
     -p 4567:4565 \
     -v $(pwd)/emulator_RDM_conf8/my_project:/my_project \
-    confd-rdm-img \
+    confd-ordm-img \
     confd --foreground --verbose -c /my_project/etc/confd/confd.conf

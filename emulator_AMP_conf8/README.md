@@ -31,9 +31,9 @@ Deploy any of the sample XML configuration files generated in `sample_amplifier_
 
 | Service     | Container Port | Host Port | Description                                |
 | :---------- | :------------- | :-------- | :----------------------------------------- |
-| **NETCONF** | 2022           | **2028**  | Main programmatic NETCONF interface (SSH)  |
-| **CLI**     | 2024           | **2029**  | Interactive Command Line (SSH)             |
-| **IPC**     | 4565           | **4568**  | Internal ConfD Inter-Process Communication |
+| **NETCONF** | 2022           | **2030**  | Main programmatic NETCONF interface (SSH)  |
+| **CLI**     | 2024           | **2031**  | Interactive Command Line (SSH)             |
+| **IPC**     | 4565           | **4569**  | Internal ConfD Inter-Process Communication |
 
 ### 4. Verify Functionality
 
@@ -48,13 +48,13 @@ Outputs the server capabilities, running config, and live operational telemetry 
 **Using SSH CLI:**
 
 ```bash
-ssh -p 2029 admin@localhost
+ssh -p 2031 admin@localhost
 # Password: admin
 ```
 
 **Using NETCONF console:**
 
 ```bash
-ssh -p 2028 -s admin@localhost netconf
+ssh -p 2030 -s admin@localhost netconf
 # Password: admin
 ```

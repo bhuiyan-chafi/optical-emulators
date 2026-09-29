@@ -5,7 +5,7 @@ from ncclient import manager
 
 def main():
     HOST = '127.0.0.1'
-    PORT = 2028
+    PORT = 2030
     USER = 'admin'
     PASS = 'admin'
 
