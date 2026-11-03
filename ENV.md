@@ -13,14 +13,14 @@ libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev \
 liblzma-dev git
 ```
 
-2. Install `pyenv``
+1. Install `pyenv``
 
 ```bash
 #if curl is not installed, install it and execute this again
 curl https://pyenv.run | bash
 ```
 
-3. Configure the shell
+1. Configure the shell
 
 ```bash
 echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
@@ -28,20 +28,20 @@ echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bas
 echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 ```
 
-4. Install Python 3.9.16 or your desired version
+1. Install Python 3.9.16 or your desired version
 
 ```bash
 pyenv install 3.9.16
 ```
 
-5. Create a virtual environment
+1. Create a virtual environment
 
 ```bash
 # Syntax: pyenv virtualenv <version> <name_of_env>
 pyenv virtualenv 3.9.16 netconf
 ```
 
-6. Activate it
+1. Activate it
 
 ```bash
 # go to your desired directory and activate it
@@ -51,7 +51,7 @@ pyenv activate netconf
 
 ## Python Dependencies
 
-Make sure you are in a virtual environment. Don't mess up your machine's python version or packages. 
+Make sure you are in a virtual environment. Don't mess up your machine's python version or packages.
 
 1. Install `ncclient`
 
@@ -59,7 +59,7 @@ Make sure you are in a virtual environment. Don't mess up your machine's python 
 pip install ncclient
 ```
 
-2. Others
+1. Others
 
 ```bash
 pip install python-dotenv loguru

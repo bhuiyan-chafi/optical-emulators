@@ -1,0 +1,1212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <ltp-template xmlns="http://org/openroadm/ltp-template">
+    <vendor>Nokia</vendor>
+  </ltp-template>
+  <org-openroadm-device xmlns="http://org/openroadm/device"
+                        xmlns:openROADM-if="http://org/openroadm/interfaces"
+                        xmlns:org-openroadm-port-types="http://org/openroadm/port/types">
+
+    <!-- ================================================================= -->
+    <!-- 1. Node Identity & System Capabilities (Nokia 1830 PSS-32 ROADM)  -->
+    <!-- ================================================================= -->
+    <info>
+      <node-id>ROADM-1</node-id>
+      <node-number>1</node-number>
+      <node-type>rdm</node-type>
+      <node-subtype>none</node-subtype>
+      <clli>NOKIA-PSS32-CORE1</clli>
+      <vendor>Nokia</vendor>
+      <model>1830 PSS-32</model>
+      <serial-id>NK-PSS32-2026-0001</serial-id>
+      <oamp-interface-name>OAMP-ETH0</oamp-interface-name>
+      <macAddress>00:1b:21:32:00:01</macAddress>
+      <softwareVersion>R23.1.0</softwareVersion>
+      <openroadm-version>18.1.0</openroadm-version>
+      <template>NOKIA-PSS32-4DEG-1SRG-CL-CONTENTION-AWARE</template>
+      <lifecycle-state>deployed</lifecycle-state>
+      <max-degrees>4</max-degrees>
+      <max-srgs>1</max-srgs>
+    </info>
+
+    <!-- ================================================================= -->
+    <!-- 2. Chassis / Shelf Inventory (Nokia 1830 PSS-32 Core/Mesh Shelf)  -->
+    <!-- ================================================================= -->
+    <shelves>
+      <shelf-name>shelf-1</shelf-name>
+      <shelf-type>1830-PSS-32-Core-Shelf</shelf-type>
+      <rack>RACK-01</rack>
+      <shelf-position>1</shelf-position>
+      <lifecycle-state>deployed</lifecycle-state>
+      <administrative-state>inService</administrative-state>
+      <vendor>Nokia</vendor>
+      <model>1830 PSS-32</model>
+      <serial-id>NK-SH1-2026-0001</serial-id>
+      <type>Core-Mesh-Shelf</type>
+      <product-code>3KC13001AA</product-code>
+      <hardware-version>2.0</hardware-version>
+      <operational-state>inService</operational-state>
+      <equipment-state>not-reserved-inuse</equipment-state>
+      <is-physical>true</is-physical>
+      <is-passive>false</is-passive>
+      <faceplate-label>Nokia 1830 PSS-32 Universal Photonic Shelf</faceplate-label>
+      <user-description>32-Slot Core/Mesh Photonic Switching Shelf</user-description>
+    </shelves>
+
+    <!-- ================================================================= -->
+    <!-- 3. Circuit Packs & Physical Optical Ports                         -->
+    <!-- ================================================================= -->
+    <circuit-packs>
+      <circuit-pack-name>1/0/EC32</circuit-pack-name>
+      <circuit-pack-type>EC32-Controller</circuit-pack-type>
+      <circuit-pack-product-code>3KC13010AA</circuit-pack-product-code>
+      <lifecycle-state>deployed</lifecycle-state>
+      <administrative-state>inService</administrative-state>
+      <vendor>Nokia</vendor>
+      <model>EC32</model>
+      <serial-id>NK-EC32-2026-0001</serial-id>
+      <type>Controller</type>
+      <product-code>3KC13010AA</product-code>
+      <hardware-version>1.2</hardware-version>
+      <operational-state>inService</operational-state>
+      <equipment-state>not-reserved-inuse</equipment-state>
+      <circuit-pack-mode>NORMAL</circuit-pack-mode>
+      <shelf>shelf-1</shelf>
+      <slot>1</slot>
+      <is-pluggable-optics>false</is-pluggable-optics>
+      <is-physical>true</is-physical>
+      <is-passive>false</is-passive>
+      <faceplate-label>EC32 Shelf Controller</faceplate-label>
+      <user-description>Nokia 1830 PSS-32 Equipment Controller</user-description>
+    </circuit-packs>
+
+    <circuit-packs>
+      <circuit-pack-name>1/0/DEG1-WSS</circuit-pack-name>
+      <circuit-pack-type>WR20-TF-CL</circuit-pack-type>
+      <circuit-pack-product-code>3KC70920AA</circuit-pack-product-code>
+      <lifecycle-state>deployed</lifecycle-state>
+      <administrative-state>inService</administrative-state>
+      <vendor>Nokia</vendor>
+      <model>WR20-TF + AS23C/AS23L</model>
+      <serial-id>NK-DEG1-2026-0001</serial-id>
+      <type>WSS-Degree-CL</type>
+      <product-code>3KC70920AA</product-code>
+      <hardware-version>2.1</hardware-version>
+      <operational-state>inService</operational-state>
+      <equipment-state>not-reserved-inuse</equipment-state>
+      <circuit-pack-mode>NORMAL</circuit-pack-mode>
+      <shelf>shelf-1</shelf>
+      <slot>2</slot>
+      <is-pluggable-optics>false</is-pluggable-optics>
+      <is-physical>true</is-physical>
+      <is-passive>false</is-passive>
+      <faceplate-label>DEG1 WR20-TF C+L (North)</faceplate-label>
+      <user-description>Line Degree 1 (North) Twin FlexGrid WSS + Extended C+L Line Amplifiers</user-description>
+      <ports>
+        <port-name>DEG1-TTP-TXRX</port-name>
+        <port-type>LINE-TXRX-CL</port-type>
+        <port-qual>roadm-external</port-qual>
+        <port-wavelength-type>multi-wavelength</port-wavelength-type>
+        <port-direction>bidirectional</port-direction>
+        <is-physical>true</is-physical>
+        <pm-capable>true</pm-capable>
+        <alarm-capable>true</alarm-capable>
+        <faceplate-label>DEG1-LINE-TXRX</faceplate-label>
+        <user-description>Degree 1 (North) Inter-ROADM DWDM Line Port (186.050-196.125 THz)</user-description>
+        <lifecycle-state>deployed</lifecycle-state>
+        <administrative-state>inService</administrative-state>
+        <operational-state>inService</operational-state>
+        <logical-connection-point>DEG1-TTP-TXRX</logical-connection-point>
+        <mc-capability-profile-name>FLEXGRID-CL-WSS</mc-capability-profile-name>
+        <roadm-port>
+          <port-power-capability-min-rx>-30.00</port-power-capability-min-rx>
+          <port-power-capability-min-tx>-10.00</port-power-capability-min-tx>
+          <port-power-capability-max-rx>10.00</port-power-capability-max-rx>
+          <port-power-capability-max-tx>22.00</port-power-capability-max-tx>
+        </roadm-port>
+        <port-capabilities xmlns="http://org/openroadm/port-capability">
+          <supported-interface-capability>
+            <if-cap-type>org-openroadm-port-types:if-OTS-OMS-MC-NMC</if-cap-type>
+          </supported-interface-capability>
+        </port-capabilities>
+      </ports>
+      <ports>
+        <port-name>DEG1-CTP-TXRX</port-name>
+        <port-type>INTERNAL-WSS-PORT</port-type>
+        <port-qual>roadm-internal</port-qual>
+        <port-wavelength-type>multi-wavelength</port-wavelength-type>
+        <port-direction>bidirectional</port-direction>
+        <is-physical>true</is-physical>
+        <pm-capable>true</pm-capable>
+        <alarm-capable>true</alarm-capable>
+        <faceplate-label>DEG1-INT-TXRX</faceplate-label>
+        <user-description>Degree 1 Internal Photonic Cross-Connect Port</user-description>
+        <lifecycle-state>deployed</lifecycle-state>
+        <administrative-state>inService</administrative-state>
+        <operational-state>inService</operational-state>
+        <logical-connection-point>DEG1-CTP-TXRX</logical-connection-point>
+      </ports>
+    </circuit-packs>
+
+    <circuit-packs>
+      <circuit-pack-name>1/0/DEG2-WSS</circuit-pack-name>
+      <circuit-pack-type>WR20-TF-CL</circuit-pack-type>
+      <circuit-pack-product-code>3KC70920AA</circuit-pack-product-code>
+      <lifecycle-state>deployed</lifecycle-state>
+      <administrative-state>inService</administrative-state>
+      <vendor>Nokia</vendor>
+      <model>WR20-TF + AS23C/AS23L</model>
+      <serial-id>NK-DEG2-2026-0002</serial-id>
+      <type>WSS-Degree-CL</type>
+      <product-code>3KC70920AA</product-code>
+      <hardware-version>2.1</hardware-version>
+      <operational-state>inService</operational-state>
+      <equipment-state>not-reserved-inuse</equipment-state>
+      <circuit-pack-mode>NORMAL</circuit-pack-mode>
+      <shelf>shelf-1</shelf>
+      <slot>3</slot>
+      <is-pluggable-optics>false</is-pluggable-optics>
+      <is-physical>true</is-physical>
+      <is-passive>false</is-passive>
+      <faceplate-label>DEG2 WR20-TF C+L (East)</faceplate-label>
+      <user-description>Line Degree 2 (East) Twin FlexGrid WSS + Extended C+L Line Amplifiers</user-description>
+      <ports>
+        <port-name>DEG2-TTP-TXRX</port-name>
+        <port-type>LINE-TXRX-CL</port-type>
+        <port-qual>roadm-external</port-qual>
+        <port-wavelength-type>multi-wavelength</port-wavelength-type>
+        <port-direction>bidirectional</port-direction>
+        <is-physical>true</is-physical>
+        <pm-capable>true</pm-capable>
+        <alarm-capable>true</alarm-capable>
+        <faceplate-label>DEG2-LINE-TXRX</faceplate-label>
+        <user-description>Degree 2 (East) Inter-ROADM DWDM Line Port (186.050-196.125 THz)</user-description>
+        <lifecycle-state>deployed</lifecycle-state>
+        <administrative-state>inService</administrative-state>
+        <operational-state>inService</operational-state>
+        <logical-connection-point>DEG2-TTP-TXRX</logical-connection-point>
+        <mc-capability-profile-name>FLEXGRID-CL-WSS</mc-capability-profile-name>
+        <roadm-port>
+          <port-power-capability-min-rx>-30.00</port-power-capability-min-rx>
+          <port-power-capability-min-tx>-10.00</port-power-capability-min-tx>
+          <port-power-capability-max-rx>10.00</port-power-capability-max-rx>
+          <port-power-capability-max-tx>22.00</port-power-capability-max-tx>
+        </roadm-port>
+        <port-capabilities xmlns="http://org/openroadm/port-capability">
+          <supported-interface-capability>
+            <if-cap-type>org-openroadm-port-types:if-OTS-OMS-MC-NMC</if-cap-type>
+          </supported-interface-capability>
+        </port-capabilities>
+      </ports>
+      <ports>
+        <port-name>DEG2-CTP-TXRX</port-name>
+        <port-type>INTERNAL-WSS-PORT</port-type>
+        <port-qual>roadm-internal</port-qual>
+        <port-wavelength-type>multi-wavelength</port-wavelength-type>
+        <port-direction>bidirectional</port-direction>
+        <is-physical>true</is-physical>
+        <pm-capable>true</pm-capable>
+        <alarm-capable>true</alarm-capable>
+        <faceplate-label>DEG2-INT-TXRX</faceplate-label>
+        <user-description>Degree 2 Internal Photonic Cross-Connect Port</user-description>
+        <lifecycle-state>deployed</lifecycle-state>
+        <administrative-state>inService</administrative-state>
+        <operational-state>inService</operational-state>
+        <logical-connection-point>DEG2-CTP-TXRX</logical-connection-point>
+      </ports>
+    </circuit-packs>
+
+    <circuit-packs>
+      <circuit-pack-name>1/0/DEG3-WSS</circuit-pack-name>
+      <circuit-pack-type>WR20-TF-CL</circuit-pack-type>
+      <circuit-pack-product-code>3KC70920AA</circuit-pack-product-code>
+      <lifecycle-state>deployed</lifecycle-state>
+      <administrative-state>inService</administrative-state>
+      <vendor>Nokia</vendor>
+      <model>WR20-TF + AS23C/AS23L</model>
+      <serial-id>NK-DEG3-2026-0003</serial-id>
+      <type>WSS-Degree-CL</type>
+      <product-code>3KC70920AA</product-code>
+      <hardware-version>2.1</hardware-version>
+      <operational-state>inService</operational-state>
+      <equipment-state>not-reserved-inuse</equipment-state>
+      <circuit-pack-mode>NORMAL</circuit-pack-mode>
+      <shelf>shelf-1</shelf>
+      <slot>4</slot>
+      <is-pluggable-optics>false</is-pluggable-optics>
+      <is-physical>true</is-physical>
+      <is-passive>false</is-passive>
+      <faceplate-label>DEG3 WR20-TF C+L (South)</faceplate-label>
+      <user-description>Line Degree 3 (South) Twin FlexGrid WSS + Extended C+L Line Amplifiers</user-description>
+      <ports>
+        <port-name>DEG3-TTP-TXRX</port-name>
+        <port-type>LINE-TXRX-CL</port-type>
+        <port-qual>roadm-external</port-qual>
+        <port-wavelength-type>multi-wavelength</port-wavelength-type>
+        <port-direction>bidirectional</port-direction>
+        <is-physical>true</is-physical>
+        <pm-capable>true</pm-capable>
+        <alarm-capable>true</alarm-capable>
+        <faceplate-label>DEG3-LINE-TXRX</faceplate-label>
+        <user-description>Degree 3 (South) Inter-ROADM DWDM Line Port (186.050-196.125 THz)</user-description>
+        <lifecycle-state>deployed</lifecycle-state>
+        <administrative-state>inService</administrative-state>
+        <operational-state>inService</operational-state>
+        <logical-connection-point>DEG3-TTP-TXRX</logical-connection-point>
+        <mc-capability-profile-name>FLEXGRID-CL-WSS</mc-capability-profile-name>
+        <roadm-port>
+          <port-power-capability-min-rx>-30.00</port-power-capability-min-rx>
+          <port-power-capability-min-tx>-10.00</port-power-capability-min-tx>
+          <port-power-capability-max-rx>10.00</port-power-capability-max-rx>
+          <port-power-capability-max-tx>22.00</port-power-capability-max-tx>
+        </roadm-port>
+        <port-capabilities xmlns="http://org/openroadm/port-capability">
+          <supported-interface-capability>
+            <if-cap-type>org-openroadm-port-types:if-OTS-OMS-MC-NMC</if-cap-type>
+          </supported-interface-capability>
+        </port-capabilities>
+      </ports>
+      <ports>
+        <port-name>DEG3-CTP-TXRX</port-name>
+        <port-type>INTERNAL-WSS-PORT</port-type>
+        <port-qual>roadm-internal</port-qual>
+        <port-wavelength-type>multi-wavelength</port-wavelength-type>
+        <port-direction>bidirectional</port-direction>
+        <is-physical>true</is-physical>
+        <pm-capable>true</pm-capable>
+        <alarm-capable>true</alarm-capable>
+        <faceplate-label>DEG3-INT-TXRX</faceplate-label>
+        <user-description>Degree 3 Internal Photonic Cross-Connect Port</user-description>
+        <lifecycle-state>deployed</lifecycle-state>
+        <administrative-state>inService</administrative-state>
+        <operational-state>inService</operational-state>
+        <logical-connection-point>DEG3-CTP-TXRX</logical-connection-point>
+      </ports>
+    </circuit-packs>
+
+    <circuit-packs>
+      <circuit-pack-name>1/0/DEG4-WSS</circuit-pack-name>
+      <circuit-pack-type>WR20-TF-CL</circuit-pack-type>
+      <circuit-pack-product-code>3KC70920AA</circuit-pack-product-code>
+      <lifecycle-state>deployed</lifecycle-state>
+      <administrative-state>inService</administrative-state>
+      <vendor>Nokia</vendor>
+      <model>WR20-TF + AS23C/AS23L</model>
+      <serial-id>NK-DEG4-2026-0004</serial-id>
+      <type>WSS-Degree-CL</type>
+      <product-code>3KC70920AA</product-code>
+      <hardware-version>2.1</hardware-version>
+      <operational-state>inService</operational-state>
+      <equipment-state>not-reserved-inuse</equipment-state>
+      <circuit-pack-mode>NORMAL</circuit-pack-mode>
+      <shelf>shelf-1</shelf>
+      <slot>5</slot>
+      <is-pluggable-optics>false</is-pluggable-optics>
+      <is-physical>true</is-physical>
+      <is-passive>false</is-passive>
+      <faceplate-label>DEG4 WR20-TF C+L (West)</faceplate-label>
+      <user-description>Line Degree 4 (West) Twin FlexGrid WSS + Extended C+L Line Amplifiers</user-description>
+      <ports>
+        <port-name>DEG4-TTP-TXRX</port-name>
+        <port-type>LINE-TXRX-CL</port-type>
+        <port-qual>roadm-external</port-qual>
+        <port-wavelength-type>multi-wavelength</port-wavelength-type>
+        <port-direction>bidirectional</port-direction>
+        <is-physical>true</is-physical>
+        <pm-capable>true</pm-capable>
+        <alarm-capable>true</alarm-capable>
+        <faceplate-label>DEG4-LINE-TXRX</faceplate-label>
+        <user-description>Degree 4 (West) Inter-ROADM DWDM Line Port (186.050-196.125 THz)</user-description>
+        <lifecycle-state>deployed</lifecycle-state>
+        <administrative-state>inService</administrative-state>
+        <operational-state>inService</operational-state>
+        <logical-connection-point>DEG4-TTP-TXRX</logical-connection-point>
+        <mc-capability-profile-name>FLEXGRID-CL-WSS</mc-capability-profile-name>
+        <roadm-port>
+          <port-power-capability-min-rx>-30.00</port-power-capability-min-rx>
+          <port-power-capability-min-tx>-10.00</port-power-capability-min-tx>
+          <port-power-capability-max-rx>10.00</port-power-capability-max-rx>
+          <port-power-capability-max-tx>22.00</port-power-capability-max-tx>
+        </roadm-port>
+        <port-capabilities xmlns="http://org/openroadm/port-capability">
+          <supported-interface-capability>
+            <if-cap-type>org-openroadm-port-types:if-OTS-OMS-MC-NMC</if-cap-type>
+          </supported-interface-capability>
+        </port-capabilities>
+      </ports>
+      <ports>
+        <port-name>DEG4-CTP-TXRX</port-name>
+        <port-type>INTERNAL-WSS-PORT</port-type>
+        <port-qual>roadm-internal</port-qual>
+        <port-wavelength-type>multi-wavelength</port-wavelength-type>
+        <port-direction>bidirectional</port-direction>
+        <is-physical>true</is-physical>
+        <pm-capable>true</pm-capable>
+        <alarm-capable>true</alarm-capable>
+        <faceplate-label>DEG4-INT-TXRX</faceplate-label>
+        <user-description>Degree 4 Internal Photonic Cross-Connect Port</user-description>
+        <lifecycle-state>deployed</lifecycle-state>
+        <administrative-state>inService</administrative-state>
+        <operational-state>inService</operational-state>
+        <logical-connection-point>DEG4-CTP-TXRX</logical-connection-point>
+      </ports>
+    </circuit-packs>
+
+    <circuit-packs>
+      <circuit-pack-name>1/0/SRG1-WSS</circuit-pack-name>
+      <circuit-pack-type>WR20-TF-SRG-CL</circuit-pack-type>
+      <circuit-pack-product-code>3KC70925AA</circuit-pack-product-code>
+      <lifecycle-state>deployed</lifecycle-state>
+      <administrative-state>inService</administrative-state>
+      <vendor>Nokia</vendor>
+      <model>WR20-TF SRG WSS + CMX 1x4</model>
+      <serial-id>NK-SRG1-2026-0001</serial-id>
+      <type>SRG-WSS-AddDrop-CL</type>
+      <product-code>3KC70925AA</product-code>
+      <hardware-version>2.1</hardware-version>
+      <operational-state>inService</operational-state>
+      <equipment-state>not-reserved-inuse</equipment-state>
+      <circuit-pack-mode>NORMAL</circuit-pack-mode>
+      <shelf>shelf-1</shelf>
+      <slot>6</slot>
+      <is-pluggable-optics>false</is-pluggable-optics>
+      <is-physical>true</is-physical>
+      <is-passive>false</is-passive>
+      <faceplate-label>SRG1 WR20-TF C+L Add/Drop (16-Port)</faceplate-label>
+      <user-description>Unified Extended C+L Contention-Aware SRG1 FlexGrid WSS + 1x4 CMX Splitter/Combiner (16 Add/Drop Ports)</user-description>
+      <ports>
+        <port-name>SRG1-PP1-TXRX</port-name>
+        <port-type>SRG-WSS-ADDDROP-CL</port-type>
+        <port-qual>roadm-external</port-qual>
+        <port-wavelength-type>wavelength</port-wavelength-type>
+        <port-direction>bidirectional</port-direction>
+        <is-physical>true</is-physical>
+        <pm-capable>true</pm-capable>
+        <alarm-capable>true</alarm-capable>
+        <faceplate-label>SRG1-PP1</faceplate-label>
+        <user-description>SRG1 Add/Drop Port #1 (Extended C+L FlexGrid, ready for CHM6 #1 port-17)</user-description>
+        <lifecycle-state>deployed</lifecycle-state>
+        <administrative-state>inService</administrative-state>
+        <operational-state>inService</operational-state>
+        <logical-connection-point>SRG1-PP1-TXRX</logical-connection-point>
+        <mc-capability-profile-name>FLEXGRID-CL-WSS</mc-capability-profile-name>
+        <roadm-port>
+          <port-power-capability-min-rx>-22.00</port-power-capability-min-rx>
+          <port-power-capability-min-tx>-12.00</port-power-capability-min-tx>
+          <port-power-capability-max-rx>9.00</port-power-capability-max-rx>
+          <port-power-capability-max-tx>6.00</port-power-capability-max-tx>
+        </roadm-port>
+        <port-capabilities xmlns="http://org/openroadm/port-capability">
+          <supported-interface-capability>
+            <if-cap-type>org-openroadm-port-types:if-OTS-OMS-MC-NMC</if-cap-type>
+          </supported-interface-capability>
+          <supported-interface-capability>
+            <if-cap-type>org-openroadm-port-types:if-NMC</if-cap-type>
+          </supported-interface-capability>
+        </port-capabilities>
+      </ports>
+      <ports>
+        <port-name>SRG1-PP2-TXRX</port-name>
+        <port-type>SRG-WSS-ADDDROP-CL</port-type>
+        <port-qual>roadm-external</port-qual>
+        <port-wavelength-type>wavelength</port-wavelength-type>
+        <port-direction>bidirectional</port-direction>
+        <is-physical>true</is-physical>
+        <pm-capable>true</pm-capable>
+        <alarm-capable>true</alarm-capable>
+        <faceplate-label>SRG1-PP2</faceplate-label>
+        <user-description>SRG1 Add/Drop Port #2 (Extended C+L FlexGrid, ready for CHM6 #1 port-18)</user-description>
+        <lifecycle-state>deployed</lifecycle-state>
+        <administrative-state>inService</administrative-state>
+        <operational-state>inService</operational-state>
+        <logical-connection-point>SRG1-PP2-TXRX</logical-connection-point>
+        <mc-capability-profile-name>FLEXGRID-CL-WSS</mc-capability-profile-name>
+        <roadm-port>
+          <port-power-capability-min-rx>-22.00</port-power-capability-min-rx>
+          <port-power-capability-min-tx>-12.00</port-power-capability-min-tx>
+          <port-power-capability-max-rx>9.00</port-power-capability-max-rx>
+          <port-power-capability-max-tx>6.00</port-power-capability-max-tx>
+        </roadm-port>
+        <port-capabilities xmlns="http://org/openroadm/port-capability">
+          <supported-interface-capability>
+            <if-cap-type>org-openroadm-port-types:if-OTS-OMS-MC-NMC</if-cap-type>
+          </supported-interface-capability>
+          <supported-interface-capability>
+            <if-cap-type>org-openroadm-port-types:if-NMC</if-cap-type>
+          </supported-interface-capability>
+        </port-capabilities>
+      </ports>
+      <ports>
+        <port-name>SRG1-PP3-TXRX</port-name>
+        <port-type>SRG-WSS-ADDDROP-CL</port-type>
+        <port-qual>roadm-external</port-qual>
+        <port-wavelength-type>wavelength</port-wavelength-type>
+        <port-direction>bidirectional</port-direction>
+        <is-physical>true</is-physical>
+        <pm-capable>true</pm-capable>
+        <alarm-capable>true</alarm-capable>
+        <faceplate-label>SRG1-PP3</faceplate-label>
+        <user-description>SRG1 Add/Drop Port #3 (Extended C+L FlexGrid, ready for CHM6 #1 port-19)</user-description>
+        <lifecycle-state>deployed</lifecycle-state>
+        <administrative-state>inService</administrative-state>
+        <operational-state>inService</operational-state>
+        <logical-connection-point>SRG1-PP3-TXRX</logical-connection-point>
+        <mc-capability-profile-name>FLEXGRID-CL-WSS</mc-capability-profile-name>
+        <roadm-port>
+          <port-power-capability-min-rx>-22.00</port-power-capability-min-rx>
+          <port-power-capability-min-tx>-12.00</port-power-capability-min-tx>
+          <port-power-capability-max-rx>9.00</port-power-capability-max-rx>
+          <port-power-capability-max-tx>6.00</port-power-capability-max-tx>
+        </roadm-port>
+        <port-capabilities xmlns="http://org/openroadm/port-capability">
+          <supported-interface-capability>
+            <if-cap-type>org-openroadm-port-types:if-OTS-OMS-MC-NMC</if-cap-type>
+          </supported-interface-capability>
+          <supported-interface-capability>
+            <if-cap-type>org-openroadm-port-types:if-NMC</if-cap-type>
+          </supported-interface-capability>
+        </port-capabilities>
+      </ports>
+      <ports>
+        <port-name>SRG1-PP4-TXRX</port-name>
+        <port-type>SRG-WSS-ADDDROP-CL</port-type>
+        <port-qual>roadm-external</port-qual>
+        <port-wavelength-type>wavelength</port-wavelength-type>
+        <port-direction>bidirectional</port-direction>
+        <is-physical>true</is-physical>
+        <pm-capable>true</pm-capable>
+        <alarm-capable>true</alarm-capable>
+        <faceplate-label>SRG1-PP4</faceplate-label>
+        <user-description>SRG1 Add/Drop Port #4 (Extended C+L FlexGrid, ready for CHM6 #1 port-20)</user-description>
+        <lifecycle-state>deployed</lifecycle-state>
+        <administrative-state>inService</administrative-state>
+        <operational-state>inService</operational-state>
+        <logical-connection-point>SRG1-PP4-TXRX</logical-connection-point>
+        <mc-capability-profile-name>FLEXGRID-CL-WSS</mc-capability-profile-name>
+        <roadm-port>
+          <port-power-capability-min-rx>-22.00</port-power-capability-min-rx>
+          <port-power-capability-min-tx>-12.00</port-power-capability-min-tx>
+          <port-power-capability-max-rx>9.00</port-power-capability-max-rx>
+          <port-power-capability-max-tx>6.00</port-power-capability-max-tx>
+        </roadm-port>
+        <port-capabilities xmlns="http://org/openroadm/port-capability">
+          <supported-interface-capability>
+            <if-cap-type>org-openroadm-port-types:if-OTS-OMS-MC-NMC</if-cap-type>
+          </supported-interface-capability>
+          <supported-interface-capability>
+            <if-cap-type>org-openroadm-port-types:if-NMC</if-cap-type>
+          </supported-interface-capability>
+        </port-capabilities>
+      </ports>
+      <ports>
+        <port-name>SRG1-PP5-TXRX</port-name>
+        <port-type>SRG-WSS-ADDDROP-CL</port-type>
+        <port-qual>roadm-external</port-qual>
+        <port-wavelength-type>wavelength</port-wavelength-type>
+        <port-direction>bidirectional</port-direction>
+        <is-physical>true</is-physical>
+        <pm-capable>true</pm-capable>
+        <alarm-capable>true</alarm-capable>
+        <faceplate-label>SRG1-PP5</faceplate-label>
+        <user-description>SRG1 Add/Drop Port #5 (Extended C+L FlexGrid, ready for CHM6 #1 port-21)</user-description>
+        <lifecycle-state>deployed</lifecycle-state>
+        <administrative-state>inService</administrative-state>
+        <operational-state>inService</operational-state>
+        <logical-connection-point>SRG1-PP5-TXRX</logical-connection-point>
+        <mc-capability-profile-name>FLEXGRID-CL-WSS</mc-capability-profile-name>
+        <roadm-port>
+          <port-power-capability-min-rx>-22.00</port-power-capability-min-rx>
+          <port-power-capability-min-tx>-12.00</port-power-capability-min-tx>
+          <port-power-capability-max-rx>9.00</port-power-capability-max-rx>
+          <port-power-capability-max-tx>6.00</port-power-capability-max-tx>
+        </roadm-port>
+        <port-capabilities xmlns="http://org/openroadm/port-capability">
+          <supported-interface-capability>
+            <if-cap-type>org-openroadm-port-types:if-OTS-OMS-MC-NMC</if-cap-type>
+          </supported-interface-capability>
+          <supported-interface-capability>
+            <if-cap-type>org-openroadm-port-types:if-NMC</if-cap-type>
+          </supported-interface-capability>
+        </port-capabilities>
+      </ports>
+      <ports>
+        <port-name>SRG1-PP6-TXRX</port-name>
+        <port-type>SRG-WSS-ADDDROP-CL</port-type>
+        <port-qual>roadm-external</port-qual>
+        <port-wavelength-type>wavelength</port-wavelength-type>
+        <port-direction>bidirectional</port-direction>
+        <is-physical>true</is-physical>
+        <pm-capable>true</pm-capable>
+        <alarm-capable>true</alarm-capable>
+        <faceplate-label>SRG1-PP6</faceplate-label>
+        <user-description>SRG1 Add/Drop Port #6 (Extended C+L FlexGrid, ready for CHM6 #1 port-22)</user-description>
+        <lifecycle-state>deployed</lifecycle-state>
+        <administrative-state>inService</administrative-state>
+        <operational-state>inService</operational-state>
+        <logical-connection-point>SRG1-PP6-TXRX</logical-connection-point>
+        <mc-capability-profile-name>FLEXGRID-CL-WSS</mc-capability-profile-name>
+        <roadm-port>
+          <port-power-capability-min-rx>-22.00</port-power-capability-min-rx>
+          <port-power-capability-min-tx>-12.00</port-power-capability-min-tx>
+          <port-power-capability-max-rx>9.00</port-power-capability-max-rx>
+          <port-power-capability-max-tx>6.00</port-power-capability-max-tx>
+        </roadm-port>
+        <port-capabilities xmlns="http://org/openroadm/port-capability">
+          <supported-interface-capability>
+            <if-cap-type>org-openroadm-port-types:if-OTS-OMS-MC-NMC</if-cap-type>
+          </supported-interface-capability>
+          <supported-interface-capability>
+            <if-cap-type>org-openroadm-port-types:if-NMC</if-cap-type>
+          </supported-interface-capability>
+        </port-capabilities>
+      </ports>
+      <ports>
+        <port-name>SRG1-PP7-TXRX</port-name>
+        <port-type>SRG-WSS-ADDDROP-CL</port-type>
+        <port-qual>roadm-external</port-qual>
+        <port-wavelength-type>wavelength</port-wavelength-type>
+        <port-direction>bidirectional</port-direction>
+        <is-physical>true</is-physical>
+        <pm-capable>true</pm-capable>
+        <alarm-capable>true</alarm-capable>
+        <faceplate-label>SRG1-PP7</faceplate-label>
+        <user-description>SRG1 Add/Drop Port #7 (Extended C+L FlexGrid, ready for CHM6 #1 port-23)</user-description>
+        <lifecycle-state>deployed</lifecycle-state>
+        <administrative-state>inService</administrative-state>
+        <operational-state>inService</operational-state>
+        <logical-connection-point>SRG1-PP7-TXRX</logical-connection-point>
+        <mc-capability-profile-name>FLEXGRID-CL-WSS</mc-capability-profile-name>
+        <roadm-port>
+          <port-power-capability-min-rx>-22.00</port-power-capability-min-rx>
+          <port-power-capability-min-tx>-12.00</port-power-capability-min-tx>
+          <port-power-capability-max-rx>9.00</port-power-capability-max-rx>
+          <port-power-capability-max-tx>6.00</port-power-capability-max-tx>
+        </roadm-port>
+        <port-capabilities xmlns="http://org/openroadm/port-capability">
+          <supported-interface-capability>
+            <if-cap-type>org-openroadm-port-types:if-OTS-OMS-MC-NMC</if-cap-type>
+          </supported-interface-capability>
+          <supported-interface-capability>
+            <if-cap-type>org-openroadm-port-types:if-NMC</if-cap-type>
+          </supported-interface-capability>
+        </port-capabilities>
+      </ports>
+      <ports>
+        <port-name>SRG1-PP8-TXRX</port-name>
+        <port-type>SRG-WSS-ADDDROP-CL</port-type>
+        <port-qual>roadm-external</port-qual>
+        <port-wavelength-type>wavelength</port-wavelength-type>
+        <port-direction>bidirectional</port-direction>
+        <is-physical>true</is-physical>
+        <pm-capable>true</pm-capable>
+        <alarm-capable>true</alarm-capable>
+        <faceplate-label>SRG1-PP8</faceplate-label>
+        <user-description>SRG1 Add/Drop Port #8 (Extended C+L FlexGrid, ready for CHM6 #1 port-24)</user-description>
+        <lifecycle-state>deployed</lifecycle-state>
+        <administrative-state>inService</administrative-state>
+        <operational-state>inService</operational-state>
+        <logical-connection-point>SRG1-PP8-TXRX</logical-connection-point>
+        <mc-capability-profile-name>FLEXGRID-CL-WSS</mc-capability-profile-name>
+        <roadm-port>
+          <port-power-capability-min-rx>-22.00</port-power-capability-min-rx>
+          <port-power-capability-min-tx>-12.00</port-power-capability-min-tx>
+          <port-power-capability-max-rx>9.00</port-power-capability-max-rx>
+          <port-power-capability-max-tx>6.00</port-power-capability-max-tx>
+        </roadm-port>
+        <port-capabilities xmlns="http://org/openroadm/port-capability">
+          <supported-interface-capability>
+            <if-cap-type>org-openroadm-port-types:if-OTS-OMS-MC-NMC</if-cap-type>
+          </supported-interface-capability>
+          <supported-interface-capability>
+            <if-cap-type>org-openroadm-port-types:if-NMC</if-cap-type>
+          </supported-interface-capability>
+        </port-capabilities>
+      </ports>
+      <ports>
+        <port-name>SRG1-PP9-TXRX</port-name>
+        <port-type>SRG-WSS-ADDDROP-CL</port-type>
+        <port-qual>roadm-external</port-qual>
+        <port-wavelength-type>wavelength</port-wavelength-type>
+        <port-direction>bidirectional</port-direction>
+        <is-physical>true</is-physical>
+        <pm-capable>true</pm-capable>
+        <alarm-capable>true</alarm-capable>
+        <faceplate-label>SRG1-PP9</faceplate-label>
+        <user-description>SRG1 Add/Drop Port #9 (Extended C+L FlexGrid, ready for CHM6 #2 port-17)</user-description>
+        <lifecycle-state>deployed</lifecycle-state>
+        <administrative-state>inService</administrative-state>
+        <operational-state>inService</operational-state>
+        <logical-connection-point>SRG1-PP9-TXRX</logical-connection-point>
+        <mc-capability-profile-name>FLEXGRID-CL-WSS</mc-capability-profile-name>
+        <roadm-port>
+          <port-power-capability-min-rx>-22.00</port-power-capability-min-rx>
+          <port-power-capability-min-tx>-12.00</port-power-capability-min-tx>
+          <port-power-capability-max-rx>9.00</port-power-capability-max-rx>
+          <port-power-capability-max-tx>6.00</port-power-capability-max-tx>
+        </roadm-port>
+        <port-capabilities xmlns="http://org/openroadm/port-capability">
+          <supported-interface-capability>
+            <if-cap-type>org-openroadm-port-types:if-OTS-OMS-MC-NMC</if-cap-type>
+          </supported-interface-capability>
+          <supported-interface-capability>
+            <if-cap-type>org-openroadm-port-types:if-NMC</if-cap-type>
+          </supported-interface-capability>
+        </port-capabilities>
+      </ports>
+      <ports>
+        <port-name>SRG1-PP10-TXRX</port-name>
+        <port-type>SRG-WSS-ADDDROP-CL</port-type>
+        <port-qual>roadm-external</port-qual>
+        <port-wavelength-type>wavelength</port-wavelength-type>
+        <port-direction>bidirectional</port-direction>
+        <is-physical>true</is-physical>
+        <pm-capable>true</pm-capable>
+        <alarm-capable>true</alarm-capable>
+        <faceplate-label>SRG1-PP10</faceplate-label>
+        <user-description>SRG1 Add/Drop Port #10 (Extended C+L FlexGrid, ready for CHM6 #2 port-18)</user-description>
+        <lifecycle-state>deployed</lifecycle-state>
+        <administrative-state>inService</administrative-state>
+        <operational-state>inService</operational-state>
+        <logical-connection-point>SRG1-PP10-TXRX</logical-connection-point>
+        <mc-capability-profile-name>FLEXGRID-CL-WSS</mc-capability-profile-name>
+        <roadm-port>
+          <port-power-capability-min-rx>-22.00</port-power-capability-min-rx>
+          <port-power-capability-min-tx>-12.00</port-power-capability-min-tx>
+          <port-power-capability-max-rx>9.00</port-power-capability-max-rx>
+          <port-power-capability-max-tx>6.00</port-power-capability-max-tx>
+        </roadm-port>
+        <port-capabilities xmlns="http://org/openroadm/port-capability">
+          <supported-interface-capability>
+            <if-cap-type>org-openroadm-port-types:if-OTS-OMS-MC-NMC</if-cap-type>
+          </supported-interface-capability>
+          <supported-interface-capability>
+            <if-cap-type>org-openroadm-port-types:if-NMC</if-cap-type>
+          </supported-interface-capability>
+        </port-capabilities>
+      </ports>
+      <ports>
+        <port-name>SRG1-PP11-TXRX</port-name>
+        <port-type>SRG-WSS-ADDDROP-CL</port-type>
+        <port-qual>roadm-external</port-qual>
+        <port-wavelength-type>wavelength</port-wavelength-type>
+        <port-direction>bidirectional</port-direction>
+        <is-physical>true</is-physical>
+        <pm-capable>true</pm-capable>
+        <alarm-capable>true</alarm-capable>
+        <faceplate-label>SRG1-PP11</faceplate-label>
+        <user-description>SRG1 Add/Drop Port #11 (Extended C+L FlexGrid, ready for CHM6 #2 port-19)</user-description>
+        <lifecycle-state>deployed</lifecycle-state>
+        <administrative-state>inService</administrative-state>
+        <operational-state>inService</operational-state>
+        <logical-connection-point>SRG1-PP11-TXRX</logical-connection-point>
+        <mc-capability-profile-name>FLEXGRID-CL-WSS</mc-capability-profile-name>
+        <roadm-port>
+          <port-power-capability-min-rx>-22.00</port-power-capability-min-rx>
+          <port-power-capability-min-tx>-12.00</port-power-capability-min-tx>
+          <port-power-capability-max-rx>9.00</port-power-capability-max-rx>
+          <port-power-capability-max-tx>6.00</port-power-capability-max-tx>
+        </roadm-port>
+        <port-capabilities xmlns="http://org/openroadm/port-capability">
+          <supported-interface-capability>
+            <if-cap-type>org-openroadm-port-types:if-OTS-OMS-MC-NMC</if-cap-type>
+          </supported-interface-capability>
+          <supported-interface-capability>
+            <if-cap-type>org-openroadm-port-types:if-NMC</if-cap-type>
+          </supported-interface-capability>
+        </port-capabilities>
+      </ports>
+      <ports>
+        <port-name>SRG1-PP12-TXRX</port-name>
+        <port-type>SRG-WSS-ADDDROP-CL</port-type>
+        <port-qual>roadm-external</port-qual>
+        <port-wavelength-type>wavelength</port-wavelength-type>
+        <port-direction>bidirectional</port-direction>
+        <is-physical>true</is-physical>
+        <pm-capable>true</pm-capable>
+        <alarm-capable>true</alarm-capable>
+        <faceplate-label>SRG1-PP12</faceplate-label>
+        <user-description>SRG1 Add/Drop Port #12 (Extended C+L FlexGrid, ready for CHM6 #2 port-20)</user-description>
+        <lifecycle-state>deployed</lifecycle-state>
+        <administrative-state>inService</administrative-state>
+        <operational-state>inService</operational-state>
+        <logical-connection-point>SRG1-PP12-TXRX</logical-connection-point>
+        <mc-capability-profile-name>FLEXGRID-CL-WSS</mc-capability-profile-name>
+        <roadm-port>
+          <port-power-capability-min-rx>-22.00</port-power-capability-min-rx>
+          <port-power-capability-min-tx>-12.00</port-power-capability-min-tx>
+          <port-power-capability-max-rx>9.00</port-power-capability-max-rx>
+          <port-power-capability-max-tx>6.00</port-power-capability-max-tx>
+        </roadm-port>
+        <port-capabilities xmlns="http://org/openroadm/port-capability">
+          <supported-interface-capability>
+            <if-cap-type>org-openroadm-port-types:if-OTS-OMS-MC-NMC</if-cap-type>
+          </supported-interface-capability>
+          <supported-interface-capability>
+            <if-cap-type>org-openroadm-port-types:if-NMC</if-cap-type>
+          </supported-interface-capability>
+        </port-capabilities>
+      </ports>
+      <ports>
+        <port-name>SRG1-PP13-TXRX</port-name>
+        <port-type>SRG-WSS-ADDDROP-CL</port-type>
+        <port-qual>roadm-external</port-qual>
+        <port-wavelength-type>wavelength</port-wavelength-type>
+        <port-direction>bidirectional</port-direction>
+        <is-physical>true</is-physical>
+        <pm-capable>true</pm-capable>
+        <alarm-capable>true</alarm-capable>
+        <faceplate-label>SRG1-PP13</faceplate-label>
+        <user-description>SRG1 Add/Drop Port #13 (Extended C+L FlexGrid, ready for CHM6 #2 port-21)</user-description>
+        <lifecycle-state>deployed</lifecycle-state>
+        <administrative-state>inService</administrative-state>
+        <operational-state>inService</operational-state>
+        <logical-connection-point>SRG1-PP13-TXRX</logical-connection-point>
+        <mc-capability-profile-name>FLEXGRID-CL-WSS</mc-capability-profile-name>
+        <roadm-port>
+          <port-power-capability-min-rx>-22.00</port-power-capability-min-rx>
+          <port-power-capability-min-tx>-12.00</port-power-capability-min-tx>
+          <port-power-capability-max-rx>9.00</port-power-capability-max-rx>
+          <port-power-capability-max-tx>6.00</port-power-capability-max-tx>
+        </roadm-port>
+        <port-capabilities xmlns="http://org/openroadm/port-capability">
+          <supported-interface-capability>
+            <if-cap-type>org-openroadm-port-types:if-OTS-OMS-MC-NMC</if-cap-type>
+          </supported-interface-capability>
+          <supported-interface-capability>
+            <if-cap-type>org-openroadm-port-types:if-NMC</if-cap-type>
+          </supported-interface-capability>
+        </port-capabilities>
+      </ports>
+      <ports>
+        <port-name>SRG1-PP14-TXRX</port-name>
+        <port-type>SRG-WSS-ADDDROP-CL</port-type>
+        <port-qual>roadm-external</port-qual>
+        <port-wavelength-type>wavelength</port-wavelength-type>
+        <port-direction>bidirectional</port-direction>
+        <is-physical>true</is-physical>
+        <pm-capable>true</pm-capable>
+        <alarm-capable>true</alarm-capable>
+        <faceplate-label>SRG1-PP14</faceplate-label>
+        <user-description>SRG1 Add/Drop Port #14 (Extended C+L FlexGrid, ready for CHM6 #2 port-22)</user-description>
+        <lifecycle-state>deployed</lifecycle-state>
+        <administrative-state>inService</administrative-state>
+        <operational-state>inService</operational-state>
+        <logical-connection-point>SRG1-PP14-TXRX</logical-connection-point>
+        <mc-capability-profile-name>FLEXGRID-CL-WSS</mc-capability-profile-name>
+        <roadm-port>
+          <port-power-capability-min-rx>-22.00</port-power-capability-min-rx>
+          <port-power-capability-min-tx>-12.00</port-power-capability-min-tx>
+          <port-power-capability-max-rx>9.00</port-power-capability-max-rx>
+          <port-power-capability-max-tx>6.00</port-power-capability-max-tx>
+        </roadm-port>
+        <port-capabilities xmlns="http://org/openroadm/port-capability">
+          <supported-interface-capability>
+            <if-cap-type>org-openroadm-port-types:if-OTS-OMS-MC-NMC</if-cap-type>
+          </supported-interface-capability>
+          <supported-interface-capability>
+            <if-cap-type>org-openroadm-port-types:if-NMC</if-cap-type>
+          </supported-interface-capability>
+        </port-capabilities>
+      </ports>
+      <ports>
+        <port-name>SRG1-PP15-TXRX</port-name>
+        <port-type>SRG-WSS-ADDDROP-CL</port-type>
+        <port-qual>roadm-external</port-qual>
+        <port-wavelength-type>wavelength</port-wavelength-type>
+        <port-direction>bidirectional</port-direction>
+        <is-physical>true</is-physical>
+        <pm-capable>true</pm-capable>
+        <alarm-capable>true</alarm-capable>
+        <faceplate-label>SRG1-PP15</faceplate-label>
+        <user-description>SRG1 Add/Drop Port #15 (Extended C+L FlexGrid, ready for CHM6 #2 port-23)</user-description>
+        <lifecycle-state>deployed</lifecycle-state>
+        <administrative-state>inService</administrative-state>
+        <operational-state>inService</operational-state>
+        <logical-connection-point>SRG1-PP15-TXRX</logical-connection-point>
+        <mc-capability-profile-name>FLEXGRID-CL-WSS</mc-capability-profile-name>
+        <roadm-port>
+          <port-power-capability-min-rx>-22.00</port-power-capability-min-rx>
+          <port-power-capability-min-tx>-12.00</port-power-capability-min-tx>
+          <port-power-capability-max-rx>9.00</port-power-capability-max-rx>
+          <port-power-capability-max-tx>6.00</port-power-capability-max-tx>
+        </roadm-port>
+        <port-capabilities xmlns="http://org/openroadm/port-capability">
+          <supported-interface-capability>
+            <if-cap-type>org-openroadm-port-types:if-OTS-OMS-MC-NMC</if-cap-type>
+          </supported-interface-capability>
+          <supported-interface-capability>
+            <if-cap-type>org-openroadm-port-types:if-NMC</if-cap-type>
+          </supported-interface-capability>
+        </port-capabilities>
+      </ports>
+      <ports>
+        <port-name>SRG1-PP16-TXRX</port-name>
+        <port-type>SRG-WSS-ADDDROP-CL</port-type>
+        <port-qual>roadm-external</port-qual>
+        <port-wavelength-type>wavelength</port-wavelength-type>
+        <port-direction>bidirectional</port-direction>
+        <is-physical>true</is-physical>
+        <pm-capable>true</pm-capable>
+        <alarm-capable>true</alarm-capable>
+        <faceplate-label>SRG1-PP16</faceplate-label>
+        <user-description>SRG1 Add/Drop Port #16 (Extended C+L FlexGrid, ready for CHM6 #2 port-24)</user-description>
+        <lifecycle-state>deployed</lifecycle-state>
+        <administrative-state>inService</administrative-state>
+        <operational-state>inService</operational-state>
+        <logical-connection-point>SRG1-PP16-TXRX</logical-connection-point>
+        <mc-capability-profile-name>FLEXGRID-CL-WSS</mc-capability-profile-name>
+        <roadm-port>
+          <port-power-capability-min-rx>-22.00</port-power-capability-min-rx>
+          <port-power-capability-min-tx>-12.00</port-power-capability-min-tx>
+          <port-power-capability-max-rx>9.00</port-power-capability-max-rx>
+          <port-power-capability-max-tx>6.00</port-power-capability-max-tx>
+        </roadm-port>
+        <port-capabilities xmlns="http://org/openroadm/port-capability">
+          <supported-interface-capability>
+            <if-cap-type>org-openroadm-port-types:if-OTS-OMS-MC-NMC</if-cap-type>
+          </supported-interface-capability>
+          <supported-interface-capability>
+            <if-cap-type>org-openroadm-port-types:if-NMC</if-cap-type>
+          </supported-interface-capability>
+        </port-capabilities>
+      </ports>
+      <ports>
+        <port-name>SRG1-CP-TXRX</port-name>
+        <port-type>INTERNAL-CMX-COMMON</port-type>
+        <port-qual>roadm-internal</port-qual>
+        <port-wavelength-type>multi-wavelength</port-wavelength-type>
+        <port-direction>bidirectional</port-direction>
+        <is-physical>true</is-physical>
+        <pm-capable>true</pm-capable>
+        <alarm-capable>true</alarm-capable>
+        <faceplate-label>SRG1-COMMON-TXRX</faceplate-label>
+        <user-description>SRG1 Common WSS Aggregate Port (Single Contention Domain shared across Degrees 1..4)</user-description>
+        <lifecycle-state>deployed</lifecycle-state>
+        <administrative-state>inService</administrative-state>
+        <operational-state>inService</operational-state>
+        <logical-connection-point>SRG1-CP-TXRX</logical-connection-point>
+      </ports>
+    </circuit-packs>
+
+    <!-- ================================================================= -->
+    <!-- 4. Initial Line Interfaces (OTS & OMS Ready; 0 Active Channels)   -->
+    <!-- ================================================================= -->
+    <interface>
+      <name>OTS-DEG1</name>
+      <description>Optical Transport Section on Degree 1 (Extended C+L Band)</description>
+      <type>openROADM-if:opticalTransport</type>
+      <lifecycle-state>deployed</lifecycle-state>
+      <administrative-state>inService</administrative-state>
+      <operational-state>inService</operational-state>
+      <supporting-circuit-pack-name>1/0/DEG1-WSS</supporting-circuit-pack-name>
+      <supporting-port>DEG1-TTP-TXRX</supporting-port>
+      <ots xmlns="http://org/openroadm/optical-transport-interfaces">
+        <fiber-type>smf</fiber-type>
+        <span-loss-receive>12.500</span-loss-receive>
+        <span-loss-transmit>12.500</span-loss-transmit>
+        <ingress-span-loss-aging-margin>2.000</ingress-span-loss-aging-margin>
+      </ots>
+    </interface>
+    <interface>
+      <name>OMS-DEG1</name>
+      <description>Optical Multiplex Section on Degree 1 (186.050-196.125 THz)</description>
+      <type>openROADM-if:openROADMOpticalMultiplex</type>
+      <lifecycle-state>deployed</lifecycle-state>
+      <administrative-state>inService</administrative-state>
+      <operational-state>inService</operational-state>
+      <supporting-circuit-pack-name>1/0/DEG1-WSS</supporting-circuit-pack-name>
+      <supporting-port>DEG1-TTP-TXRX</supporting-port>
+      <supporting-interface-list>OTS-DEG1</supporting-interface-list>
+    </interface>
+    <interface>
+      <name>OTS-DEG2</name>
+      <description>Optical Transport Section on Degree 2 (Extended C+L Band)</description>
+      <type>openROADM-if:opticalTransport</type>
+      <lifecycle-state>deployed</lifecycle-state>
+      <administrative-state>inService</administrative-state>
+      <operational-state>inService</operational-state>
+      <supporting-circuit-pack-name>1/0/DEG2-WSS</supporting-circuit-pack-name>
+      <supporting-port>DEG2-TTP-TXRX</supporting-port>
+      <ots xmlns="http://org/openroadm/optical-transport-interfaces">
+        <fiber-type>smf</fiber-type>
+        <span-loss-receive>12.500</span-loss-receive>
+        <span-loss-transmit>12.500</span-loss-transmit>
+        <ingress-span-loss-aging-margin>2.000</ingress-span-loss-aging-margin>
+      </ots>
+    </interface>
+    <interface>
+      <name>OMS-DEG2</name>
+      <description>Optical Multiplex Section on Degree 2 (186.050-196.125 THz)</description>
+      <type>openROADM-if:openROADMOpticalMultiplex</type>
+      <lifecycle-state>deployed</lifecycle-state>
+      <administrative-state>inService</administrative-state>
+      <operational-state>inService</operational-state>
+      <supporting-circuit-pack-name>1/0/DEG2-WSS</supporting-circuit-pack-name>
+      <supporting-port>DEG2-TTP-TXRX</supporting-port>
+      <supporting-interface-list>OTS-DEG2</supporting-interface-list>
+    </interface>
+    <interface>
+      <name>OTS-DEG3</name>
+      <description>Optical Transport Section on Degree 3 (Extended C+L Band)</description>
+      <type>openROADM-if:opticalTransport</type>
+      <lifecycle-state>deployed</lifecycle-state>
+      <administrative-state>inService</administrative-state>
+      <operational-state>inService</operational-state>
+      <supporting-circuit-pack-name>1/0/DEG3-WSS</supporting-circuit-pack-name>
+      <supporting-port>DEG3-TTP-TXRX</supporting-port>
+      <ots xmlns="http://org/openroadm/optical-transport-interfaces">
+        <fiber-type>smf</fiber-type>
+        <span-loss-receive>12.500</span-loss-receive>
+        <span-loss-transmit>12.500</span-loss-transmit>
+        <ingress-span-loss-aging-margin>2.000</ingress-span-loss-aging-margin>
+      </ots>
+    </interface>
+    <interface>
+      <name>OMS-DEG3</name>
+      <description>Optical Multiplex Section on Degree 3 (186.050-196.125 THz)</description>
+      <type>openROADM-if:openROADMOpticalMultiplex</type>
+      <lifecycle-state>deployed</lifecycle-state>
+      <administrative-state>inService</administrative-state>
+      <operational-state>inService</operational-state>
+      <supporting-circuit-pack-name>1/0/DEG3-WSS</supporting-circuit-pack-name>
+      <supporting-port>DEG3-TTP-TXRX</supporting-port>
+      <supporting-interface-list>OTS-DEG3</supporting-interface-list>
+    </interface>
+    <interface>
+      <name>OTS-DEG4</name>
+      <description>Optical Transport Section on Degree 4 (Extended C+L Band)</description>
+      <type>openROADM-if:opticalTransport</type>
+      <lifecycle-state>deployed</lifecycle-state>
+      <administrative-state>inService</administrative-state>
+      <operational-state>inService</operational-state>
+      <supporting-circuit-pack-name>1/0/DEG4-WSS</supporting-circuit-pack-name>
+      <supporting-port>DEG4-TTP-TXRX</supporting-port>
+      <ots xmlns="http://org/openroadm/optical-transport-interfaces">
+        <fiber-type>smf</fiber-type>
+        <span-loss-receive>12.500</span-loss-receive>
+        <span-loss-transmit>12.500</span-loss-transmit>
+        <ingress-span-loss-aging-margin>2.000</ingress-span-loss-aging-margin>
+      </ots>
+    </interface>
+    <interface>
+      <name>OMS-DEG4</name>
+      <description>Optical Multiplex Section on Degree 4 (186.050-196.125 THz)</description>
+      <type>openROADM-if:openROADMOpticalMultiplex</type>
+      <lifecycle-state>deployed</lifecycle-state>
+      <administrative-state>inService</administrative-state>
+      <operational-state>inService</operational-state>
+      <supporting-circuit-pack-name>1/0/DEG4-WSS</supporting-circuit-pack-name>
+      <supporting-port>DEG4-TTP-TXRX</supporting-port>
+      <supporting-interface-list>OTS-DEG4</supporting-interface-list>
+    </interface>
+
+    <!-- ================================================================= -->
+    <!-- 5. Internal Photonic Mesh Backplane Links                         -->
+    <!-- ================================================================= -->
+    <internal-link>
+      <internal-link-name>SRG1-CP-to-DEG1-CTP</internal-link-name>
+      <source>
+        <circuit-pack-name>1/0/SRG1-WSS</circuit-pack-name>
+        <port-name>SRG1-CP-TXRX</port-name>
+      </source>
+      <destination>
+        <circuit-pack-name>1/0/DEG1-WSS</circuit-pack-name>
+        <port-name>DEG1-CTP-TXRX</port-name>
+      </destination>
+    </internal-link>
+    <internal-link>
+      <internal-link-name>SRG1-CP-to-DEG2-CTP</internal-link-name>
+      <source>
+        <circuit-pack-name>1/0/SRG1-WSS</circuit-pack-name>
+        <port-name>SRG1-CP-TXRX</port-name>
+      </source>
+      <destination>
+        <circuit-pack-name>1/0/DEG2-WSS</circuit-pack-name>
+        <port-name>DEG2-CTP-TXRX</port-name>
+      </destination>
+    </internal-link>
+    <internal-link>
+      <internal-link-name>SRG1-CP-to-DEG3-CTP</internal-link-name>
+      <source>
+        <circuit-pack-name>1/0/SRG1-WSS</circuit-pack-name>
+        <port-name>SRG1-CP-TXRX</port-name>
+      </source>
+      <destination>
+        <circuit-pack-name>1/0/DEG3-WSS</circuit-pack-name>
+        <port-name>DEG3-CTP-TXRX</port-name>
+      </destination>
+    </internal-link>
+    <internal-link>
+      <internal-link-name>SRG1-CP-to-DEG4-CTP</internal-link-name>
+      <source>
+        <circuit-pack-name>1/0/SRG1-WSS</circuit-pack-name>
+        <port-name>SRG1-CP-TXRX</port-name>
+      </source>
+      <destination>
+        <circuit-pack-name>1/0/DEG4-WSS</circuit-pack-name>
+        <port-name>DEG4-CTP-TXRX</port-name>
+      </destination>
+    </internal-link>
+    <internal-link>
+      <internal-link-name>DEG1-CTP-to-DEG2-CTP</internal-link-name>
+      <source>
+        <circuit-pack-name>1/0/DEG1-WSS</circuit-pack-name>
+        <port-name>DEG1-CTP-TXRX</port-name>
+      </source>
+      <destination>
+        <circuit-pack-name>1/0/DEG2-WSS</circuit-pack-name>
+        <port-name>DEG2-CTP-TXRX</port-name>
+      </destination>
+    </internal-link>
+    <internal-link>
+      <internal-link-name>DEG1-CTP-to-DEG3-CTP</internal-link-name>
+      <source>
+        <circuit-pack-name>1/0/DEG1-WSS</circuit-pack-name>
+        <port-name>DEG1-CTP-TXRX</port-name>
+      </source>
+      <destination>
+        <circuit-pack-name>1/0/DEG3-WSS</circuit-pack-name>
+        <port-name>DEG3-CTP-TXRX</port-name>
+      </destination>
+    </internal-link>
+    <internal-link>
+      <internal-link-name>DEG1-CTP-to-DEG4-CTP</internal-link-name>
+      <source>
+        <circuit-pack-name>1/0/DEG1-WSS</circuit-pack-name>
+        <port-name>DEG1-CTP-TXRX</port-name>
+      </source>
+      <destination>
+        <circuit-pack-name>1/0/DEG4-WSS</circuit-pack-name>
+        <port-name>DEG4-CTP-TXRX</port-name>
+      </destination>
+    </internal-link>
+    <internal-link>
+      <internal-link-name>DEG2-CTP-to-DEG3-CTP</internal-link-name>
+      <source>
+        <circuit-pack-name>1/0/DEG2-WSS</circuit-pack-name>
+        <port-name>DEG2-CTP-TXRX</port-name>
+      </source>
+      <destination>
+        <circuit-pack-name>1/0/DEG3-WSS</circuit-pack-name>
+        <port-name>DEG3-CTP-TXRX</port-name>
+      </destination>
+    </internal-link>
+    <internal-link>
+      <internal-link-name>DEG2-CTP-to-DEG4-CTP</internal-link-name>
+      <source>
+        <circuit-pack-name>1/0/DEG2-WSS</circuit-pack-name>
+        <port-name>DEG2-CTP-TXRX</port-name>
+      </source>
+      <destination>
+        <circuit-pack-name>1/0/DEG4-WSS</circuit-pack-name>
+        <port-name>DEG4-CTP-TXRX</port-name>
+      </destination>
+    </internal-link>
+    <internal-link>
+      <internal-link-name>DEG3-CTP-to-DEG4-CTP</internal-link-name>
+      <source>
+        <circuit-pack-name>1/0/DEG3-WSS</circuit-pack-name>
+        <port-name>DEG3-CTP-TXRX</port-name>
+      </source>
+      <destination>
+        <circuit-pack-name>1/0/DEG4-WSS</circuit-pack-name>
+        <port-name>DEG4-CTP-TXRX</port-name>
+      </destination>
+    </internal-link>
+
+    <!-- ================================================================= -->
+    <!-- 6. 4-Degree Unified Extended C+L Mesh Configuration               -->
+    <!-- ================================================================= -->
+    <degree>
+      <degree-number>1</degree-number>
+      <lifecycle-state>deployed</lifecycle-state>
+      <max-wavelengths>192</max-wavelengths>
+      <circuit-packs>
+        <index>1</index>
+        <circuit-pack-name>1/0/DEG1-WSS</circuit-pack-name>
+      </circuit-packs>
+      <connection-ports>
+        <index>1</index>
+        <circuit-pack-name>1/0/DEG1-WSS</circuit-pack-name>
+        <port-name>DEG1-TTP-TXRX</port-name>
+      </connection-ports>
+      <mc-capability-profile-name>FLEXGRID-CL-WSS</mc-capability-profile-name>
+    </degree>
+    <degree>
+      <degree-number>2</degree-number>
+      <lifecycle-state>deployed</lifecycle-state>
+      <max-wavelengths>192</max-wavelengths>
+      <circuit-packs>
+        <index>1</index>
+        <circuit-pack-name>1/0/DEG2-WSS</circuit-pack-name>
+      </circuit-packs>
+      <connection-ports>
+        <index>1</index>
+        <circuit-pack-name>1/0/DEG2-WSS</circuit-pack-name>
+        <port-name>DEG2-TTP-TXRX</port-name>
+      </connection-ports>
+      <mc-capability-profile-name>FLEXGRID-CL-WSS</mc-capability-profile-name>
+    </degree>
+    <degree>
+      <degree-number>3</degree-number>
+      <lifecycle-state>deployed</lifecycle-state>
+      <max-wavelengths>192</max-wavelengths>
+      <circuit-packs>
+        <index>1</index>
+        <circuit-pack-name>1/0/DEG3-WSS</circuit-pack-name>
+      </circuit-packs>
+      <connection-ports>
+        <index>1</index>
+        <circuit-pack-name>1/0/DEG3-WSS</circuit-pack-name>
+        <port-name>DEG3-TTP-TXRX</port-name>
+      </connection-ports>
+      <mc-capability-profile-name>FLEXGRID-CL-WSS</mc-capability-profile-name>
+    </degree>
+    <degree>
+      <degree-number>4</degree-number>
+      <lifecycle-state>deployed</lifecycle-state>
+      <max-wavelengths>192</max-wavelengths>
+      <circuit-packs>
+        <index>1</index>
+        <circuit-pack-name>1/0/DEG4-WSS</circuit-pack-name>
+      </circuit-packs>
+      <connection-ports>
+        <index>1</index>
+        <circuit-pack-name>1/0/DEG4-WSS</circuit-pack-name>
+        <port-name>DEG4-TTP-TXRX</port-name>
+      </connection-ports>
+      <mc-capability-profile-name>FLEXGRID-CL-WSS</mc-capability-profile-name>
+    </degree>
+
+    <!-- ================================================================= -->
+    <!-- 7. Unified Contention-Aware SRG1 (wavelength-duplication=one-per-srg) -->
+    <!-- ================================================================= -->
+    <shared-risk-group>
+      <srg-number>1</srg-number>
+      <max-add-drop-ports>16</max-add-drop-ports>
+      <current-provisioned-add-drop-ports>16</current-provisioned-add-drop-ports>
+      <prov-max-add-drop-ports>16</prov-max-add-drop-ports>
+      <lifecycle-state>deployed</lifecycle-state>
+      <wavelength-duplication>one-per-srg</wavelength-duplication>
+      <circuit-packs>
+        <index>1</index>
+        <circuit-pack-name>1/0/SRG1-WSS</circuit-pack-name>
+      </circuit-packs>
+      <mc-capability-profile-name>FLEXGRID-CL-WSS</mc-capability-profile-name>
+    </shared-risk-group>
+
+    <!-- ================================================================= -->
+    <!-- 8. Media Channel Capability Profile (186.050-196.125 THz FlexGrid) -->
+    <!-- ================================================================= -->
+    <mc-capability-profile>
+      <profile-name>FLEXGRID-CL-WSS</profile-name>
+      <center-freq-granularity>6.25000</center-freq-granularity>
+      <min-edge-freq>186.05000000</min-edge-freq>
+      <max-edge-freq>196.12500000</max-edge-freq>
+      <slot-width-granularity>12.50000</slot-width-granularity>
+      <min-slots>1</min-slots>
+      <max-slots>24</max-slots>
+    </mc-capability-profile>
+
+  </org-openroadm-device>
+</config>

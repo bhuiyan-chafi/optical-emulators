@@ -1,2 +1,4 @@
 /repos
-**/ssh_host_*
+**/ssh_host_**.zip
+*.signed.zip
+**/build_context/
